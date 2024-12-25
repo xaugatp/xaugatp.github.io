@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- , shrink-to-fit=no -->
+        <title>Saugat Poudel - Aspiring Data Scientist and ML Engineer | Portfolio</title>
+        <meta name="description" content="Portfolio of Saugat Poudel, an Aspiring Data Scientist and Machine Learning Engineer .">
+        <meta name="keywords" content="Saugat Poudel, Data Scientist, Machine Learning Engineer, Artificial Intelligence, Portfolio">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/nav.css">
+        <link rel="stylesheet" type="text/css" href="styles/info.css">
+        <link rel="stylesheet" type="text/css" href="styles/about.css">
+        <link rel="stylesheet" type="text/css" href="styles/timeline.css">
+        <link rel="stylesheet" type="text/css" href="styles/projects.css">
+        <link rel="stylesheet" type="text/css" href="styles/publications.css">
+        <link rel="stylesheet" type="text/css" href="styles/blog.css">
+
+         <!-- Favicon -->
+        <link rel="icon" href="assets/me.png" type="image/x-icon">
+
+        <!-- Open Graph tags -->
+        <meta name="description" content="Portfolio of Saugat Poudel, an Aspiring Data Scientist and Machine Learning Engineer .">
+        <meta name="keywords" content="Saugat Poudel, Data Scientist, Machine Learning Engineer, Artificial Intelligence, Portfolio">
+        <a href="https://www.linkedin.com/in/xaugat/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/xaugatp" target="_blank">GitHub</a>
+        <a href="Resume_Saugat.pdf" target="_blank">Resume</a>
+
+
+            <!-- Twitter Card tags -->
+        <!-- <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@nikhil2362">-->
+
+        <!-- Structured Data Markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Saugat Poudel",
+          "url": "https://xaugatp.github.io/",
+          "image": "https://xaugatp.github.io/assets/me.png",
+          "sameAs": [
+            "https://www.linkedin.com/in/xaugat/",
+            "https://github.com/xaugatp",
+            "https://www.hackerrank.com/profile/saugatp363"
+          ],
+          "jobTitle": "Data Scientist Intern + Education",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Torrens University Australia"
+          },
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Torrens University Australia"
+          },
+          "knowsAbout": ["Machine Learning", "Data Science", "Large Language Models"],
+          "description": "Saugat Poudel is a graduate student at Torrens University Australia, specializing in Machine Learning, Data Science, and Large Language Models (LLMs)."
+        }
+        </script>
+    </head>
+    <body>
+        <header class="gradient-background">
+            <nav>
+                <div class="nav-left">
+                    <a href="#dhead" class="nav-link">Saugat Poudel</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#timeline" class="nav-link">Timeline</a>
+                </div>
+                <div class="nav-mobile">
+                    <!-- <button id="menu-toggle">Menu</button> -->
+                    <button id="menu-toggle" aria-label="Toggle menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-menu">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#blog" class="nav-link">Blog</a>
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#publications" class="nav-link">Publications</a>
+                        <a href="#timeline" class="nav-link">Timeline</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="dhead" class="container gradient-background">
+                <div class="row">
+                    <div id="dpic">
+                        <img src="assets/me.png" alt="Saugat Poudel Data Scientiest and ML Engineer" />
+                    </div>
+                    <div id="ddesc">
+                        <h1>Saugat Poudel</h1>
+                        <h2>Exploring the Frontiers of AI and Data Science</h2>
+                        <div id="dico">
+                            <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" class="iico" alt="Connect with Saugat on LinkedIn"/></a>
+                            <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" class="iico" alt="View Saugat's GitHub projects"/></a>
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" style="cursor: pointer;" class="iico" id="iemail" title="Click to reveal Saugat's email" alt="Contact Saugat via email" />
+                        </div>
+                        <div id="demail"></div>
+                        <a href="Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">
+                            <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/filetext.svg" class="iico" alt="PDF icon" /> -->
+                            <img src="assets/resume.svg" class="iico" alt="PDF icon" />
+
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+<!-- Popup Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-project-content"></div>
+    </div>
+</div>
+
+
+                    <!-- <h4>Tasks</h4>
+                    <div class="skills">
+                        <div class="skill-item"><span>Large Language Models:</span> PEFT finetuning, distillation, RAG, Agents</div>
+                        <div class="skill-item"><span>Computer Vision:</span> Image Generation, Image Classification, Segmentation, Object Detection</div>
+                        <div class="skill-item"><span>Data Processing:</span> Data cleaning, Feature extraction, EDA</div>
+                        <div class="skill-item"><span>Tabular ML:</span> Classification, Regression, Clustering, Dimensionality Reduction</div>
+                        <div class="skill-item"><span>Natural Language Processing:</span> Text Classification, Named Entity Recognition, Sentiment Analysis</div>
+                        <div class="skill-item"><span>Speech Processing:</span> Speech Recognition, Text-to-Speech</div>
+                        <div class="skill-item"><span>Time Series:</span> Forecasting, Analysis</div>
+                    </div> -->
+                
+                    <!-- <h4>Frameworks</h4> -->
+
+                    <div class="section" id="about">
+                        <h2>About</h2>
+                        <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Data Scientist and Machine Learning Engineer</strong> 🤖💡 with a passion for <strong>AI-powered solutions</strong>, <strong>Data Science</strong>, and <strong>MLOps</strong>. <br>
+                            🎓 I am pursuing my <strong>Bachelor's in Software Engineering (Artificial Intelligence)</strong> at Torrens University, Australia. With hands-on experience in <strong>Machine Learning Pipelines</strong>, <strong>Data Science</strong>, and <strong>Modal Deployment</strong>, I strive to <strong>create scalable and impactful solutions</strong>. <br><br>
+                            🌱 My focus is on mastering <strong>ML model deployment</strong>, <strong>Data Science</strong>, and <strong>Integration of LLMS in businesses</strong>.<br><br> <strong>Welcome to my portfolio!</strong></br> </br></p>
+                        <h2>SKILLS</h2>
+                    
+                        <div class="skills-container">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="ml-ds">Machine Learning & Data Science</button>
+                                <button class="tab-button" data-tab="programming">Programming</button>
+                                <button class="tab-button" data-tab="dev-tools">Development Tools</button>
+                                <button class="tab-button" data-tab="cloud">MLOps Tools</button>
+                                
+                            </div>
+                    
+                            <div id="ml-ds" class="tab-content active">
+                                <div class="skills-section">
+                                    <div class="skills">
+                                        <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN, CNN, Reinforcement Learning</div>
+                                        <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost</div>
+                                        <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face Transformers</div>
+                                        <div class="skill-item"><span>Data Analysis:</span> NumPy, Pandas, PySpark</div>
+                                        <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn</div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div id="programming" class="tab-content">
+                                <div class="skills-section">
+                                    <div class="skills">
+                                        <div class="skill-item"><span>Languages:</span> Python, C++</div>
+                                        <div class="skill-item"><span>Frameworks:</span> Flask</div>
+                                        <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB</div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div id="dev-tools" class="tab-content">
+                                <div class="skills-section">
+                                    <div class="skills">
+                                        <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
+                                        <div class="skill-item"><span>IDEs:</span> VS Code, Jupyter Notebooks, PyCharm</div>
+                                        <div class="skill-item"><span>Containerization:</span> Docker</div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div id="cloud" class="tab-content">
+                                <div class="skills-section">
+                                    <div class="skills">
+                                        <div class="skill-item"><span>Platforms:</span> AWS EC2, AWS Beanstalk</div>
+                                        <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, CircleCI, Jenkins, Weights & Biases</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+            <div class="section" id="projects">
+                <h2>Projects</h2>
+
+                <h3>Personal Projects</h3>
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/pdf-chatbot.png" alt="PDF Chatbot System">
+                            <h4>PDF-Based Chatbot with Hugging Face</h4>
+                            <p class="project-brief">Developed a chatbot system to process PDF data, create embeddings, and enable intelligent Q&A.</p>
+                            <p class="project-tools">Python, PyPDF2, LangChain, Hugging Face, Solara, ChromaDB</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <p><strong>Technologies:</strong> Python, PyPDF2, LangChain, Hugging Face, Solara</p>
+                                <p><strong>Vector Database:</strong> ChromaDB</p>
+                                <p><strong>Year:</strong> 2023</p>
+                            </div>
+                            <p class="project-description">
+                                This project involved building an interactive chatbot system capable of answering user queries based on PDF documents. The pipeline included:
+                                <ul>
+                                    <li><strong>PDF Processing:</strong> Merged multiple PDFs using PyPDF2 and extracted text data.</li>
+                                    <li><strong>Text Splitting:</strong> Split PDF content into manageable chunks using RecursiveCharacterTextSplitter for efficient processing.</li>
+                                    <li><strong>Vector Database:</strong> Created embeddings for document chunks using Hugging Face's `sentence-transformers` and stored them in a persistent ChromaDB.</li>
+                                    <li><strong>Chatbot Interface:</strong> Built a Solara-based UI for real-time question answering using LangChain's RetrievalQA and Hugging Face models.</li>
+                                    <li><strong>Optimization:</strong> Integrated Hugging Face's `Falcon-7B-Instruct` for enhanced conversational responses with reduced latency.</li>
+                                </ul>
+                                This project showcases expertise in integrating machine learning, vector databases, and user interface design for practical applications.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/pdf-chatbot-system" target="_blank">Code</a>
+                                <a href="https://your-demo-link.com" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/file-organizer.jpg" alt="Local File Organizer">
+                            <h4>Local File Organizer</h4>
+                            <p class="project-brief">Developed a Python-based tool for organizing files efficiently by content, date, or type.</p>
+                            <p class="project-tools">Python, NLTK, NexaVLM, TensorRT, PyPI</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <p><strong>Team Size:</strong> 3</p>
+                                <p><strong>Date:</strong> 2023</p>
+                                <p><strong>Distribution:</strong> Published as a PyPI package</p>
+                            </div>
+                            <p class="project-description">
+                                The Local File Organizer is a Python tool designed to categorize and manage files in local directories with various customizable modes:
+                                <ul>
+                                    <li><strong>Mode 1: Organize by Content</strong> - Utilizes machine learning models to analyze and classify files based on their content.</li>
+                                    <li><strong>Mode 2: Organize by Date</strong> - Groups files by creation or modification dates.</li>
+                                    <li><strong>Mode 3: Organize by Type</strong> - Sorts files into folders based on file types (e.g., images, documents).</li>
+                                </ul>
+                                <strong>My Responsibilities:</strong>
+                                <ul>
+                                    <li>Implemented the core logic for file classification and organization using Python's <code>os</code> module.</li>
+                                    <li>Integrated advanced machine learning models (NexaVLM and NexaText) for intelligent content-based file organization.</li>
+                                    <li>Added support for natural language processing (NLP) with NLTK for analyzing text files.</li>
+                                    <li>Designed and published the project as a PyPI package for easy installation and use.</li>
+                                    <li>Ensured robust error handling and created detailed documentation for end-users.</li>
+                                </ul>
+                                The tool offers both command-line and interactive modes, making it accessible to a wide range of users. Its silent mode allows operation logs to be saved in a text file for future reference.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://pypi.org/project/local-file-organizer" target="_blank">PyPI Package</a>
+                                <a href="https://github.com/yourusername/local-file-organizer" target="_blank">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/multiclass_classification_CNN.webp" alt="Multiclass Classification Using CNN">
+                            <h4>Multiclass Classification Using CNN</h4>
+                            <p class="project-brief">Developed a Convolutional Neural Network to classify images into multiple categories with high accuracy.</p>
+                            <p class="project-tools">Python, TensorFlow, Keras</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <p><strong>Semester:</strong> 5</p>
+                                <p><strong>Team size:</strong> 1</p>
+                                <p><strong>Date:</strong> October 2023</p>
+                                <p><strong>Grade:</strong> A</p>
+                            </div>
+                            <p class="project-description">
+                                In this project, I developed a Convolutional Neural Network (CNN) for multiclass image classification:
+                                <ul>
+                                    <li><strong>Data Preparation:</strong> Collected and preprocessed a dataset comprising multiple image categories, ensuring balanced class distribution and adequate sample size for each class.</li>
+                                    <li><strong>Model Architecture:</strong> Designed a CNN architecture with multiple convolutional and pooling layers, followed by fully connected layers, optimized for feature extraction and classification tasks.</li>
+                                    <li><strong>Training and Validation:</strong> Trained the model using the prepared dataset, employing techniques such as data augmentation and dropout to prevent overfitting and enhance generalization.</li>
+                                    <li><strong>Performance Evaluation:</strong> Achieved high accuracy on the validation set, demonstrating the model's effectiveness in correctly classifying images into their respective categories.</li>
+                                    <li><strong>Deployment:</strong> Deployed the trained model as a web application, allowing users to upload images and receive real-time classification results.</li>
+                                </ul>
+                                This project enhanced my understanding of deep learning techniques for image classification and provided practical experience in building and deploying CNN models for real-world applications.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/xaugatp/multiclass-classification-using-CNN" target="_blank">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/CreditCardFraudDetection.jpeg" alt="Credit Card Fraud Detection">
+                            <h4>Credit Card Fraud Detection</h4>
+                            <p class="project-brief">Developed a machine learning model to detect fraudulent credit card transactions.</p>
+                            <p class="project-tools">Python, Jupyter Notebook</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <p><strong>Semester:</strong> N/A</p>
+                                <p><strong>Team size:</strong> 1</p>
+                                <p><strong>Date:</strong> N/A</p>
+                                <p><strong>Grade:</strong> N/A</p>
+                            </div>
+                            <p class="project-description">
+                                In this project, I developed a machine learning model to detect fraudulent credit card transactions. The project involved:
+                                <ul>
+                                    <li><strong>Data Preprocessing:</strong> Cleaning and preparing the dataset for modeling.</li>
+                                    <li><strong>Feature Engineering:</strong> Selecting and transforming features to improve model performance.</li>
+                                    <li><strong>Model Development:</strong> Implementing and training machine learning algorithms to accurately detect fraud.</li>
+                                    <li><strong>Model Evaluation:</strong> Assessing model performance using appropriate metrics and validation techniques.</li>
+                                </ul>
+                                This project enhanced my understanding of fraud detection systems and the application of machine learning in financial contexts.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/diamond-price-prediction.jpeg" alt="Diamond Price Prediction">
+                            <h4>AI powered Stone Price Prediction</h4>
+                            <p class="project-brief">Developed a machine learning model to predict diamond prices using various features like carat, cut, color, and clarity.</p>
+                            <p class="project-tools">Python, scikit-learn, Pandas, Matplotlib</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <p><strong>Semester:</strong> 3</p>
+                                <p><strong>Team size:</strong> 1</p>
+                                <p><strong>Date:</strong> Dec 2023</p>
+                                <p><strong>Grade:</strong> A</p>
+                            </div>
+                            <p class="project-description">
+                                In this project, I built a model to predict diamond prices based on key attributes such as carat, cut, color, clarity, and other features:
+                                <ul>
+                                    <li>Preprocessed and cleaned the data, handling missing values and encoding categorical features.</li>
+                                    <li>Developed and tuned multiple machine learning models including Linear Regression and Random Forest.</li>
+                                    <li>Visualized data distributions and model results using Matplotlib and Seaborn.</li>
+                                    <li>Achieved a high prediction accuracy and deployed the model via a Flask app for real-time predictions.</li>
+                                </ul>
+                                This project provided hands-on experience with data science workflows, machine learning models, and deployment.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/xaugatp/DiamondPricePrediction" target="_blank">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more project cards here -->
+                </div>
+                    <!-- Add more Undergraduate projects here -->
+                </div>
+    
+            </div>
+
+
+            <div class="section" id="timeline">
+                <h2>Education and Experience</h2>
+                <ul class="timeline">
+                    <li class="entry">
+                        <div class="entry-image">
+                            <img loading="lazy" data-src="assets/torrens.png" alt="UCSD Seal" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">
+                                <h3>Bachelor of Software Engineering(Artificial Intelligence)</h3>
+                                <h4 class="organization">Torrens University Australia</h4>
+                                <p class="entry-meta">
+                                    <span class="year">2022 - May 2025</span>
+                                    <span class="location">Sydney, Australia</span>
+                                </p>
+                            </div>
+                            <p>Bachelors of Software Engineering with specialization in Artificial Intelligence.</p>
+                        </div>
+                    </li>
+                    <li class="entry">
+                        <div class="entry-image">
+                            <img loading="lazy" data-src="assets/pwskills-logo.png" alt="PW Skills Logo" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">
+                                <h3>Data Science Intern</h3>
+                                <h4 class="organization">PW Skills</h4>
+                                <p class="entry-meta">
+                                    <span class="year">2023 - 2024</span>
+                                    <span class="location">Remote</span>
+                                </p>
+                            </div>
+                            <p>Collaborated on advanced data science projects, developing AI models to enhance learning platforms and student engagement.</p>
+                            <ul>
+                                <li>Built and deployed AI models to personalize learning paths for students, improving content recommendations.</li>
+                                <li>Developed automated data pipelines to streamline user interaction data collection and analysis, improving platform performance.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="entry">
+                        <div class="entry-image">
+                            <img loading="lazy" data-src="assets/british-airways-logo.png" alt="British Airways Logo" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">s
+                                <h3>Data Science Job Simulation</h3>
+                                <h4 class="organization">British Airways</h4>
+                                <p class="entry-meta">
+                                    <span class="year">2023</span>
+                                    <span class="location">Remote</span>
+                                </p>
+                            </div>
+                            <p>Utilized web scraping techniques to derive actionable insights from company data and developed predictive models to forecast customer buying behavior.</p>
+                            <ul>
+                                <li>Scraped data from travel booking websites and customer reviews to predict flight booking trends.</li>
+                                <li>Built machine learning models to predict the likelihood of customer purchases, optimizing marketing strategies.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="entry">
+                        <div class="entry-image">
+                            <img loading="lazy" data-src="assets/commonwealth-bank-logo.png" alt="Commonwealth Bank Logo" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">
+                                <h3>Intro to Data Science Job Simulation</h3>
+                                <h4 class="organization">Commonwealth Bank</h4>
+                                <p class="entry-meta">
+                                    <span class="year">2023</span>
+                                    <span class="location">Remote</span>
+                                </p>
+                            </div>
+                            <p>Performed data aggregation and anonymization, proposed innovative data analysis approaches, and designed efficient databases for optimal data management.</p>
+                            <ul>
+                                <li>Processed large datasets and implemented anonymization techniques to ensure data privacy.</li>
+                                <li>Proposed advanced data analysis methods to identify financial trends and improve decision-making.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </main>
+        
+        <hr>
+
+        <footer>
+            <p>&copy; 2024 Saugat Poudel. All rights reserved.</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+
+
+    </body>
+</html>
