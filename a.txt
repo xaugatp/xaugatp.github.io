@@ -20,8 +20,9 @@
         <link rel="icon" href="assets/me.png" type="image/x-icon">
 
         <!-- Open Graph tags -->
-        <meta name="description" content="Portfolio of Saugat Poudel, an Aspiring Data Scientist and Machine Learning Engineer .">
-        <meta name="keywords" content="Saugat Poudel, Data Scientist, Machine Learning Engineer, Artificial Intelligence, Portfolio">
+        <meta name="description" content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, MLOps, and AI-driven product development.">
+        <meta name="keywords" content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Artificial Intelligence, Deep Learning, NLP, Cloud Computing, Portfolio">
+
         <a href="https://www.linkedin.com/in/xaugat/" target="_blank">LinkedIn</a>
         <a href="https://github.com/xaugatp" target="_blank">GitHub</a>
         <a href="assets/Resume_Saugat.pdf" target="_blank">Resume</a>
@@ -133,63 +134,63 @@
 
                     <div class="section" id="about">
                         <h2>About</h2>
-                        <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Data Scientist and Machine Learning Engineer</strong> 🤖💡 with a passion for <strong>AI-powered solutions</strong>, <strong>Data Science</strong>, and <strong>MLOps</strong>. <br>
-                            🎓 I am pursuing my <strong>Bachelor's in Software Engineering (Artificial Intelligence)</strong> at Torrens University, Australia. With hands-on experience in <strong>Machine Learning Pipelines</strong>, <strong>Data Science</strong>, and <strong>Modal Deployment</strong>, I strive to <strong>create scalable and impactful solutions</strong>. <br><br>
-                            🌱 My focus is on mastering <strong>ML model deployment</strong>, <strong>Data Science</strong>, and <strong>Integration of LLMS in businesses</strong>.<br><br> <strong>Welcome to my portfolio!</strong></br> </br></p>
-                        <h2>SKILLS</h2>
-                    
-                        <div class="skills-container">
-                            <div class="tab-buttons">
-                                <button class="tab-button active" data-tab="ml-ds">Machine Learning & Data Science</button>
-                                <button class="tab-button" data-tab="programming">Programming</button>
-                                <button class="tab-button" data-tab="dev-tools">Development Tools</button>
-                                <button class="tab-button" data-tab="cloud">MLOps Tools</button>
-                                
-                            </div>
-                    
-                            <div id="ml-ds" class="tab-content active">
-                                <div class="skills-section">
-                                    <div class="skills">
-                                        <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN, CNN, Reinforcement Learning</div>
-                                        <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost</div>
-                                        <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face Transformers</div>
-                                        <div class="skill-item"><span>Data Analysis:</span> NumPy, Pandas, PySpark</div>
-                                        <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn</div>
+                        <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Machine Learning Engineer & Data Scientist</strong> 🤖💡 passionate about <strong>exploring and experimenting Machine Learning models and LLMs </strong>. <br>
+                            🎓 I am pursuing a <strong>Bachelor’s in Software Engineering (AI)</strong> at Torrens University, Australia. With hands-on experience in <strong>Machine learning, deep learning, NLP and Generative AI</strong>, I focus on <strong>delivering impactful, production-ready solutions</strong>. <br><br>
+                            🌱 My expertise lies in <strong>Machine Learning and predictive analytics and integrating Large Language Models (LLMs) into business applications</strong>. <br><br>
+                            🚀 <strong>Welcome to my portfolio!</strong> Feel free to explore my projects and experiences.</p>
+                            <h2>SKILLS</h2>
+
+                            <div class="skills-container">
+                                <div class="tab-buttons">
+                                    <button class="tab-button active" data-tab="ml-ds">Machine Learning & AI</button>
+                                    <button class="tab-button" data-tab="programming">Programming & Databases</button>
+                                    <button class="tab-button" data-tab="dev-tools">Development & Deployment</button>
+                                    <button class="tab-button" data-tab="cloud">Cloud & MLOps</button>
+                                </div>
+                            
+                                <div id="ml-ds" class="tab-content active">
+                                    <div class="skills-section">
+                                        <div class="skills">
+                                            <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN, CNN, Transformers, Reinforcement Learning</div>
+                                            <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost</div>
+                                            <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face Transformers, LangChain</div>
+                                            <div class="skill-item"><span>Data Processing:</span> NumPy, Pandas, PySpark</div>
+                                            <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn, Plotly</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div id="programming" class="tab-content">
+                                    <div class="skills-section">
+                                        <div class="skills">
+                                            <div class="skill-item"><span>Languages:</span> Python, C++</div>
+                                            <div class="skill-item"><span>Web Frameworks:</span> Flask, FastAPI</div>
+                                            <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB, ChromaDB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div id="dev-tools" class="tab-content">
+                                    <div class="skills-section">
+                                        <div class="skills">
+                                            <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
+                                            <div class="skill-item"><span>IDEs & Environments:</span> VS Code, Jupyter Notebooks, PyCharm</div>
+                                            <div class="skill-item"><span>Containerization & Orchestration:</span> Docker, Kubernetes</div>
+                                            <div class="skill-item"><span>CI/CD & Automation:</span> GitHub Actions, Jenkins, CircleCI</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div id="cloud" class="tab-content">
+                                    <div class="skills-section">
+                                        <div class="skills">
+                                            <div class="skill-item"><span>Platforms:</span> AWS (EC2, S3, Beanstalk), Google Cloud</div>
+                                            <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, Weights & Biases</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                    
-                            <div id="programming" class="tab-content">
-                                <div class="skills-section">
-                                    <div class="skills">
-                                        <div class="skill-item"><span>Languages:</span> Python, C++</div>
-                                        <div class="skill-item"><span>Frameworks:</span> Flask</div>
-                                        <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB</div>
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div id="dev-tools" class="tab-content">
-                                <div class="skills-section">
-                                    <div class="skills">
-                                        <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
-                                        <div class="skill-item"><span>IDEs:</span> VS Code, Jupyter Notebooks, PyCharm</div>
-                                        <div class="skill-item"><span>Containerization:</span> Docker</div>
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div id="cloud" class="tab-content">
-                                <div class="skills-section">
-                                    <div class="skills">
-                                        <div class="skill-item"><span>Platforms:</span> AWS EC2, AWS Beanstalk</div>
-                                        <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, CircleCI, Jenkins, Weights & Biases</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                            
 
             <div class="section" id="projects">
                 <h2>Projects</h2>
@@ -199,166 +200,90 @@
 
                     <div class="project-card">
                         <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/pdf-chatbot.png" alt="PDF Chatbot System">
-                            <h4>PDF-Based Chatbot with Hugging Face</h4>
-                            <p class="project-brief">Developed a chatbot system to process PDF data, create embeddings, and enable intelligent Q&A.</p>
-                            <p class="project-tools">Python, PyPDF2, LangChain, Hugging Face, Solara, ChromaDB</p>
+                            <img loading="lazy" data-src="assets/projects/insurance_chatbot.webp" alt="PDF Chatbot System">
+                            <h4>RAG-based Chatbot for Insurance Company</h4>
+                            <p class="project-brief">Developed a chatbot system by finetuning LLM, creating embeddings, and implementing RAG to enable intelligent Q&A.</p>
+                            <p class="project-tools">Python, PyPDF2, LangChain, Hugging Face,Falcon-7B-Instruct, Solara, ChromaDB</p>
                         </div>
                         <button class="view-details-btn">View Details</button>
                         <div class="project-details hidden">
                             <div class="project-info">
-                                <p><strong>Technologies:</strong> Python, PyPDF2, LangChain, Hugging Face, Solara</p>
-                                <p><strong>Vector Database:</strong> ChromaDB</p>
-                                <p><strong>Year:</strong> 2023</p>
+    
                             </div>
-                            <p class="project-description">
-                                This project involved building an interactive chatbot system capable of answering user queries based on PDF documents. The pipeline included:
-                                <ul>
-                                    <li><strong>PDF Processing:</strong> Merged multiple PDFs using PyPDF2 and extracted text data.</li>
-                                    <li><strong>Text Splitting:</strong> Split PDF content into manageable chunks using RecursiveCharacterTextSplitter for efficient processing.</li>
-                                    <li><strong>Vector Database:</strong> Created embeddings for document chunks using Hugging Face's `sentence-transformers` and stored them in a persistent ChromaDB.</li>
-                                    <li><strong>Chatbot Interface:</strong> Built a Solara-based UI for real-time question answering using LangChain's RetrievalQA and Hugging Face models.</li>
-                                    <li><strong>Optimization:</strong> Integrated Hugging Face's `Falcon-7B-Instruct` for enhanced conversational responses with reduced latency.</li>
-                                </ul>
-                                This project showcases expertise in integrating machine learning, vector databases, and user interface design for practical applications.
-                            </p>
+                            <p>About</p>
+
+                                <p>- Designed and developed an AI-driven chatbot capable of answering complex legal queries related to insurance policies.</p>
+
+                                <p>- Integrated semantic search with ChromaDB and Falcon-7B, achieving 90% retrieval precision.</p>
+                                
+                                <p>- Streamlined access to insurance documents and policy details, improving the customer experience.</p>
+                                
+                                <p>- Optimized the chatbot’s performance through prompt engineering and fine-tuning to provide contextually relevant responses.</p>
+                                
+                                <p>- Deployed the chatbot in a cloud environment for easy integration into the insurance company’s existing platform. </p>
                             <div class="project-links">
                                 <a href="https://github.com/xaugatp/chatbot" target="_blank">Code</a>
-                                <! <a href="https://your-demo-link.com" target="_blank"></a-->
+                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
                             </div>
                         </div>
                     </div>
                     
-
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/file-organizer.jpg" alt="Local File Organizer">
-                            <h4>Local File Organizer</h4>
-                            <p class="project-brief">Developed a Python-based tool for organizing files efficiently by content, date, or type.</p>
-                            <p class="project-tools">Python, NLTK, NexaVLM, TensorRT, PyPI</p>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
-                        <div class="project-details hidden">
-                            <div class="project-info">
-                                <p><strong>Team Size:</strong> 3</p>
-                                <p><strong>Date:</strong> 2023</p>
-                                <p><strong>Distribution:</strong> Published as a PyPI package</p>
-                            </div>
-                            <p class="project-description">
-                                The Local File Organizer is a Python tool designed to categorize and manage files in local directories with various customizable modes:
-                                <ul>
-                                    <li><strong>Mode 1: Organize by Content</strong> - Utilizes machine learning models to analyze and classify files based on their content.</li>
-                                    <li><strong>Mode 2: Organize by Date</strong> - Groups files by creation or modification dates.</li>
-                                    <li><strong>Mode 3: Organize by Type</strong> - Sorts files into folders based on file types (e.g., images, documents).</li>
-                                </ul>
-                                <strong>My Responsibilities:</strong>
-                                <ul>
-                                    <li>Implemented the core logic for file classification and organization using Python's <code>os</code> module.</li>
-                                    <li>Integrated advanced machine learning models (NexaVLM and NexaText) for intelligent content-based file organization.</li>
-                                    <li>Added support for natural language processing (NLP) with NLTK for analyzing text files.</li>
-                                    <li>Designed and published the project as a PyPI package for easy installation and use.</li>
-                                    <li>Ensured robust error handling and created detailed documentation for end-users.</li>
-                                </ul>
-                                The tool offers both command-line and interactive modes, making it accessible to a wide range of users. Its silent mode allows operation logs to be saved in a text file for future reference.
-                            </p>
-                            <div class="project-links">
-                                <a href="https://pypi.org/project/local-file-organizer" target="_blank">PyPI Package</a>
-                                <a href="https://github.com/yourusername/local-file-organizer" target="_blank">Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/multiclass_classification_CNN.webp" alt="Multiclass Classification Using CNN">
-                            <h4>Multiclass Classification Using CNN</h4>
-                            <p class="project-brief">Developed a Convolutional Neural Network to classify images into multiple categories with high accuracy.</p>
-                            <p class="project-tools">Python, TensorFlow, Keras</p>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
-                        <div class="project-details hidden">
-                            <div class="project-info">
-                                <p><strong>Semester:</strong> 5</p>
-                                <p><strong>Team size:</strong> 1</p>
-                                <p><strong>Date:</strong> October 2023</p>
-                                <p><strong>Grade:</strong> A</p>
-                            </div>
-                            <p class="project-description">
-                                In this project, I developed a Convolutional Neural Network (CNN) for multiclass image classification:
-                                <ul>
-                                    <li><strong>Data Preparation:</strong> Collected and preprocessed a dataset comprising multiple image categories, ensuring balanced class distribution and adequate sample size for each class.</li>
-                                    <li><strong>Model Architecture:</strong> Designed a CNN architecture with multiple convolutional and pooling layers, followed by fully connected layers, optimized for feature extraction and classification tasks.</li>
-                                    <li><strong>Training and Validation:</strong> Trained the model using the prepared dataset, employing techniques such as data augmentation and dropout to prevent overfitting and enhance generalization.</li>
-                                    <li><strong>Performance Evaluation:</strong> Achieved high accuracy on the validation set, demonstrating the model's effectiveness in correctly classifying images into their respective categories.</li>
-                                    <li><strong>Deployment:</strong> Deployed the trained model as a web application, allowing users to upload images and receive real-time classification results.</li>
-                                </ul>
-                                This project enhanced my understanding of deep learning techniques for image classification and provided practical experience in building and deploying CNN models for real-world applications.
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/xaugatp/multiclass-classification-using-CNN" target="_blank">Code</a>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div class="project-card">
                         <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/CreditCardFraudDetection.jpeg" alt="Credit Card Fraud Detection">
+                            <img loading="lazy" data-src="assets/fraud_detection.png" alt="Credit Card Fraud Detection">
                             <h4>Credit Card Fraud Detection</h4>
-                            <p class="project-brief">Developed a machine learning model to detect fraudulent credit card transactions.</p>
-                            <p class="project-tools">Python, Jupyter Notebook</p>
+                            <p class="project-brief">Developed a fraud detection system using machine learning models to detect fraudulent credit card transactions with high accuracy.</p>
+                            <p class="project-tools">XGBoost, Scikit-learn, Python, ML-Flow, Docker, Streamlit</p>
                         </div>
                         <button class="view-details-btn">View Details</button>
                         <div class="project-details hidden">
                             <div class="project-info">
-                                <p><strong>Semester:</strong> N/A</p>
-                                <p><strong>Team size:</strong> 1</p>
-                                <p><strong>Date:</strong> N/A</p>
-                                <p><strong>Grade:</strong> N/A</p>
+                            <p>About:</p>
+
+                            <p>- Engineered an ensemble model combining XGBoost with Scikit-learn to achieve 95% fraud detection accuracy.</p>
+
+                            <p>- Applied anomaly detection techniques to improve the system's ability to detect unusual patterns in transactions.</p>
+                            
+                            <p>- Reduced false positives by 22%, enhancing the model's precision and improving overall transaction security.</p>
+                            
+                            <p>- Performed cross-validation and tuned the model to ensure scalability and robustness.</p>
+                            
+                            <p>- Deployed the model into a real-time transaction monitoring system, ensuring fast and accurate fraud detection.</p>
                             </div>
-                            <p class="project-description">
-                                In this project, I developed a machine learning model to detect fraudulent credit card transactions. The project involved:
-                                <ul>
-                                    <li><strong>Data Preprocessing:</strong> Cleaning and preparing the dataset for modeling.</li>
-                                    <li><strong>Feature Engineering:</strong> Selecting and transforming features to improve model performance.</li>
-                                    <li><strong>Model Development:</strong> Implementing and training machine learning algorithms to accurately detect fraud.</li>
-                                    <li><strong>Model Evaluation:</strong> Assessing model performance using appropriate metrics and validation techniques.</li>
-                                </ul>
-                                This project enhanced my understanding of fraud detection systems and the application of machine learning in financial contexts.
-                            </p>
+                            
                             <div class="project-links">
                                 <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank">Code</a>
+                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
                             </div>
                         </div>
                     </div>
                     
                     <div class="project-card">
                         <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/diamond-price-prediction.jpeg" alt="Diamond Price Prediction">
-                            <h4>AI powered Stone Price Prediction</h4>
-                            <p class="project-brief">Developed a machine learning model to predict diamond prices using various features like carat, cut, color, and clarity.</p>
-                            <p class="project-tools">Python, scikit-learn, Pandas, Matplotlib</p>
+                            <img loading="lazy" data-src="assets/ts.jpg" alt="Diamond Price Prediction">
+                            <h4>Stock Market Analysis and Prediction with LSTM</h4>
+                            <p class="project-brief">: Developed a time-series forecasting model using LSTM (Long Short-Term Memory), leveraging TensorFlow/Keras to predict stock market trends with high accuracy..</p>
+                            <p class="project-tools">Python, Tensorflow, Pandas, Numpy, Seaborn, Matplotlib, Streamlit, LLM-Gemeni</p>
                         </div>
                         <button class="view-details-btn">View Details</button>
                         <div class="project-details hidden">
                             <div class="project-info">
-                                <p><strong>Semester:</strong> 3</p>
-                                <p><strong>Team size:</strong> 1</p>
-                                <p><strong>Date:</strong> Dec 2023</p>
-                                <p><strong>Grade:</strong> A</p>
                             </div>
-                            <p class="project-description">
-                                In this project, I built a model to predict diamond prices based on key attributes such as carat, cut, color, clarity, and other features:
-                                <ul>
-                                    <li>Preprocessed and cleaned the data, handling missing values and encoding categorical features.</li>
-                                    <li>Developed and tuned multiple machine learning models including Linear Regression and Random Forest.</li>
-                                    <li>Visualized data distributions and model results using Matplotlib and Seaborn.</li>
-                                    <li>Achieved a high prediction accuracy and deployed the model via a Flask app for real-time predictions.</li>
-                                </ul>
-                                This project provided hands-on experience with data science workflows, machine learning models, and deployment.
-                            </p>
+                            <p>About</p>
+
+                                <p>- Engineered an LSTM model to predict stock market trends with 95% accuracy, leveraging historical data and technical indicators.</p>
+
+                                <p>- Integrated GPT-3 for sentiment analysis and news sentiment scoring to enhance the model's predictive capabilities.</p>
+                                
+                                <p>- Developed a user-friendly dashboard using Streamlit to visualize stock trends and predictions, enabling easy interpretation of results.</p>
+                                
+                                <p>- Conducted backtesting and model evaluation to ensure the model's reliability and robustness in real-world scenarios.</p>
+                                
+                                <p>- Deployed the model as a web application, providing real-time stock market predictions to users.</p>
                             <div class="project-links">
                                 <a href="https://github.com/xaugatp/DiamondPricePrediction" target="_blank">GitHub Repository</a>
+                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
                             </div>
                         </div>
                     </div>
@@ -369,47 +294,128 @@
                 </div>
     
             </div>
+
+            <div class="section" id="projects">
+                <h2>Education</h2>
             <div class="section" id="timeline">
-                <h2>Education and Experience</h2>
-                <ul class="timeline">
+            <li class="entry">
+                <div class="entry-image">
+                    <img loading="lazy" data-src="assets/torrens.png" alt="UCSD Seal" />
+                </div>
+                <div class="entry-content">
+                    <div class="entry-dot"></div>
+                    <div class="entry-header">
+                        <h3>Bachelor of Software Engineering(Artificial Intelligence)</h3>
+                        <h4 class="organization">Torrens University Australia</h4>
+                        <p class="entry-meta">
+                            <span class="year">2022 - May 2025</span>
+                            <span class="location">Sydney, Australia</span>
+                        </p>
+                    </div>
+                    <p>Bachelors of Software Engineering with specialization in Artificial Intelligence.</p>
+                </div>
+            </div>
+            </li>
+            <div class="section" id="certifications">
+                <h2>Certifications</h2>
+                <div class="section" id="timeline">
                     <li class="entry">
                         <div class="entry-image">
-                            <img loading="lazy" data-src="assets/torrens.png" alt="UCSD Seal" />
+                            <img loading="lazy" data-src="assets/projects/llogo.png" alt="DeepLearning.AI Logo" />
                         </div>
                         <div class="entry-content">
                             <div class="entry-dot"></div>
                             <div class="entry-header">
-                                <h3>Bachelor of Software Engineering(Artificial Intelligence)</h3>
-                                <h4 class="organization">Torrens University Australia</h4>
+                                <h3>Machine Learning Specialization</h3>
+                                <h4 class="organization">DeepLearning.AI</h4>
                                 <p class="entry-meta">
-                                    <span class="year">2022 - May 2025</span>
-                                    <span class="location">Sydney, Australia</span>
+                                    <span class="year">Completed: 2024</span>
                                 </p>
                             </div>
-                            <p>Bachelors of Software Engineering with specialization in Artificial Intelligence.</p>
-                        </div>
+                            <p>Comprehensive specialization covering fundamental machine learning algorithms, deep learning models, and real-world AI applications.</p>
+                            <a href="assets/projects/mls.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
+                            <style>.certificate-btn:hover { background-color: #45a049; } .certificate-btn:active { background-color: #397539; }</style>
+
                     </li>
+            
                     <li class="entry">
                         <div class="entry-image">
-                            <img loading="lazy" data-src="assets/pwskills-logo.png" alt="PW Skills Logo" />
+                            <img loading="lazy" data-src="assets/pwskills-logo.png" alt="PwSkills Logo" />
                         </div>
                         <div class="entry-content">
                             <div class="entry-dot"></div>
                             <div class="entry-header">
-                                <h3>Data Science Bootcamp + Intern</h3>
-                                <h4 class="organization">PW Skills</h4>
+                                <h3>Data Science Bootcamp</h3>
+                                <h4 class="organization">PwSkills</h4>
                                 <p class="entry-meta">
-                                    <span class="year">2023 - 2024</span>
-                                    <span class="location">Remote</span>
+                                    <span class="year">2023-2025</span>
                                 </p>
                             </div>
-                            <p>Collaborated on advanced data science projects, developing AI models to enhance learning platforms and student engagement.</p>
+                            <p>Intensive bootcamp focused on data wrangling, statistical analysis, machine learning techniques, and business data analytics for practical decision-making.</p>
+                            <a href="assets/projects/pwskills certificate.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
+                        </div>
+                        
+                    </li>
+                </div>
+            </div>
+            
+    
+
+            <div class="section" id="timeline">
+                <h2>Experience</h2>
+                <ul class="timeline">
+                    
+                    <!-- New experiences -->
+                    <li class="entry">
+                        <div class="entry-image" style="background-color:black;">
+                            <img loading="lazy" src="assets/xonects-logo.webp" alt="Xonects Logo" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">
+                                <h3>AI/ML Engineer Internship</h3>
+                                <h4 class="organization">Xonects</h4>
+                                <p class="entry-meta">
+                                    <span class="year">Sep 2024 – Jan 2025</span>
+                                    <span class="location">Sydney</span>
+                                </p>
+                            </div>
+                            <p>Contributed to the end-to-end development of AI/ML solutions, including contract analysis pipeline development and machine learning model optimization for operational forecasting.</p>
                             <ul>
-                                <li>Built and deployed AI models to personalize learning paths for students, improving content recommendations.</li>
-                                <li>Developed automated data pipelines to streamline user interaction data collection and analysis, improving platform performance.</li>
+                                <li>Developed a contract analysis pipeline, including data extraction, cleaning, and analysis, reducing document review time by 35% for 26+ clients.</li>
+                                <li>Experimented with machine learning and deep learning algorithms, optimized XGBoost with Hyperopt for forecasting, improving decision-making efficiency by 20% during pre-launch trials.</li>
+                                <li>Deployed scalable MLOps pipelines using Docker, Kubernetes, and MLflow on AWS, cutting deployment time by 30% and ensuring high scalability and availability.</li>
+                                <li>Collaborated with cross-functional teams to integrate AI solutions into operational systems, enhancing business productivity and forecasting accuracy.</li>
                             </ul>
                         </div>
                     </li>
+                    
+                    <li class="entry">
+                        <div class="entry-image">
+                            <img loading="lazy" src="assets/sms-neotech-logo.jpg" alt="SMS Neotech Logo" />
+                        </div>
+                        <div class="entry-content">
+                            <div class="entry-dot"></div>
+                            <div class="entry-header">
+                                <h3>ML Engineer Trainee</h3>
+                                <h4 class="organization">SMS Neotech</h4>
+                                <p class="entry-meta">
+                                    <span class="year">Feb 2024 – Aug 2024</span>
+                                    <span class="location">Remote</span>
+                                </p>
+                            </div>
+                            <p>Assisted in designing and implementing data pipelines, developing predictive models, and deploying machine learning solutions to improve business processes.</p>
+                            <ul>
+                                <li>Assisted in designing and implementing data pipelines for efficient data ingestion, cleaning, and transformation.</li>
+                                <li>Developed and fine-tuned machine learning models to forecast key business metrics, improving decision-making processes.</li>
+                                <li>Collaborated with cross-functional teams to integrate data-driven insights into product features and enhancements.</li>
+                                <li>Supported the deployment of models and applications using containerization (Docker) and cloud platforms, gaining practical MLOps experience.</li>
+                                <li>Built and optimized predictive models to forecast customer purchasing behavior, reducing churn by 12% and enhancing retention strategies.</li>
+                                <li>Implemented data-driven decision-making frameworks, enabling improved customer insights and business outcomes.</li>
+                            </ul>
+                        </div>
+                    </li>
+
                     <li class="entry">
                         <div class="entry-image">
                             <img loading="lazy" src="assets/british-airways-logo.png" alt="British Airways Logo" />
@@ -419,6 +425,7 @@
                             <div class="entry-header">
                                 <h3>Data Science Job Simulation</h3>
                                 <h4 class="organization">British Airways</h4>
+                                <a href="assets/projects/british_airways_certificate.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
                                 <p class="entry-meta">
                                     <span class="year">2023</span>
                                     <span class="location">Remote</span>
@@ -440,6 +447,7 @@
                             <div class="entry-header">
                                 <h3>Intro to Data Science Job Simulation</h3>
                                 <h4 class="organization">Commonwealth Bank</h4>
+                                <a href="assets/projects/cb.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
                                 <p class="entry-meta">
                                     <span class="year">2023</span>
                                     <span class="location">Remote</span>
@@ -449,51 +457,6 @@
                             <ul>
                                 <li>Processed large datasets and implemented anonymization techniques to ensure data privacy.</li>
                                 <li>Proposed advanced data analysis methods to identify financial trends and improve decision-making.</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- New experiences -->
-                    <li class="entry">
-                        <div class="entry-image" style="background-color:black;">
-                            <img loading="lazy" src="assets/xonects-logo.webp" alt="Xonects Logo" />
-                        </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>AI/ML Engineer Internship</h3>
-                                <h4 class="organization">Xonects</h4>
-                                <p class="entry-meta">
-                                    <span class="year">Sep 2024 – Jan 2025</span>
-                                    <span class="location">Sydney</span>
-                                </p>
-                            </div>
-                            <p>End-to-end development of contract analysis pipeline and machine learning model optimization for operational forecasting.</p>
-                            <ul>
-                                <li>Developed contract analysis pipeline, performing data extraction, cleaning, and analysis, reducing document review time by 35% for 26+ clients.</li>
-                                <li>Experimented with machine learning and deep learning algorithms, optimized XGBoost with Hyperopt for forecasting, improving decision-making efficiency by 20% during pre-launch trials.</li>
-                                <li>Deployed scalable MLOps pipelines using Docker, Kubernetes, and MLflow on AWS, cutting deployment time by 30%.</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" src="assets/sms-neotech-logo.jpg" alt="SMS Neotech Logo" />
-                        </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>ML Engineer Trainee</h3>
-                                <h4 class="organization">SMS Neotech</h4>
-                                <p class="entry-meta">
-                                    <span class="year">Feb 2024 – Aug 2024</span>
-                                    <span class="location">Remote</span>
-                                </p>
-                            </div>
-                            <p>Developed AI-powered solutions and scalable APIs to improve document management and real-time response for users.</p>
-                            <ul>
-                                <li>Developed an AI-powered file organizer using PyQt and Gemini LLM, reducing document search time by 40%.</li>
-                                <li>Built a RAG-based legal chatbot (LangChain, ChromaDB) with 95% accuracy for retrieving page-specific references from legal documents.</li>
-                                <li>Deployed scalable APIs (FastAPI, Docker) to reduce latency by 25%, ensuring real-time response for 500+ daily users.</li>
                             </ul>
                         </div>
                     </li>
