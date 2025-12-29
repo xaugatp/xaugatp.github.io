@@ -1,91 +1,249 @@
 /* Projects Section */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
+.featured-section {
+    background: var(--bg-secondary);
+    perspective: 1000px;
 }
 
-.project-card {
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.featured-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-lg);
+.featured-card:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+    box-shadow:
+        20px 20px 60px rgba(0, 0, 0, 0.5),
+        -5px -5px 20px rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+    z-index: 10;
 }
 
-.project-preview {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.project-preview img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--border);
+.featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-preview img {
-    transform: scale(1.05);
+.featured-card:hover::before {
+    transform: scaleX(1);
 }
 
-.project-preview h4 {
-    padding: 20px 24px 8px;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin: 0;
-}
-
-.project-brief {
-    padding: 0 24px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+.featured-content {
+    padding: 32px;
     flex-grow: 1;
-    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
 }
 
-.project-tools {
-    padding: 0 24px 20px;
-    font-size: 0.8rem;
-    color: var(--primary-light);
-    font-weight: 500;
-    margin: 0;
+.featured-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
 }
 
-.view-details-btn {
-    margin: 0 24px 24px;
-    padding: 12px 24px;
-    background: transparent;
-    border: 1px solid var(--primary);
-    color: var(--primary-light);
-    border-radius: var(--radius-md);
+.featured-content p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.featured-specs {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+}
+
+.featured-specs li {
     font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.featured-specs strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary-light);
+}
+
+.featured-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.featured-tech span {
+    padding: 6px 14px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-light);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-start;
 }
 
-.view-details-btn:hover {
+.btn-link {
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
+}
+
+.btn-link:hover {
+    gap: 10px;
+    color: var(--primary-light);
+}
+
+/* Fake UI Visuals for 3D Cards */
+.featured-image {
+    height: 220px;
+    background: #0f0f13;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fake-ui {
+    width: 80%;
+    height: 80%;
+    background: #1e1e24;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .fake-ui {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Chat UI */
+.ui-header {
+    height: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 6px;
+}
+
+.ui-header span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.ui-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg-bot {
+    background: rgba(99, 102, 241, 0.2);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: var(--primary-light);
+    width: fit-content;
+}
+
+/* Graph UI */
+.graph-ui {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 20px 10px 10px;
+}
+
+.graph-bar {
+    width: 15%;
     background: var(--primary);
-    color: white;
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+    border-radius: 4px 4px 0 0;
+    opacity: 0.5;
 }
 
-.hidden {
-    display: none;
+.graph-bar.alert {
+    background: #f43f5e;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+}
+
+/* Code UI */
+.code-ui {
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #a5b4fc;
+}
+
+/* Cam UI */
+.cam-ui {
+    background: url('../assets/projects/construction.jpg') center/cover;
+    /* Fallback if no image */
+    background-color: #2d2d35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-detect {
+    border: 2px solid #22d3ee;
+    padding: 4px;
+    color: #22d3ee;
+    font-size: 0.7rem;
+    background: rgba(34, 211, 238, 0.1);
+}
+
+/* Card UI */
+.card-ui {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-sm {
+    width: 40px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 /* Modal */
