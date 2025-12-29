@@ -1,129 +1,195 @@
-.gradient-background {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg, 
-        #ffffff,  /* Pure white */
-        #f0f8ff,  /* Alice Blue */
-        #f5f5f5,  /* White Smoke */
-        #e6f2ff,  /* Very light blue */
-        #f0f0f0,  /* Light gray */
-        #e1ebf7,  /* Another light blue shade */
-        #fafafa   /* Very light gray, almost white */
-    );
-    background-size: 300% 300%;
-    animation: gradientAnimation 20s ease infinite;
-}
-
-@keyframes gradientAnimation {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
+/* Hero Section */
 #dhead {
     width: 100%;
-    /* height: 100vh; */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa;
     text-align: center;
     box-sizing: border-box;
-    padding: 80px 20px; 
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    /* Soft warm glow spotlight */
+    background: radial-gradient(circle at center, rgba(244, 63, 94, 0.08) 0%, transparent 60%);
+}
+
+#dhead .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 10;
+}
+
+/* Profile Picture */
+#dpic {
+    position: relative;
+    margin-bottom: 20px;
 }
 
 #dpic img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: opacity 0.05s ease-in-out;
+    object-fit: cover;
+    border: 3px solid rgba(99, 102, 241, 0.5);
+    /* Indigo Border */
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+    transition: all 0.5s ease;
 }
 
+#dpic::after {
+    content: '';
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    z-index: -1;
+    opacity: 0.4;
+    filter: blur(25px);
+    transition: opacity 0.5s ease;
+}
+
+#dpic:hover img {
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+    /* Rose on hover */
+}
+
+#dpic:hover::after {
+    opacity: 0.7;
+    filter: blur(30px);
+}
+
+/* Text Content */
 #ddesc h1 {
-    font-size: 2em;
+    font-size: 4.5rem;
+    font-weight: 800;
     margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(to right, #fff, #c7d2fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -2px;
 }
 
 #ddesc h2 {
-    font-size: 1em;
-    margin: 10px 0;
-    color: gray;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 15px 0 35px;
+    color: var(--accent-color);
+    /* Amber/Gold for "Explorer" feel */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    text-align: center;
+    text-transform: none;
+    display: block;
+    left: auto;
+    transform: none;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
 }
 
+#ddesc h2::after {
+    display: none;
+}
+
+/* Social Icons */
 #dico {
-    margin: 20px 0;
-}
-
-#dico a, #dico img {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 35px;
 }
 
 .iico {
     width: 30px;
     height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+    filter: invert(1) brightness(2);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0.8;
 }
 
-.iico:hover {
-    transform: translateY(-2px);
-}
-
-#dico a::after, #dico img::after {
-    content: attr(aria-label);
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-}
-
-#dico a:hover::after, #dico img:hover::after {
+#dico a:hover .iico,
+#dico img.iico:hover {
+    transform: translateY(-5px) scale(1.1);
     opacity: 1;
-    visibility: visible;
+    filter: drop-shadow(0 0 8px var(--secondary-color));
+    /* Rose Glow */
 }
 
-#dico img#iemail::after {
-    content: attr(title);
-}
-
+/* Resume Button - High Engagement Gradient */
 .resume-button {
     display: inline-flex;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 10px 20px;
-    border-radius: 25px;
+    gap: 12px;
+    /* Engaging warm gradient */
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 16px 36px;
+    border-radius: 100px;
     text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 25px rgba(244, 63, 94, 0.4);
+    /* Rose Shadow */
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.resume-button span,
+.resume-button img,
+.resume-button .iico {
+    position: relative;
+    z-index: 2;
 }
 
 .resume-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.5);
+    /* Indigo Shadow */
+}
+
+.resume-button:hover::before {
+    opacity: 1;
 }
 
 .resume-button .iico {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    /* filter: brightness(0) invert(1);  This ensures the icon is white */
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+    opacity: 1;
+    margin: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #ddesc h1 {
+        font-size: 2.5rem;
+    }
+
+    #ddesc h2 {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
 }

@@ -1,70 +1,79 @@
-@keyframes subtleGoldFlow {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
 nav {
-    padding: 15px 5%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 90%;
-    top: 0;
+    top: 20px;
+    left: 5%;
     z-index: 1000;
-    transition: all 0.3s ease;
-}
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-nav:not(.scrolled) {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    /* Default Glass State */
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 6px rgba(52, 73, 94, 0.1);
+    background: rgba(2, 6, 23, 0.85);
+    /* Deep midnight */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    border-color: rgba(99, 102, 241, 0.2);
+    /* Indigo tint border */
+    top: 10px;
+    padding: 15px 5%;
 }
 
+/* Logo Area */
 .nav-left a {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
     color: var(--text-primary);
-    transition: color 0.3s ease;
+    position: relative;
+    letter-spacing: -0.5px;
 }
 
-.nav-left a:hover {
-    color: transparent;
-    background: linear-gradient(90deg, 
-        #c0392b, /* Darker red */
-        #e74c3c, /* Accent red */
-        #f39c12, /* Orange */
-        #e74c3c, /* Accent red */
-        #c0392b  /* Darker red */
-    );
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: warmLiquidFlow 4s linear infinite;
-    text-shadow: 0 0 2px rgba(231, 76, 60, 0.3);
+.nav-left a::before {
+    content: '';
+    position: absolute;
+    inset: -5px -10px;
+    background: linear-gradient(90deg, transparent, rgba(244, 63, 94, 0.1), transparent);
+    /* Rose flash */
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0.5s;
+    z-index: -1;
 }
 
+.nav-left a:hover::before {
+    transform: skewX(-20deg) translateX(150%);
+}
+
+/* Desktop Links */
 .nav-right {
     display: flex;
-    gap: 25px;
+    gap: 30px;
+    align-items: center;
 }
 
 .nav-right a {
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
     position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-glow);
 }
 
 .nav-right a::after {
@@ -72,25 +81,20 @@ nav.scrolled {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
-    background-color: var(--primary-color);
+    /* Warm Gradient Underline */
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
     transition: width 0.3s ease;
-}
-
-.nav-right a:hover {
-    color: var(--primary-color);
+    border-radius: 2px;
 }
 
 .nav-right a:hover::after {
     width: 100%;
 }
 
+/* Mobile Toggle */
 .nav-mobile {
-    display: none;
-}
-
-#mobile-menu {
     display: none;
 }
 
@@ -98,7 +102,28 @@ nav.scrolled {
     display: none;
 }
 
+#mobile-menu {
+    display: none;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+    nav {
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        padding: 15px 20px;
+        background: rgba(2, 6, 23, 0.9);
+    }
+
+    nav.scrolled {
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+    }
+
     .nav-right {
         display: none;
     }
@@ -113,39 +138,40 @@ nav.scrolled {
         align-items: center;
         width: 40px;
         height: 40px;
-        background-color: var(--primary-color);
-        color: var(--text-light);
-        border: none;
+        background: transparent;
+        color: var(--text-primary);
+        border: 1px solid var(--glass-border);
         border-radius: 8px;
         cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        box-shadow: 0 4px 6px rgba(52, 73, 94, 0.1);
+        transition: all 0.3s ease;
     }
 
     #menu-toggle:hover {
-        background-color: var(--secondary-color);
-    }
-
-    #menu-toggle:active {
-        transform: scale(0.98);
-    }
-
-    #menu-toggle:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
     }
 
     #mobile-menu {
         display: none;
+        /* JS toggles to Flex */
         flex-direction: column;
-        gap: 15px;
+        gap: 0;
         position: absolute;
         top: 100%;
+        /* Below navbar */
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.95);
-        padding: 15px 5%;
-        box-shadow: 0 4px 6px rgba(52, 73, 94, 0.1);
+        background: rgba(2, 6, 23, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        padding: 0;
+        overflow: hidden;
+        /* Animation handled by class toggling max-height or transform usually, 
+           but basic display toggle is what existing JS does. 
+           We'll stick to that but make it look good. */
     }
 
     #mobile-menu.open {
@@ -155,12 +181,22 @@ nav.scrolled {
     #mobile-menu a {
         text-decoration: none;
         color: var(--text-secondary);
-        font-weight: 400;
-        font-size: 1rem;
-        transition: color 0.3s ease;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        transition: all 0.2s ease;
+        text-align: center;
     }
 
     #mobile-menu a:hover {
-        color: var(--primary-color);
+        background: rgba(244, 63, 94, 0.05);
+        /* Rose tint */
+        color: var(--secondary-color);
+        letter-spacing: 1px;
+    }
+
+    #mobile-menu a:last-child {
+        border-bottom: none;
     }
 }

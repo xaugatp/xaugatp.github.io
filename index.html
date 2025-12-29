@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- , shrink-to-fit=no -->
-        <title>Saugat Poudel - Data Scientist| ML Engineer| AI Engineer | Portfolio</title>
-        <meta name="description" content="Portfolio of Saugat Poudel, an Aspiring Data Scientist and Machine Learning Engineer .">
-        <meta name="keywords" content="Saugat Poudel, Data Scientist, Machine Learning Engineer, Artificial Intelligence, Portfolio">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/nav.css">
-        <link rel="stylesheet" type="text/css" href="styles/info.css">
-        <link rel="stylesheet" type="text/css" href="styles/about.css">
-        <link rel="stylesheet" type="text/css" href="styles/timeline.css">
-        <link rel="stylesheet" type="text/css" href="styles/projects.css">
-        <link rel="stylesheet" type="text/css" href="styles/publications.css">
-        <link rel="stylesheet" type="text/css" href="styles/blog.css">
 
-         <!-- Favicon -->
-        <link rel="icon" href="assets/me.png" type="image/x-icon">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saugat Poudel - Data Scientist | ML Engineer | AI Engineer | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, MLOps, and AI-driven product development.">
+    <meta name="keywords"
+        content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Artificial Intelligence, Deep Learning, NLP, Cloud Computing, Portfolio">
 
-        <!-- Open Graph tags -->
-        <meta name="description" content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, MLOps, and AI-driven product development.">
-        <meta name="keywords" content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Artificial Intelligence, Deep Learning, NLP, Cloud Computing, Portfolio">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="styles/info.css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <link rel="stylesheet" type="text/css" href="styles/timeline.css">
+    <link rel="stylesheet" type="text/css" href="styles/projects.css">
+    <link rel="stylesheet" type="text/css" href="styles/publications.css">
+    <link rel="stylesheet" type="text/css" href="styles/blog.css">
 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/me.png" type="image/x-icon">
 
-        <!-- Structured Data Markup -->
+    <!-- Structured Data Markup -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -50,425 +49,462 @@
           "description": "Saugat Poudel is a graduate student at Torrens University Australia, specializing in Machine Learning, Data Science, and Large Language Models (LLMs)."
         }
         </script>
-    </head>
-    <body>
-        <header class="gradient-background">
-            <nav>
-                <div class="nav-left">
-                    <a href="#dhead" class="nav-link">Saugat Poudel</a>
-                </div>
-                <div class="nav-right">
+</head>
+
+<body>
+    <header class="gradient-background">
+        <nav id="navbar">
+            <div class="nav-left">
+                <a href="#dhead" class="nav-link">Saugat Poudel</a>
+            </div>
+            <div class="nav-right">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <!-- Pointing Timeline to Experience for now, as is common -->
+                <a href="#experience" class="nav-link">Timeline</a>
+            </div>
+            <div class="nav-mobile">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div id="mobile-menu">
                     <a href="#about" class="nav-link">About</a>
-                    <a href="#blog" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#timeline" class="nav-link">Timeline</a>
+                    <a href="#experience" class="nav-link">Timeline</a>
                 </div>
-                <div class="nav-mobile">
-                    <!-- <button id="menu-toggle">Menu</button> -->
-                    <button id="menu-toggle" aria-label="Toggle menu">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div id="mobile-menu">
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#blog" class="nav-link">Skills</a>
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <a href="#timeline" class="nav-link">Timeline</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div id="dhead" class="container gradient-background">
-                <div class="row">
-                    <div id="dpic">
-                        <img src="assets/me.png" alt="Saugat Poudel Data Scientiest and ML Engineer" />
-                    </div>
-                    <div id="ddesc">
-                        <h1>Saugat Poudel</h1>
-                        <h2>Exploring the Frontiers of AI and Data Science<br> 
-                            
-                            </h2>
-                        <div id="dico">
-                            <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" class="iico" alt="Connect with Saugat on LinkedIn"/></a>
-                            <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" class="iico" alt="View Saugat's GitHub projects"/></a>
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" style="cursor: pointer;" class="iico" id="iemail" title="Click to reveal Saugat's email" alt="Contact Saugat via email" />
-                        </div>
-                        <div id="demail"></div>
-                        <a href="assets/Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">
-                            <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/filetext.svg" class="iico" alt="PDF icon" /> -->
-                            <img src="assets/resume.svg" class="iico" alt="PDF icon" />
+            </div>
+        </nav>
+    </header>
 
-                            View Resume
-                        </a>
+    <main>
+        <!-- Hero Section -->
+        <section id="dhead" class="container gradient-background">
+            <div class="row">
+                <div id="dpic">
+                    <img src="assets/me.png" alt="Saugat Poudel Data Scientist and ML Engineer" />
+                </div>
+                <div id="ddesc">
+                    <h1>Saugat Poudel</h1>
+                    <h2>Exploring the Frontiers of AI and Data Science</h2>
+                    <div id="dico">
+                        <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><img
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" class="iico"
+                                alt="Connect with Saugat on LinkedIn" /></a>
+                        <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg"
+                                class="iico" alt="View Saugat's GitHub projects" /></a>
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" style="cursor: pointer;"
+                            class="iico" id="iemail" title="Click to reveal Saugat's email"
+                            alt="Contact Saugat via email" />
+                    </div>
+                    <div id="demail"></div>
+                    <a href="assets/Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">
+                        <img src="assets/resume.svg" class="iico" alt="PDF icon" />
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2>About</h2>
+            <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Machine Learning Engineer & Data Scientist</strong>
+                🤖💡 passionate about <strong>exploring and experimenting with Machine Learning models and
+                    LLMs</strong>. <br>
+                🎓 I am pursuing a <strong>Bachelor’s in Software Engineering (AI)</strong> at Torrens University,
+                Australia. With hands-on experience in <strong>Machine learning, deep learning, NLP, and Generative
+                    AI</strong>, I focus on <strong>delivering impactful, production-ready solutions</strong>. <br><br>
+                🌱 My expertise lies in <strong>Machine Learning, predictive analytics, and integrating Large Language
+                    Models (LLMs) into business applications</strong>. <br><br>
+                🚀 <strong>Welcome to my portfolio!</strong> Feel free to explore my projects and experiences.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2>SKILLS</h2>
+            <div class="skills-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="ml-ds">Machine Learning & AI</button>
+                    <button class="tab-button" data-tab="programming">Programming & Databases</button>
+                    <button class="tab-button" data-tab="dev-tools">Development & Deployment</button>
+                    <button class="tab-button" data-tab="cloud">Cloud & MLOps</button>
+                </div>
+
+                <div id="ml-ds" class="tab-content active">
+                    <div class="skills-section">
+                        <div class="skills">
+                            <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN,
+                                CNN, Transformers, Reinforcement Learning</div>
+                            <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow,
+                                PyTorch, Keras, XGBoost</div>
+                            <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face
+                                Transformers, LangChain</div>
+                            <div class="skill-item"><span>Data Processing:</span> NumPy, Pandas, PySpark</div>
+                            <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn, Plotly</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="programming" class="tab-content">
+                    <div class="skills-section">
+                        <div class="skills">
+                            <div class="skill-item"><span>Languages:</span> Python, C++</div>
+                            <div class="skill-item"><span>Web Frameworks:</span> Flask, FastAPI</div>
+                            <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB, ChromaDB</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dev-tools" class="tab-content">
+                    <div class="skills-section">
+                        <div class="skills">
+                            <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
+                            <div class="skill-item"><span>IDEs & Environments:</span> VS Code, Jupyter Notebooks,
+                                PyCharm</div>
+                            <div class="skill-item"><span>Containerization & Orchestration:</span> Docker, Kubernetes
+                            </div>
+                            <div class="skill-item"><span>CI/CD & Automation:</span> GitHub Actions, Jenkins, CircleCI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cloud" class="tab-content">
+                    <div class="skills-section">
+                        <div class="skills">
+                            <div class="skill-item"><span>Platforms:</span> AWS (EC2, S3, Beanstalk), Google Cloud</div>
+                            <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, Weights & Biases</div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-<!-- Popup Modal -->
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modal-project-content"></div>
-    </div>
-</div>
-
-
-                    <!-- <h4>Tasks</h4>
-                    <div class="skills">
-                        <div class="skill-item"><span>Large Language Models:</span> PEFT finetuning, distillation, RAG, Agents</div>
-                        <div class="skill-item"><span>Computer Vision:</span> Image Generation, Image Classification, Segmentation, Object Detection</div>
-                        <div class="skill-item"><span>Data Processing:</span> Data cleaning, Feature extraction, EDA</div>
-                        <div class="skill-item"><span>Tabular ML:</span> Classification, Regression, Clustering, Dimensionality Reduction</div>
-                        <div class="skill-item"><span>Natural Language Processing:</span> Text Classification, Named Entity Recognition, Sentiment Analysis</div>
-                        <div class="skill-item"><span>Speech Processing:</span> Speech Recognition, Text-to-Speech</div>
-                        <div class="skill-item"><span>Time Series:</span> Forecasting, Analysis</div>
-                    </div> -->
-                
-                    <!-- <h4>Frameworks</h4> -->
-
-                    <div class="section" id="about">
-                        <h2>About</h2>
-                        <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Machine Learning Engineer & Data Scientist</strong> 🤖💡 passionate about <strong>exploring and experimenting Machine Learning models and LLMs </strong>. <br>
-                            🎓 I am pursuing a <strong>Bachelor’s in Software Engineering (AI)</strong> at Torrens University, Australia. With hands-on experience in <strong>Machine learning, deep learning, NLP and Generative AI</strong>, I focus on <strong>delivering impactful, production-ready solutions</strong>. <br><br>
-                            🌱 My expertise lies in <strong>Machine Learning and predictive analytics and integrating Large Language Models (LLMs) into business applications</strong>. <br><br>
-                            🚀 <strong>Welcome to my portfolio!</strong> Feel free to explore my projects and experiences.</p>
-                            <h2>SKILLS</h2>
-
-                            <div class="skills-container">
-                                <div class="tab-buttons">
-                                    <button class="tab-button active" data-tab="ml-ds">Machine Learning & AI</button>
-                                    <button class="tab-button" data-tab="programming">Programming & Databases</button>
-                                    <button class="tab-button" data-tab="dev-tools">Development & Deployment</button>
-                                    <button class="tab-button" data-tab="cloud">Cloud & MLOps</button>
-                                </div>
-                            
-                                <div id="ml-ds" class="tab-content active">
-                                    <div class="skills-section">
-                                        <div class="skills">
-                                            <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN, CNN, Transformers, Reinforcement Learning</div>
-                                            <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost</div>
-                                            <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face Transformers, LangChain</div>
-                                            <div class="skill-item"><span>Data Processing:</span> NumPy, Pandas, PySpark</div>
-                                            <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn, Plotly</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div id="programming" class="tab-content">
-                                    <div class="skills-section">
-                                        <div class="skills">
-                                            <div class="skill-item"><span>Languages:</span> Python, C++</div>
-                                            <div class="skill-item"><span>Web Frameworks:</span> Flask, FastAPI</div>
-                                            <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB, ChromaDB</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div id="dev-tools" class="tab-content">
-                                    <div class="skills-section">
-                                        <div class="skills">
-                                            <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
-                                            <div class="skill-item"><span>IDEs & Environments:</span> VS Code, Jupyter Notebooks, PyCharm</div>
-                                            <div class="skill-item"><span>Containerization & Orchestration:</span> Docker, Kubernetes</div>
-                                            <div class="skill-item"><span>CI/CD & Automation:</span> GitHub Actions, Jenkins, CircleCI</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div id="cloud" class="tab-content">
-                                    <div class="skills-section">
-                                        <div class="skills">
-                                            <div class="skill-item"><span>Platforms:</span> AWS (EC2, S3, Beanstalk), Google Cloud</div>
-                                            <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, Weights & Biases</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-            <div class="section" id="projects">
-                <h2>Projects</h2>
-
-                <h3>Personal Projects</h3>
-                <div class="project-grid">
-
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img loading="lazy" data-src="assets/projects/insurance_chatbot.webp" alt="PDF Chatbot System">
-                            <h4>RAG-based Chatbot for Insurance Company</h4>
-                            <p class="project-brief">Developed a chatbot system by finetuning LLM, creating embeddings, and implementing RAG to enable intelligent Q&A.</p>
-                            <p class="project-tools">Python, PyPDF2, LangChain, Hugging Face,Falcon-7B-Instruct, Solara, ChromaDB</p>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
-                        <div class="project-details hidden">
-                            <div class="project-info">
-    
-                            </div>
-                            <p>About</p>
-
-                                <p>- Designed and developed an AI-driven chatbot capable of answering complex legal queries related to insurance policies.</p>
-
-                                <p>- Integrated semantic search with ChromaDB and Falcon-7B, achieving 90% retrieval precision.</p>
-                                
-                                <p>- Streamlined access to insurance documents and policy details, improving the customer experience.</p>
-                                
-                                <p>- Optimized the chatbot’s performance through prompt engineering and fine-tuning to provide contextually relevant responses.</p>
-                                
-                                <p>- Deployed the chatbot in a cloud environment for easy integration into the insurance company’s existing platform. </p>
-                            <div class="project-links">
-                                <a href="https://github.com/xaugatp/chatbot" target="_blank">Code</a>
-                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
-                            </div>
-                        </div>
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <h3>Personal Projects</h3>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img loading="lazy" data-src="assets/projects/insurance_chatbot.webp" alt="PDF Chatbot System">
+                        <h4>RAG-based Chatbot for Insurance Company</h4>
+                        <p class="project-brief">Developed a chatbot system by finetuning LLM, creating embeddings, and
+                            implementing RAG to enable intelligent Q&A.</p>
+                        <p class="project-tools">Python, PyPDF2, LangChain, Hugging Face, Falcon-7B-Instruct, Solara,
+                            ChromaDB</p>
                     </div>
-                    
-                    
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img loading="lazy" data-src="assets/fraud_detection.png" alt="Credit Card Fraud Detection">
-                            <h4>Credit Card Fraud Detection</h4>
-                            <p class="project-brief">Developed a fraud detection system using machine learning models to detect fraudulent credit card transactions with high accuracy.</p>
-                            <p class="project-tools">XGBoost, Scikit-learn, Python, ML-Flow, Docker, Streamlit</p>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
-                        <div class="project-details hidden">
-                            <div class="project-info">
-                            <p>About:</p>
-
-                            <p>- Engineered an ensemble model combining XGBoost with Scikit-learn to achieve 95% fraud detection accuracy.</p>
-
-                            <p>- Applied anomaly detection techniques to improve the system's ability to detect unusual patterns in transactions.</p>
-                            
-                            <p>- Reduced false positives by 22%, enhancing the model's precision and improving overall transaction security.</p>
-                            
-                            <p>- Performed cross-validation and tuned the model to ensure scalability and robustness.</p>
-                            
-                            <p>- Deployed the model into a real-time transaction monitoring system, ensuring fast and accurate fraud detection.</p>
-                            </div>
-                            
-                            <div class="project-links">
-                                <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank">Code</a>
-                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img loading="lazy" data-src="assets/ts.jpg" alt="Diamond Price Prediction">
-                            <h4>Stock Market Analysis and Prediction with LSTM</h4>
-                            <p class="project-brief">: Developed a time-series forecasting model using LSTM (Long Short-Term Memory), leveraging TensorFlow/Keras to predict stock market trends with high accuracy..</p>
-                            <p class="project-tools">Python, Tensorflow, Pandas, Numpy, Seaborn, Matplotlib, Streamlit, LLM-Gemeni</p>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
-                        <div class="project-details hidden">
-                            <div class="project-info">
-                            </div>
-                            <p>About</p>
-
-                                <p>- Engineered an LSTM model to predict stock market trends with 95% accuracy, leveraging historical data and technical indicators.</p>
-
-                                <p>- Integrated GPT-3 for sentiment analysis and news sentiment scoring to enhance the model's predictive capabilities.</p>
-                                
-                                <p>- Developed a user-friendly dashboard using Streamlit to visualize stock trends and predictions, enabling easy interpretation of results.</p>
-                                
-                                <p>- Conducted backtesting and model evaluation to ensure the model's reliability and robustness in real-world scenarios.</p>
-                                
-                                <p>- Deployed the model as a web application, providing real-time stock market predictions to users.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/xaugatp/DiamondPricePrediction" target="_blank">GitHub Repository</a>
-                                <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more project cards here -->
-                </div>
-                    <!-- Add more Undergraduate projects here -->
-                </div>
-    
-            </div>
-
-            <div class="section" id="projects">
-                <h2>Education</h2>
-            <div class="section" id="timeline">
-            <li class="entry">
-                <div class="entry-image">
-                    <img loading="lazy" data-src="assets/torrens.png" alt="UCSD Seal" />
-                </div>
-                <div class="entry-content">
-                    <div class="entry-dot"></div>
-                    <div class="entry-header">
-                        <h3>Bachelor of Software Engineering(Artificial Intelligence)</h3>
-                        <h4 class="organization">Torrens University Australia</h4>
-                        <p class="entry-meta">
-                            <span class="year">2022 - May 2025</span>
-                            <span class="location">Sydney, Australia</span>
+                    <button class="view-details-btn">View Details</button>
+                    <div class="project-details hidden">
+                        <div class="project-info"></div>
+                        <p>About</p>
+                        <p>- Designed and developed an AI-driven chatbot capable of answering complex legal queries
+                            related to insurance policies.</p>
+                        <p>- Integrated semantic search with ChromaDB and Falcon-7B, achieving 90% retrieval precision.
                         </p>
+                        <p>- Streamlined access to insurance documents and policy details, improving the customer
+                            experience.</p>
+                        <p>- Optimized the chatbot’s performance through prompt engineering and fine-tuning to provide
+                            contextually relevant responses.</p>
+                        <p>- Deployed the chatbot in a cloud environment for easy integration into the insurance
+                            company’s existing platform.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/xaugatp/chatbot" target="_blank">Code</a>
+                            <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
+                        </div>
                     </div>
-                    <p>Bachelors of Software Engineering with specialization in Artificial Intelligence.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img loading="lazy" data-src="assets/fraud_detection.png" alt="Credit Card Fraud Detection">
+                        <h4>Credit Card Fraud Detection</h4>
+                        <p class="project-brief">Developed a fraud detection system using machine learning models to
+                            detect fraudulent credit card transactions with high accuracy.</p>
+                        <p class="project-tools">XGBoost, Scikit-learn, Python, ML-Flow, Docker, Streamlit</p>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                    <div class="project-details hidden">
+                        <div class="project-info">
+                            <p>About:</p>
+                            <p>- Engineered an ensemble model combining XGBoost with Scikit-learn to achieve 95% fraud
+                                detection accuracy.</p>
+                            <p>- Applied anomaly detection techniques to improve the system's ability to detect unusual
+                                patterns in transactions.</p>
+                            <p>- Reduced false positives by 22%, enhancing the model's precision and improving overall
+                                transaction security.</p>
+                            <p>- Performed cross-validation and tuned the model to ensure scalability and robustness.
+                            </p>
+                            <p>- Deployed the model into a real-time transaction monitoring system, ensuring fast and
+                                accurate fraud detection.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank">Code</a>
+                            <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img loading="lazy" data-src="assets/ts.jpg" alt="Diamond Price Prediction">
+                        <h4>Stock Market Analysis and Prediction with LSTM</h4>
+                        <p class="project-brief">Developed a time-series forecasting model using LSTM (Long Short-Term
+                            Memory), leveraging TensorFlow/Keras to predict stock market trends with high accuracy.</p>
+                        <p class="project-tools">Python, Tensorflow, Pandas, Numpy, Seaborn, Matplotlib, Streamlit,
+                            LLM-Gemini</p>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                    <div class="project-details hidden">
+                        <div class="project-info"></div>
+                        <p>About</p>
+                        <p>- Engineered an LSTM model to predict stock market trends with 95% accuracy, leveraging
+                            historical data and technical indicators.</p>
+                        <p>- Integrated GPT-3 for sentiment analysis and news sentiment scoring to enhance the model's
+                            predictive capabilities.</p>
+                        <p>- Developed a user-friendly dashboard using Streamlit to visualize stock trends and
+                            predictions, enabling easy interpretation of results.</p>
+                        <p>- Conducted backtesting and model evaluation to ensure the model's reliability and robustness
+                            in real-world scenarios.</p>
+                        <p>- Deployed the model as a web application, providing real-time stock market predictions to
+                            users.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/xaugatp/DiamondPricePrediction" target="_blank">GitHub
+                                Repository</a>
+                            <a href="https://your-demo-link.com" target="_blank">Deployment Link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </li>
-            <div class="section" id="certifications">
-                <h2>Certifications</h2>
-                <div class="section" id="timeline">
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" data-src="assets/projects/llogo.png" alt="DeepLearning.AI Logo" />
-                        </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>Machine Learning Specialization</h3>
-                                <h4 class="organization">DeepLearning.AI</h4>
-                                <p class="entry-meta">
-                                    <span class="year">Completed: 2024</span>
-                                </p>
-                            </div>
-                            <p>Comprehensive specialization covering fundamental machine learning algorithms, deep learning models, and real-world AI applications.</p>
-                            <a href="assets/projects/mls.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
-                            <style>.certificate-btn:hover { background-color: #45a049; } .certificate-btn:active { background-color: #397539; }</style>
+        </section>
 
-                    </li>
-            
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" data-src="assets/pwskills-logo.png" alt="PwSkills Logo" />
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <ul class="timeline">
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" data-src="assets/torrens.png" alt="Torrens University Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>Bachelor of Software Engineering (Artificial Intelligence)</h3>
+                            <h4 class="organization">Torrens University Australia</h4>
+                            <p class="entry-meta">
+                                <span class="year">2022 - May 2025</span>
+                                <span class="location">Sydney, Australia</span>
+                            </p>
                         </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>Data Science Bootcamp</h3>
-                                <h4 class="organization">PwSkills</h4>
-                                <p class="entry-meta">
-                                    <span class="year">2023-2025</span>
-                                </p>
-                            </div>
-                            <p>Intensive bootcamp focused on data wrangling, statistical analysis, machine learning techniques, and business data analytics for practical decision-making.</p>
-                            <a href="assets/projects/pwskills certificate.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
-                        </div>
-                        
-                    </li>
-                </div>
-            </div>
-            
-    
+                        <p>Bachelors of Software Engineering with specialization in Artificial Intelligence.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-            <div class="section" id="timeline">
-                <h2>Experience</h2>
-                <ul class="timeline">
-                    
-                    <!-- New experiences -->
-                    <li class="entry">
-                        <div class="entry-image" style="background-color:black;">
-                            <img loading="lazy" src="assets/xonects-logo.webp" alt="Xonects Logo" />
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul class="timeline">
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" data-src="assets/projects/llogo.png" alt="DeepLearning.AI Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>Machine Learning Specialization</h3>
+                            <h4 class="organization">DeepLearning.AI</h4>
+                            <p class="entry-meta">
+                                <span class="year">Completed: 2024</span>
+                            </p>
                         </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>AI/ML Engineer Internship</h3>
-                                <h4 class="organization">Xonects</h4>
-                                <p class="entry-meta">
-                                    <span class="year">Sep 2024 – Jan 2025</span>
-                                    <span class="location">Sydney</span>
-                                </p>
-                            </div>
-                            <p>Contributed to the end-to-end development of AI/ML solutions, including contract analysis pipeline development and machine learning model optimization for operational forecasting.</p>
-                            <ul>
-                                <li>Developed a contract analysis pipeline, including data extraction, cleaning, and analysis, reducing document review time by 35% for 26+ clients.</li>
-                                <li>Experimented with machine learning and deep learning algorithms, optimized XGBoost with Hyperopt for forecasting, improving decision-making efficiency by 20% during pre-launch trials.</li>
-                                <li>Deployed scalable MLOps pipelines using Docker, Kubernetes, and MLflow on AWS, cutting deployment time by 30% and ensuring high scalability and availability.</li>
-                                <li>Collaborated with cross-functional teams to integrate AI solutions into operational systems, enhancing business productivity and forecasting accuracy.</li>
-                            </ul>
-                        </div>
-                    </li>
-                    
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" src="assets/sms-neotech-logo.jpg" alt="SMS Neotech Logo" />
-                        </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>ML Engineer Trainee</h3>
-                                <h4 class="organization">SMS Neotech</h4>
-                                <p class="entry-meta">
-                                    <span class="year">Feb 2024 – Aug 2024</span>
-                                    <span class="location">Remote</span>
-                                </p>
-                            </div>
-                            <p>Assisted in designing and implementing data pipelines, developing predictive models, and deploying machine learning solutions to improve business processes.</p>
-                            <ul>
-                                <li>Assisted in designing and implementing data pipelines for efficient data ingestion, cleaning, and transformation.</li>
-                                <li>Developed and fine-tuned machine learning models to forecast key business metrics, improving decision-making processes.</li>
-                                <li>Collaborated with cross-functional teams to integrate data-driven insights into product features and enhancements.</li>
-                                <li>Supported the deployment of models and applications using containerization (Docker) and cloud platforms, gaining practical MLOps experience.</li>
-                                <li>Built and optimized predictive models to forecast customer purchasing behavior, reducing churn by 12% and enhancing retention strategies.</li>
-                                <li>Implemented data-driven decision-making frameworks, enabling improved customer insights and business outcomes.</li>
-                            </ul>
-                        </div>
-                    </li>
+                        <p>Comprehensive specialization covering fundamental machine learning algorithms, deep learning
+                            models, and real-world AI applications.</p>
+                        <a href="assets/projects/mls.pdf" target="_blank" class="certificate-btn">View Certificate</a>
+                        <style>
+                            /* Removed inline styles override */
+                        </style>
+                    </div>
+                </li>
 
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" src="assets/british-airways-logo.png" alt="British Airways Logo" />
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" data-src="assets/pwskills-logo.png" alt="PwSkills Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>Data Science Bootcamp</h3>
+                            <h4 class="organization">PwSkills</h4>
+                            <p class="entry-meta">
+                                <span class="year">2023-2025</span>
+                            </p>
                         </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>Data Science Job Simulation</h3>
-                                <h4 class="organization">British Airways</h4>
-                                <a href="assets/projects/british_airways_certificate.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
-                                <p class="entry-meta">
-                                    <span class="year">2023</span>
-                                    <span class="location">Remote</span>
-                                </p>
-                            </div>
-                            <p>Utilized web scraping techniques to derive actionable insights from company data and developed predictive models to forecast customer buying behavior.</p>
-                            <ul>
-                                <li>Scraped data from travel booking websites and customer reviews to predict flight booking trends.</li>
-                                <li>Built machine learning models to predict the likelihood of customer purchases, optimizing marketing strategies.</li>
-                            </ul>
+                        <p>Intensive bootcamp focused on data wrangling, statistical analysis, machine learning
+                            techniques, and business data analytics for practical decision-making.</p>
+                        <a href="assets/projects/pwskills certificate.pdf" target="_blank" class="certificate-btn">View
+                            Certificate</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            <ul class="timeline">
+                <!-- Experience 1 -->
+                <li class="entry">
+                    <div class="entry-image" style="background-color:black;">
+                        <img loading="lazy" src="assets/xonects-logo.webp" alt="Xonects Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>AI/ML Engineer Internship</h3>
+                            <h4 class="organization">Xonects</h4>
+                            <p class="entry-meta">
+                                <span class="year">Sep 2024 – Jan 2025</span>
+                                <span class="location">Sydney</span>
+                            </p>
                         </div>
-                    </li>
-                    <li class="entry">
-                        <div class="entry-image">
-                            <img loading="lazy" data-src="assets/commonwealth-bank-logo.jpeg" alt="Commonwealth Bank Logo" />
+                        <p>Contributed to the end-to-end development of AI/ML solutions, including contract analysis
+                            pipeline development and machine learning model optimization for operational forecasting.
+                        </p>
+                        <ul>
+                            <li>Developed a contract analysis pipeline, including data extraction, cleaning, and
+                                analysis, reducing document review time by 35% for 26+ clients.</li>
+                            <li>Experimented with machine learning and deep learning algorithms, optimized XGBoost with
+                                Hyperopt for forecasting, improving decision-making efficiency by 20% during pre-launch
+                                trials.</li>
+                            <li>Deployed scalable MLOps pipelines using Docker, Kubernetes, and MLflow on AWS, cutting
+                                deployment time by 30% and ensuring high scalability and availability.</li>
+                            <li>Collaborated with cross-functional teams to integrate AI solutions into operational
+                                systems, enhancing business productivity and forecasting accuracy.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Experience 2 -->
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" src="assets/sms-neotech-logo.jpg" alt="SMS Neotech Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>ML Engineer Trainee</h3>
+                            <h4 class="organization">SMS Neotech</h4>
+                            <p class="entry-meta">
+                                <span class="year">Feb 2024 – Aug 2024</span>
+                                <span class="location">Remote</span>
+                            </p>
                         </div>
-                        <div class="entry-content">
-                            <div class="entry-dot"></div>
-                            <div class="entry-header">
-                                <h3>Intro to Data Science Job Simulation</h3>
-                                <h4 class="organization">Commonwealth Bank</h4>
-                                <a href="assets/projects/cb.pdf" target="_blank" class="certificate-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;">View Certificate</a>
-                                <p class="entry-meta">
-                                    <span class="year">2023</span>
-                                    <span class="location">Remote</span>
-                                </p>
-                            </div>
-                            <p>Performed data aggregation and anonymization, proposed innovative data analysis approaches, and designed efficient databases for optimal data management.</p>
-                            <ul>
-                                <li>Processed large datasets and implemented anonymization techniques to ensure data privacy.</li>
-                                <li>Proposed advanced data analysis methods to identify financial trends and improve decision-making.</li>
-                            </ul>
+                        <p>Assisted in designing and implementing data pipelines, developing predictive models, and
+                            deploying machine learning solutions to improve business processes.</p>
+                        <ul>
+                            <li>Assisted in designing and implementing data pipelines for efficient data ingestion,
+                                cleaning, and transformation.</li>
+                            <li>Developed and fine-tuned machine learning models to forecast key business metrics,
+                                improving decision-making processes.</li>
+                            <li>Collaborated with cross-functional teams to integrate data-driven insights into product
+                                features and enhancements.</li>
+                            <li>Supported the deployment of models and applications using containerization (Docker) and
+                                cloud platforms, gaining practical MLOps experience.</li>
+                            <li>Built and optimized predictive models to forecast customer purchasing behavior, reducing
+                                churn by 12% and enhancing retention strategies.</li>
+                            <li>Implemented data-driven decision-making frameworks, enabling improved customer insights
+                                and business outcomes.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Experience 3 -->
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" src="assets/british-airways-logo.png" alt="British Airways Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>Data Science Job Simulation</h3>
+                            <h4 class="organization">British Airways</h4>
+                            <a href="assets/projects/british_airways_certificate.pdf" target="_blank"
+                                class="certificate-btn">View Certificate</a>
+                            <p class="entry-meta">
+                                <span class="year">2023</span>
+                                <span class="location">Remote</span>
+                            </p>
                         </div>
-                    </li>
-                </ul>
-            </div>
-            
-        </main>
-        
-        <hr>
+                        <p>Utilized web scraping techniques to derive actionable insights from company data and
+                            developed predictive models to forecast customer buying behavior.</p>
+                        <ul>
+                            <li>Scraped data from travel booking websites and customer reviews to predict flight booking
+                                trends.</li>
+                            <li>Built machine learning models to predict the likelihood of customer purchases,
+                                optimizing marketing strategies.</li>
+                        </ul>
+                    </div>
+                </li>
 
-        <footer>
-            <p>&copy; 2024 Saugat Poudel. All rights reserved.</p>
-        </footer>
+                <!-- Experience 4 -->
+                <li class="entry">
+                    <div class="entry-image">
+                        <img loading="lazy" data-src="assets/commonwealth-bank-logo.jpeg"
+                            alt="Commonwealth Bank Logo" />
+                    </div>
+                    <div class="entry-content">
+                        <div class="entry-dot"></div>
+                        <div class="entry-header">
+                            <h3>Intro to Data Science Job Simulation</h3>
+                            <h4 class="organization">Commonwealth Bank</h4>
+                            <a href="assets/projects/cb.pdf" target="_blank" class="certificate-btn">View
+                                Certificate</a>
+                            <p class="entry-meta">
+                                <span class="year">2023</span>
+                                <span class="location">Remote</span>
+                            </p>
+                        </div>
+                        <p>Performed data aggregation and anonymization, proposed innovative data analysis approaches,
+                            and designed efficient databases for optimal data management.</p>
+                        <ul>
+                            <li>Processed large datasets and implemented anonymization techniques to ensure data
+                                privacy.</li>
+                            <li>Proposed advanced data analysis methods to identify financial trends and improve
+                                decision-making.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-        <script src="js/main.js"></script>
+    <hr>
 
+    <footer>
+        <p>&copy; 2024 Saugat Poudel. All rights reserved.</p>
+    </footer>
 
-    </body>
+    <!-- Popup Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-project-content"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
