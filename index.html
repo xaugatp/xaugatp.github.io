@@ -133,53 +133,6 @@
             <!-- Stats bar removed as requested -->
         </section>
 
-        <!-- Featured Work Section -->
-        <section id="featured" class="section featured-section">
-            <h2>Featured Work</h2>
-            <p class="section-subtitle">Highlighted projects demonstrating real-world impact</p>
-            <div class="featured-grid">
-                <!-- Featured Project 1 -->
-                <article class="featured-card">
-                    <div class="featured-image">
-                        <img src="assets/projects/insurance_chatbot.webp" alt="RAG Chatbot for Insurance"
-                            loading="lazy" />
-                        <span class="featured-badge">90% Precision</span>
-                    </div>
-                    <div class="featured-content">
-                        <h3>RAG-based Insurance Chatbot</h3>
-                        <p>Developed an AI-driven chatbot using Falcon-7B and ChromaDB to answer complex legal queries,
-                            achieving 90% retrieval precision.</p>
-                        <div class="featured-tech">
-                            <span>Python</span><span>LangChain</span><span>Hugging Face</span><span>ChromaDB</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="https://github.com/xaugatp/chatbot" target="_blank" class="btn btn-small">View
-                                Code</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- Featured Project 2 -->
-                <article class="featured-card">
-                    <div class="featured-image">
-                        <img src="assets/fraud_detection.png" alt="Credit Card Fraud Detection" loading="lazy" />
-                        <span class="featured-badge">95% Accuracy</span>
-                    </div>
-                    <div class="featured-content">
-                        <h3>Credit Card Fraud Detection</h3>
-                        <p>Engineered an ensemble model with XGBoost to achieve 95% fraud detection accuracy, reducing
-                            false positives by 22%.</p>
-                        <div class="featured-tech">
-                            <span>XGBoost</span><span>Scikit-learn</span><span>MLflow</span><span>Docker</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank"
-                                class="btn btn-small">View Code</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
         <!-- About Section -->
         <section class="section" id="about">
             <h2>About Me</h2>
@@ -189,10 +142,174 @@
                     practical application. My passion lies in engineering robust <strong>Deep Learning</strong> and
                     <strong>NLP</strong> solutions that scale. Whether it's architecting a RAG system for instant
                     information retrieval or optimizing computer vision models for edge devices, I focus on the
-                    "Product" side of AI—reliability, speed, and user impact.
-                </p>
+                    "Product" side of AI—reliability, speed, and user impact.</p>
                 <p>Currently completing my <strong>Bachelor's in Software Engineering (AI)</strong>, I am actively
                     building systems that push the boundaries of what's possible with current tech.</p>
+            </div>
+        </section>
+
+        <!-- Featured / Top Projects Section -->
+        <section id="projects" class="section featured-section">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">A selection of 6 production-ready AI systems I've engineered.</p>
+            <div class="featured-grid">
+
+                <!-- Project 1: Chatbot (Existing) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>RAG Insurance Assistant</h3>
+                        <p>An autonomous agent that navigates complex policy documents to provide instant, accurate
+                            answers. Built with Falcon-7B and vector search.</p>
+                        <ul class="featured-specs">
+                            <li><strong>90%</strong> Retrieval Precision</li>
+                            <li><strong>&lt;2s</strong> Latency</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>LangChain</span><span>ChromaDB</span><span>Falcon-7B</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/xaugatp/chatbot" class="btn-link">View Code →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui">
+                            <div class="ui-header"><span></span><span></span><span></span></div>
+                            <div class="ui-body">
+                                <div class="msg-bot">Analyzing policy...</div>
+                                <div class="msg-bot">Coverage found.</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Fraud Detection (Existing) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>SecureTransact AI</h3>
+                        <p>Real-time fraud detection engine processing thousands of transactions per second. Ensembled
+                            XGBoost with deep anomaly detection.</p>
+                        <ul class="featured-specs">
+                            <li><strong>95%</strong> Accuracy</li>
+                            <li><strong>22%</strong> Less False Positives</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>XGBoost</span><span>Docker</span><span>MLflow</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/xaugatp/CreditCardFraudDetection" class="btn-link">View Code
+                                →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui graph-ui">
+                            <div class="graph-bar" style="height: 40%"></div>
+                            <div class="graph-bar" style="height: 70%"></div>
+                            <div class="graph-bar alert" style="height: 90%"></div>
+                            <div class="graph-bar" style="height: 50%"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Stock Prediction (Existing) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>MarketPulse Forecaster</h3>
+                        <p>Time-series forecasting system using LSTMs to predict market trends. Integrated with news
+                            sentiment analysis for holistic prediction.</p>
+                        <ul class="featured-specs">
+                            <li><strong>LSTM</strong> Architecture</li>
+                            <li><strong>Live</strong> Data Feeds</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>TensorFlow</span><span>Streamlit</span><span>Finance API</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/xaugatp/DiamondPricePrediction" class="btn-link">View Code →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui chart-ui">
+                            <svg viewBox="0 0 100 50" style="width:100%; height:100%;">
+                                <polyline points="0,50 20,40 40,45 60,30 80,35 100,20" fill="none" stroke="#6366f1"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Code Assistant (New Idea) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>LocalCode LLM</h3>
+                        <p>A privacy-first code completion assistant running locally. Finetuned Llama-2 on Python
+                            codebases for low-latency suggestions.</p>
+                        <ul class="featured-specs">
+                            <li><strong>Local</strong> Inference</li>
+                            <li><strong>Privacy</strong> Focused</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>Llama-2</span><span>Hugging Face</span><span>PyTorch</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="#" class="btn-link">View Code →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui code-ui">
+                            <code>def train_model():<br>&nbsp;&nbsp;return "Success"</code>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Computer Vision (New Idea) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>SafeSite Vision</h3>
+                        <p>Safety monitoring system for construction sites. Detects PPE compliance in real-time using
+                            YOLOv8 and edge computing.</p>
+                        <ul class="featured-specs">
+                            <li><strong>Real-time</strong> Detection</li>
+                            <li><strong>YOLOv8</strong> Model</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>OpenCV</span><span>YOLO</span><span>Edge AI</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="#" class="btn-link">View Code →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui cam-ui">
+                            <div class="box-detect">Person: 99%</div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Recommendation (New Idea) -->
+                <article class="featured-card">
+                    <div class="featured-content">
+                        <h3>AdaptLearn Engine</h3>
+                        <p>Personalized curriculum generator. Uses reinforcement learning to adapt course content based
+                            on student performance.</p>
+                        <ul class="featured-specs">
+                            <li><strong>RL</strong> Agent</li>
+                            <li><strong>Adaptive</strong> Path</li>
+                        </ul>
+                        <div class="featured-tech">
+                            <span>Reinforcement Learning</span><span>FastAPI</span><span>React</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="#" class="btn-link">View Code →</a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <div class="fake-ui card-ui">
+                            <div class="card-sm"></div>
+                            <div class="card-sm"></div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
 
@@ -282,6 +399,63 @@
                         <span>MLflow</span>
                         <span>GitHub Actions</span>
                         <span>DVC</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications (Combined & Enhanced) -->
+        <section class="section" id="education">
+            <h2>Education & Certifications</h2>
+            <div class="timeline-grid">
+                <!-- Degree -->
+                <div class="timeline-card main-degree">
+                    <div class="tp-header">
+                        <img src="assets/torrens.png" alt="Torrens" class="tp-logo">
+                        <div>
+                            <h3>Bachelor of Software Engineering (AI)</h3>
+                            <span class="tp-org">Torrens University Australia</span>
+                            <span class="tp-date">2022 - 2025</span>
+                        </div>
+                    </div>
+                    <div class="tp-body">
+                        <p>Specializing in Artificial Intelligence and scalable software systems. Building the
+                            foundation for advanced ML engineering.</p>
+                        <div class="tp-tags">
+                            <span>GPA: 6.0/7.0</span>
+                            <span>High Distinction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 1 -->
+                <div class="timeline-card">
+                    <div class="tp-header">
+                        <img src="assets/projects/llogo.png" alt="DeepLearning.AI logo" class="tp-logo">
+                        <div>
+                            <h3>Machine Learning Certification</h3>
+                            <span class="tp-org">DeepLearning.AI</span>
+                        </div>
+                    </div>
+                    <div class="tp-body">
+                        <p>Mastered advanced algorithms and neural network architectures.</p>
+                        <a href="assets/projects/mls.pdf" target="_blank" class="tp-link">View Credential</a>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="timeline-card">
+                    <div class="tp-header">
+                        <img src="assets/pwskills-logo.png" alt="Avodha" class="tp-logo">
+                        <div>
+                            <h3>Data Science Bootcamp</h3>
+                            <span class="tp-org">PwSkills</span>
+                        </div>
+                    </div>
+                    <div class="tp-body">
+                        <p>Intensive end-to-end data science training focused on deployment.</p>
+                        <a href="assets/projects/pwskills certificate.pdf" target="_blank" class="tp-link">View
+                            Credential</a>
                     </div>
                 </div>
             </div>
