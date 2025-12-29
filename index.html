@@ -82,106 +82,257 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="dhead" class="container gradient-background">
-            <div class="row">
-                <div id="dpic">
-                    <img src="assets/me.png" alt="Saugat Poudel Data Scientist and ML Engineer" />
-                </div>
-                <div id="ddesc">
-                    <h1>Saugat Poudel</h1>
-                    <h2>Exploring the Frontiers of AI and Data Science</h2>
-                    <div id="dico">
-                        <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><img
-                                src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" class="iico"
-                                alt="Connect with Saugat on LinkedIn" /></a>
-                        <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg"
-                                class="iico" alt="View Saugat's GitHub projects" /></a>
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" style="cursor: pointer;"
-                            class="iico" id="iemail" title="Click to reveal Saugat's email"
-                            alt="Contact Saugat via email" />
+        <!-- Hero Section - Two Column Layout -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Saugat Poudel</h1>
+                    <h2 class="hero-title">ML & AI Engineer</h2>
+                    <p class="hero-tagline">Transforming data into intelligent solutions that drive business impact.</p>
+
+                    <div class="hero-cta">
+                        <a href="assets/Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            View Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Contact Me
+                        </a>
                     </div>
-                    <div id="demail"></div>
-                    <a href="assets/Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">
-                        <img src="assets/resume.svg" class="iico" alt="PDF icon" />
-                        View Resume
-                    </a>
+
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" />
+                        </a>
+                        <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" />
+                        </a>
+                        <span class="social-email" id="iemail" title="Click to reveal email">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" alt="Email" />
+                        </span>
+                    </div>
+                    <div id="demail" class="email-display"></div>
                 </div>
+
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/me.png" alt="Saugat Poudel - ML & AI Engineer" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">ML Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Model Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">35%</span>
+                    <span class="stat-label">Efficiency Gain</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="featured" class="section featured-section">
+            <h2>Featured Work</h2>
+            <p class="section-subtitle">Highlighted projects demonstrating real-world impact</p>
+            <div class="featured-grid">
+                <!-- Featured Project 1 -->
+                <article class="featured-card">
+                    <div class="featured-image">
+                        <img src="assets/projects/insurance_chatbot.webp" alt="RAG Chatbot for Insurance"
+                            loading="lazy" />
+                        <span class="featured-badge">90% Precision</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3>RAG-based Insurance Chatbot</h3>
+                        <p>Developed an AI-driven chatbot using Falcon-7B and ChromaDB to answer complex legal queries,
+                            achieving 90% retrieval precision.</p>
+                        <div class="featured-tech">
+                            <span>Python</span><span>LangChain</span><span>Hugging Face</span><span>ChromaDB</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/xaugatp/chatbot" target="_blank" class="btn btn-small">View
+                                Code</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Featured Project 2 -->
+                <article class="featured-card">
+                    <div class="featured-image">
+                        <img src="assets/fraud_detection.png" alt="Credit Card Fraud Detection" loading="lazy" />
+                        <span class="featured-badge">95% Accuracy</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3>Credit Card Fraud Detection</h3>
+                        <p>Engineered an ensemble model with XGBoost to achieve 95% fraud detection accuracy, reducing
+                            false positives by 22%.</p>
+                        <div class="featured-tech">
+                            <span>XGBoost</span><span>Scikit-learn</span><span>MLflow</span><span>Docker</span>
+                        </div>
+                        <div class="featured-links">
+                            <a href="https://github.com/xaugatp/CreditCardFraudDetection" target="_blank"
+                                class="btn btn-small">View Code</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- About Section -->
         <section class="section" id="about">
-            <h2>About</h2>
-            <p>👋 Hi, I'm <strong>Saugat Poudel</strong>, a <strong>Machine Learning Engineer & Data Scientist</strong>
-                🤖💡 passionate about <strong>exploring and experimenting with Machine Learning models and
-                    LLMs</strong>. <br>
-                🎓 I am pursuing a <strong>Bachelor’s in Software Engineering (AI)</strong> at Torrens University,
-                Australia. With hands-on experience in <strong>Machine learning, deep learning, NLP, and Generative
-                    AI</strong>, I focus on <strong>delivering impactful, production-ready solutions</strong>. <br><br>
-                🌱 My expertise lies in <strong>Machine Learning, predictive analytics, and integrating Large Language
-                    Models (LLMs) into business applications</strong>. <br><br>
-                🚀 <strong>Welcome to my portfolio!</strong> Feel free to explore my projects and experiences.</p>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a <strong>Machine Learning Engineer & Data Scientist</strong> passionate about building
+                    intelligent systems that solve real-world problems. Currently pursuing a <strong>Bachelor's in
+                        Software Engineering (AI)</strong> at Torrens University, Australia.</p>
+                <p>My expertise spans <strong>Machine Learning, Deep Learning, NLP, and Generative AI</strong>. I focus
+                    on delivering <strong>production-ready, scalable solutions</strong> that create measurable business
+                    impact.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>End-to-end ML pipeline development</span>
+                    </div>
+                    <div class="highlight-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>LLM integration & RAG systems</span>
+                    </div>
+                    <div class="highlight-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>MLOps & cloud deployment</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="section" id="skills">
-            <h2>SKILLS</h2>
-            <div class="skills-container">
-                <div class="tab-buttons">
-                    <button class="tab-button active" data-tab="ml-ds">Machine Learning & AI</button>
-                    <button class="tab-button" data-tab="programming">Programming & Databases</button>
-                    <button class="tab-button" data-tab="dev-tools">Development & Deployment</button>
-                    <button class="tab-button" data-tab="cloud">Cloud & MLOps</button>
-                </div>
+        <section class="section skills-section" id="skills">
+            <h2>Technical Skills</h2>
+            <p class="section-subtitle">Core competencies across the ML/AI stack</p>
 
-                <div id="ml-ds" class="tab-content active">
-                    <div class="skills-section">
-                        <div class="skills">
-                            <div class="skill-item"><span>Algorithms:</span> Supervised & Unsupervised Learning, ANN,
-                                CNN, Transformers, Reinforcement Learning</div>
-                            <div class="skill-item"><span>Libraries & Frameworks:</span> Scikit-learn, TensorFlow,
-                                PyTorch, Keras, XGBoost</div>
-                            <div class="skill-item"><span>Natural Language Processing:</span> NLTK, SpaCy, Hugging Face
-                                Transformers, LangChain</div>
-                            <div class="skill-item"><span>Data Processing:</span> NumPy, Pandas, PySpark</div>
-                            <div class="skill-item"><span>Data Visualization:</span> Matplotlib, Seaborn, Plotly</div>
-                        </div>
+            <div class="skills-grid">
+                <!-- ML & AI -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        <h3>Machine Learning & AI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Scikit-learn</span>
+                        <span>XGBoost</span>
+                        <span>Keras</span>
+                        <span>Transformers</span>
+                        <span>LangChain</span>
+                        <span>Hugging Face</span>
                     </div>
                 </div>
 
-                <div id="programming" class="tab-content">
-                    <div class="skills-section">
-                        <div class="skills">
-                            <div class="skill-item"><span>Languages:</span> Python, C++</div>
-                            <div class="skill-item"><span>Web Frameworks:</span> Flask, FastAPI</div>
-                            <div class="skill-item"><span>Databases:</span> MySQL, PostgreSQL, MongoDB, ChromaDB</div>
-                        </div>
+                <!-- Programming -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>SQL</span>
+                        <span>Flask</span>
+                        <span>FastAPI</span>
                     </div>
                 </div>
 
-                <div id="dev-tools" class="tab-content">
-                    <div class="skills-section">
-                        <div class="skills">
-                            <div class="skill-item"><span>Version Control:</span> Git, GitHub</div>
-                            <div class="skill-item"><span>IDEs & Environments:</span> VS Code, Jupyter Notebooks,
-                                PyCharm</div>
-                            <div class="skill-item"><span>Containerization & Orchestration:</span> Docker, Kubernetes
-                            </div>
-                            <div class="skill-item"><span>CI/CD & Automation:</span> GitHub Actions, Jenkins, CircleCI
-                            </div>
-                        </div>
+                <!-- Data -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                        <h3>Data & Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>PySpark</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>ChromaDB</span>
                     </div>
                 </div>
 
-                <div id="cloud" class="tab-content">
-                    <div class="skills-section">
-                        <div class="skills">
-                            <div class="skill-item"><span>Platforms:</span> AWS (EC2, S3, Beanstalk), Google Cloud</div>
-                            <div class="skill-item"><span>MLOps Tools:</span> MLflow, DVC, Weights & Biases</div>
-                        </div>
+                <!-- Cloud & MLOps -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                        <h3>Cloud & MLOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>MLflow</span>
+                        <span>GitHub Actions</span>
+                        <span>DVC</span>
                     </div>
                 </div>
             </div>
@@ -488,12 +639,77 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle">Interested in working together? Let's discuss your project.</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <h4>Email</h4>
+                            <p>saugatsaugat363@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Sydney, Australia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <a href="mailto:saugatsaugat363@gmail.com" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Send Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/xaugat/" target="_blank" class="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <hr>
-
     <footer>
-        <p>&copy; 2024 Saugat Poudel. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-name">Saugat Poudel</span>
+                <span class="footer-tagline">ML & AI Engineer</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/xaugatp" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/xaugat/" target="_blank">LinkedIn</a>
+                <a href="assets/Resume_Saugat.pdf" target="_blank">Resume</a>
+            </div>
+            <p class="footer-copy">&copy; 2024 Saugat Poudel. Built with passion.</p>
+        </div>
     </footer>
 
     <!-- Popup Modal -->

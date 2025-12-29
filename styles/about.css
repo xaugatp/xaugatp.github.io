@@ -1,150 +1,83 @@
-/* About Section handled by global .section in main.css primarily */
+/* About Section - handled by main.css */
 
-#about p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.25rem;
-    line-height: 1.8;
-}
-
-#about strong {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-/* Skills Container */
-.skills-container {
-    width: 100%;
-    margin: 40px auto 0;
-}
-
-/* Tabs */
-.tab-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.tab-button {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--glass-border);
-    color: var(--text-secondary);
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.tab-button:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
-}
-
-.tab-button.active {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-    font-weight: 600;
-}
-
-/* Tab Content */
-.tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Skills Section */
 .skills-section {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: var(--glass-shadow);
+    background: var(--bg-secondary);
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Skill Chip */
-.skill-item {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 12px 18px;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+.skill-category {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
     transition: all 0.3s ease;
 }
 
-.skill-item:hover {
-    background: rgba(244, 63, 94, 0.1);
-    /* Rose tint */
-    border-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.skill-category:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-.skill-item span {
-    color: var(--primary-color);
-    /* Indigo text */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.category-header svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.category-header h3 {
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-right: 8px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    margin: 0;
 }
 
-.skill-item:hover span {
-    color: var(--secondary-color);
-    /* Switch to Rose on hover */
-    text-shadow: 0 0 8px var(--secondary-glow);
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Mobile */
+.skill-tags span {
+    padding: 8px 16px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.skill-tags span:hover {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .tab-button {
-        padding: 10px 16px;
-        font-size: 0.85rem;
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
-    .skills-section {
-        padding: 20px;
-    }
-
-    .skill-item {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+    .skill-category {
+        padding: 24px;
     }
 }
