@@ -123,162 +123,72 @@
     color: var(--primary-light);
 }
 
-/* Fake UI Visuals for 3D Cards */
+/* Featured Image Area */
 .featured-image {
     height: 220px;
     background: #0f0f13;
     position: relative;
     overflow: hidden;
     border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.fake-ui {
-    width: 80%;
-    height: 80%;
-    background: #1e1e24;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    position: relative;
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.featured-card:hover .fake-ui {
-    transform: scale(1.05) translateY(-5px);
+.featured-card:hover .featured-image img {
+    transform: scale(1.1);
 }
 
-/* Chat UI */
-.ui-header {
-    height: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    gap: 6px;
-}
-
-.ui-header span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.ui-body {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.msg-bot {
-    background: rgba(99, 102, 241, 0.2);
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
+.featured-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
     color: var(--primary-light);
-    width: fit-content;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-/* Graph UI */
-.graph-ui {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 20px 10px 10px;
-}
-
-.graph-bar {
-    width: 15%;
+.featured-card:hover .featured-badge {
     background: var(--primary);
-    border-radius: 4px 4px 0 0;
-    opacity: 0.5;
+    color: white;
+    border-color: var(--primary);
 }
 
-.graph-bar.alert {
-    background: #f43f5e;
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
-}
-
-/* Code UI */
-.code-ui {
-    padding: 20px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: #a5b4fc;
-}
-
-/* Cam UI */
-.cam-ui {
-    background: url('../assets/projects/construction.jpg') center/cover;
-    /* Fallback if no image */
-    background-color: #2d2d35;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box-detect {
-    border: 2px solid #22d3ee;
-    padding: 4px;
-    color: #22d3ee;
-    font-size: 0.7rem;
-    background: rgba(34, 211, 238, 0.1);
-}
-
-/* Card UI */
-.card-ui {
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-sm {
-    width: 40px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-/* Modal */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(8px);
-    overflow-y: auto;
-    padding: 40px 20px;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: var(--bg-card);
+    margin: 10% auto;
     padding: 40px;
+    border: 1px solid var(--border);
+    width: 80%;
+    max-width: 800px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
     position: relative;
-    animation: modalSlideUp 0.4s ease;
-}
-
-@keyframes modalSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .close {
