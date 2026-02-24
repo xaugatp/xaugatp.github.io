@@ -1,0 +1,54 @@
+/* =============================================
+   SKILLS.CSS – Categorized Purple Pill Tags
+   ============================================= */
+
+.skills-container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.skill-group {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.skill-group h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    color: var(--color-text);
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--color-accent);
+    color: var(--color-text);
+    border-radius: var(--radius-pill);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: var(--transition-default);
+}
+
+.skill-pill:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(160, 32, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+    .skill-pill {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+}

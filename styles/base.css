@@ -1,0 +1,192 @@
+/* =============================================
+   BASE.CSS – Variables, Reset, Typography, Global
+   ============================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Design Tokens */
+:root {
+    --font-primary: 'Raleway', sans-serif;
+    --color-bg: #0a0a0a;
+    --color-bg-gradient-start: #1a1a2e;
+    --color-bg-gradient-end: #000000;
+    --color-accent: #a020f0;
+    --color-accent-hover: #b44dff;
+    --color-text: #ffffff;
+    --color-text-secondary: #aaaaaa;
+    --color-card-bg: rgba(255, 255, 255, 0.05);
+    --color-card-border: rgba(255, 255, 255, 0.1);
+    --radius-card: 12px;
+    --radius-pill: 20px;
+    --transition-default: all 0.3s ease;
+    --max-width: 1200px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: radial-gradient(ellipse at center, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+    background-attachment: fixed;
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Utility */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/* Section Base */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for child elements */
+.fade-in:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.fade-in:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.fade-in:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+/* Text Gradient Utility */
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), #ff6bd6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Selection */
+::selection {
+    background: var(--color-accent);
+    color: var(--color-text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
+}

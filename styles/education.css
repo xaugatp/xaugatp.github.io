@@ -1,0 +1,129 @@
+/* =============================================
+   EDUCATION.CSS – Wide Cards with Status Badges
+   ============================================= */
+
+.edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.edu-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    padding: 35px 40px;
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 30px;
+    align-items: center;
+    transition: var(--transition-default);
+}
+
+.edu-card:hover {
+    border-color: rgba(160, 32, 240, 0.3);
+    box-shadow: 0 5px 20px rgba(160, 32, 240, 0.1);
+}
+
+.edu-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edu-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.edu-details {
+    text-align: center;
+}
+
+.edu-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: var(--color-text);
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.edu-date {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+}
+
+.edu-grade {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.edu-grade strong {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.edu-skills {
+    font-size: 0.78rem;
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    margin-top: 6px;
+}
+
+.edu-badge {
+    padding: 8px 22px;
+    border-radius: var(--radius-pill);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.edu-badge.graduate {
+    background: var(--color-accent);
+    color: var(--color-text);
+}
+
+.edu-badge.in-progress {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .edu-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .edu-logo {
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+    }
+
+    .edu-badge {
+        margin: 0 auto;
+    }
+}

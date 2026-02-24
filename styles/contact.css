@@ -1,0 +1,124 @@
+/* =============================================
+   CONTACT.CSS – Split Card with Form
+   ============================================= */
+
+.contact-wrapper {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Left - Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item svg {
+    width: 22px;
+    height: 22px;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+/* Right - Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: var(--transition-default);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(160, 32, 240, 0.15);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-accent);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.contact-submit:hover {
+    background: var(--color-accent-hover);
+    box-shadow: 0 5px 20px rgba(160, 32, 240, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 40px;
+    border-top: 1px solid var(--color-card-border);
+}
+
+.footer p {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+        gap: 30px;
+    }
+}

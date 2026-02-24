@@ -4,654 +4,442 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saugat Poudel - Data Scientist | ML Engineer | AI Engineer | Portfolio</title>
+    <title>Saugat Poudel – AI/ML Engineer | Portfolio</title>
     <meta name="description"
-        content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, MLOps, and AI-driven product development.">
+        content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, edge computing, and AI-driven product development.">
     <meta name="keywords"
-        content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Artificial Intelligence, Deep Learning, NLP, Cloud Computing, Portfolio">
+        content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Portfolio">
 
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/nav.css">
-    <link rel="stylesheet" type="text/css" href="styles/info.css">
-    <link rel="stylesheet" type="text/css" href="styles/about.css">
-    <link rel="stylesheet" type="text/css" href="styles/timeline.css">
-    <link rel="stylesheet" type="text/css" href="styles/projects.css">
-    <link rel="stylesheet" type="text/css" href="styles/publications.css">
-    <link rel="stylesheet" type="text/css" href="styles/blog.css">
+    <!-- Styles (Modular) -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/education.css">
+    <link rel="stylesheet" href="styles/certifications.css">
+    <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/contact.css">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/me.png" type="image/x-icon">
 
-    <!-- Structured Data Markup -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Saugat Poudel",
-          "url": "https://xaugatp.github.io/",
-          "image": "https://xaugatp.github.io/assets/me.png",
-          "sameAs": [
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saugat Poudel",
+        "url": "https://xaugatp.github.io/",
+        "image": "https://xaugatp.github.io/assets/me.png",
+        "sameAs": [
             "https://www.linkedin.com/in/xaugat/",
-            "https://github.com/xaugatp",
-            "https://www.hackerrank.com/profile/saugatp363"
-          ],
-          "jobTitle": "Data Scientist Intern + Education",
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Torrens University Australia"
-          },
-          "affiliation": {
-            "@type": "CollegeOrUniversity",
-            "name": "Torrens University Australia"
-          },
-          "knowsAbout": ["Machine Learning", "Data Science", "Large Language Models"],
-          "description": "Saugat Poudel is a graduate student at Torrens University Australia, specializing in Machine Learning, Data Science, and Large Language Models (LLMs)."
-        }
-        </script>
+            "https://github.com/xaugatp"
+        ],
+        "jobTitle": "AI/ML Engineer",
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Charles Darwin University" },
+            { "@type": "CollegeOrUniversity", "name": "Torrens University Australia" }
+        ],
+        "knowsAbout": ["Machine Learning", "Artificial Intelligence", "Edge Computing", "NLP"]
+    }
+    </script>
 </head>
 
 <body>
-    <header class="gradient-background">
-        <nav id="navbar">
-            <div class="nav-left">
-                <a href="#dhead" class="nav-link">Saugat Poudel</a>
-            </div>
-            <div class="nav-right">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <!-- Pointing Timeline to Experience for now, as is common -->
-                <a href="#experience" class="nav-link">Timeline</a>
-            </div>
-            <div class="nav-mobile">
-                <button id="menu-toggle" aria-label="Toggle menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <div id="mobile-menu">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#experience" class="nav-link">Timeline</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+    <!-- ============== NAVBAR ============== -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">Saugat Poudel</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ============== SOCIAL SIDEBAR ============== -->
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+        </a>
+        <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+        </a>
+        <a href="mailto:saugatp363@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+            </svg>
+        </a>
+    </div>
 
     <main>
-        <!-- Hero Section - Two Column Layout -->
-        <section id="hero" class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <p class="hero-greeting">Hi, I'm</p>
-                    <h1 class="hero-name">Saugat Poudel</h1>
-                    <h2 class="hero-title">Product-Focused ML Engineer</h2>
-                    <p class="hero-tagline">Detail-oriented and technically skilled postgraduate student experienced in
-                        applying AI, machine learning and edge-computing solutions to real-world problems.</p>
-
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="12" y1="8" x2="12" y2="16"></line>
-                                <line x1="8" y1="12" x2="16" y2="12"></line>
-                            </svg>
-                            View Projects
-                        </a>
-                        <a href="assets/Resume_Saugat.pdf" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary">
-                            View Resume
-                        </a>
-                    </div>
-
-                    <div class="hero-social">
-                        <a href="https://www.linkedin.com/in/xaugat/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" />
-                        </a>
-                        <a href="https://github.com/xaugatp" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" />
-                        </a>
-                        <span class="social-email" id="iemail" title="Click to reveal email">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/gmail.svg" alt="Email" />
-                        </span>
-                    </div>
-                </div>
-
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/me.png" alt="Saugat Poudel - ML & AI Engineer" />
-                    </div>
-                </div>
-            </div>
-            <!-- Stats bar removed as requested -->
+        <!-- ============== HERO ============== -->
+        <section class="hero section" id="hero">
+            <p class="hero-greeting fade-in">Hello, I'm</p>
+            <h1 class="hero-name fade-in">SAUGAT</h1>
+            <p class="hero-tagline fade-in">Bridging AI, Machine Learning & Edge Computing<br>with Real-World Impact</p>
+            <p class="hero-description fade-in">I build intelligent systems that solve complex problems — from real-time
+                fire detection with drones to NLP pipelines processing thousands of documents. Currently pursuing a
+                Master of IT (AI) at Charles Darwin University.</p>
+            <a href="#about" class="hero-cta fade-in">Explore My Journey</a>
         </section>
 
-        <!-- About Section -->
+        <!-- ============== ABOUT ME ============== -->
         <section class="section" id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p class="lead-text">Experienced in applying AI, machine learning, and edge-computing solutions to
-                    real-world problems, including public safety initiatives.</p>
-                <p>Detail-oriented and technically skilled postgraduate student currently pursuing a <strong>Master of
-                        IT (AI Major) at Charles Darwin University</strong>, with a completed bachelor's in software
-                    engineering (AI). I am currently contributing to the Northern Territory Fire and Emergency Services
-                    (NTFES) through the research and development of a real-time active fire edge detection system.
-                </p>
-                <p>Skilled in AI application, software engineering, and cross-functional collaboration, I am passionate
-                    about leveraging my skills to contribute to impactful initiatives.</p>
-            </div>
-        </section>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <h2 class="text-gradient">About Me</h2>
+                    <p class="about-intro">I am an AI/ML Engineer dedicated to building intelligent, scalable systems.
+                        By combining strong software engineering foundations with applied AI and machine learning, I
+                        deliver high-performance solutions across public safety, agriculture, and enterprise sectors.
+                    </p>
 
-        <!-- Featured / Top Projects Section -->
-        <section id="projects" class="section featured-section">
-            <h2>Featured Projects</h2>
-            <p class="section-subtitle">A selection of 6 production-ready AI systems I've engineered.</p>
-            <div class="featured-grid">
+                    <div class="about-subsection">
+                        <h3><span>🔥</span> AI & Edge Computing</h3>
+                        <p>I build real-time AI systems on edge devices. Currently developing an active fire edge
+                            detection system for NTFES using DJI drones and Manifold3 hardware, enabling autonomous fire
+                            boundary identification.</p>
+                    </div>
 
-                <!-- Project 1: Chatbot -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>RAG Insurance Assistant</h3>
-                        <p>An autonomous agent that navigates complex policy documents to provide instant, accurate
-                            answers. Built with Falcon-7B and vector search.</p>
-                        <ul class="featured-specs">
-                            <li><strong>90%</strong> Retrieval Precision</li>
-                            <li><strong>&lt;2s</strong> Latency</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>LangChain</span><span>ChromaDB</span><span>Falcon-7B</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="https://github.com/xaugatp/chatbot" class="btn-link">View Code →</a>
-                        </div>
+                    <div class="about-subsection">
+                        <h3><span>🤖</span> NLP & Machine Learning</h3>
+                        <p>I design and deploy NLP pipelines, RAG chatbots, and ML models at scale. From processing
+                            10,000+ documents with semantic search to building fraud detection systems analyzing 15K+
+                            transactions.</p>
                     </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/insurance_chatbot.webp" alt="RAG Chatbot Dashboard" loading="lazy" />
-                        <span class="featured-badge">90% Precision</span>
-                    </div>
-                </article>
 
-                <!-- Project 2: Fraud Detection -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>SecureTransact AI</h3>
-                        <p>Real-time fraud detection engine processing thousands of transactions per second. Ensembled
-                            XGBoost with deep anomaly detection.</p>
-                        <ul class="featured-specs">
-                            <li><strong>95%</strong> Accuracy</li>
-                            <li><strong>22%</strong> Less False Positives</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>XGBoost</span><span>Docker</span><span>MLflow</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="https://github.com/xaugatp/CreditCardFraudDetection" class="btn-link">View Code
-                                →</a>
-                        </div>
-                    </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/fraud_detection.png" alt="Fraud Detection Graph" loading="lazy" />
-                        <span class="featured-badge">95% Accuracy</span>
-                    </div>
-                </article>
-
-                <!-- Project 3: Stock Prediction -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>MarketPulse Forecaster</h3>
-                        <p>Time-series forecasting system using LSTMs to predict market trends. Integrated with news
-                            sentiment analysis for holistic prediction.</p>
-                        <ul class="featured-specs">
-                            <li><strong>LSTM</strong> Architecture</li>
-                            <li><strong>Live</strong> Data Feeds</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>TensorFlow</span><span>Streamlit</span><span>Finance API</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="https://github.com/xaugatp/DiamondPricePrediction" class="btn-link">View Code →</a>
-                        </div>
-                    </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/market_pulse.jpg" alt="Stock Market Analysis" loading="lazy" />
-                        <span class="featured-badge">Real-time</span>
-                    </div>
-                </article>
-
-                <!-- Project 4: Code Assistant -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>LocalCode LLM</h3>
-                        <p>A privacy-first code completion assistant running locally. Finetuned Llama-2 on Python
-                            codebases for low-latency suggestions.</p>
-                        <ul class="featured-specs">
-                            <li><strong>Local</strong> Inference</li>
-                            <li><strong>Privacy</strong> Focused</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>Llama-2</span><span>Hugging Face</span><span>PyTorch</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="#" class="btn-link">View Code →</a>
-                        </div>
-                    </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/local_code.jpg" alt="Code Assistant" loading="lazy" />
-                        <span class="featured-badge">Privacy First</span>
-                    </div>
-                </article>
-
-                <!-- Project 5: Computer Vision -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>SafeSite Vision</h3>
-                        <p>Safety monitoring system for construction sites. Detects PPE compliance in real-time using
-                            YOLOv8 and edge computing.</p>
-                        <ul class="featured-specs">
-                            <li><strong>Real-time</strong> Detection</li>
-                            <li><strong>YOLOv8</strong> Model</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>OpenCV</span><span>YOLO</span><span>Edge AI</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="#" class="btn-link">View Code →</a>
-                        </div>
-                    </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/safe_site.jpg" alt="Computer Vision for Safety" loading="lazy" />
-                        <span class="featured-badge">Edge AI</span>
-                    </div>
-                </article>
-
-                <!-- Project 6: Recommendation -->
-                <article class="featured-card">
-                    <div class="featured-content">
-                        <h3>AdaptLearn Engine</h3>
-                        <p>Personalized curriculum generator. Uses reinforcement learning to adapt course content based
-                            on student performance.</p>
-                        <ul class="featured-specs">
-                            <li><strong>RL</strong> Agent</li>
-                            <li><strong>Adaptive</strong> Path</li>
-                        </ul>
-                        <div class="featured-tech">
-                            <span>Reinforcement Learning</span><span>FastAPI</span><span>React</span>
-                        </div>
-                        <div class="featured-links">
-                            <a href="#" class="btn-link">View Code →</a>
-                        </div>
-                    </div>
-                    <div class="featured-image">
-                        <img src="assets/projects/adapt_learn.jpg" alt="Adaptive Learning Path" loading="lazy" />
-                        <span class="featured-badge">Adaptive</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section skills-section" id="skills">
-            <h2>Technical Skills</h2>
-            <p class="section-subtitle">Core competencies across the ML/AI stack</p>
-
-            <div class="skills-grid">
-                <!-- ML & AI -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                            </path>
-                        </svg>
-                        <h3>Technical Proficiencies</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Git</span>
-                        <span>Docker</span>
-                        <span>CI/CD Tools</span>
-                        <span>Linux</span>
-                        <span>HTML/CSS</span>
-                        <span>JavaScript</span>
-                        <span>Flask</span>
-                        <span>FastAPI</span>
-                        <span>LangChain</span>
-                        <span>TensorFlow</span>
-                        <span>Scikit-learn</span>
-                        <span>Power BI</span>
-                        <span>AWS</span>
-                        <span>Azure</span>
+                    <div class="about-subsection">
+                        <h3><span>📊</span> Data Engineering & Research</h3>
+                        <p>I extract, clean, and analyze large datasets for research and production. Experienced with
+                            satellite imagery, remote sensing data, and building automated validation tools that reduce
+                            manual work by 40%.</p>
                     </div>
                 </div>
 
-                <!-- Soft Skills -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                        </svg>
-                        <h3>Soft Skills</h3>
+                <div class="about-right fade-in">
+                    <div class="about-photo">
+                        <img src="assets/me.png" alt="Saugat Poudel" />
                     </div>
-                    <div class="skill-tags">
-                        <span>Analytical Thinking</span>
-                        <span>Problem Solving</span>
-                        <span>Adaptability</span>
-                        <span>Time Management</span>
-                        <span>Effective Communication</span>
-                        <span>Critical Thinking</span>
-                        <span>Teamwork</span>
-                        <span>Initiative & Self-Motivation</span>
-                        <span>Learning Agility</span>
-                        <span>Professionalism</span>
-                        <span>Task Prioritization</span>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Working Years</span>
+                        </div>
+                        <div class="stat-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Degrees</span>
+                        </div>
+                        <div class="stat-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18" />
+                                <path d="M6 9v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9" />
+                            </svg>
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Certifications (Combined & Enhanced) -->
-        <section class="section" id="education">
-            <h2>Education & Achievements</h2>
-            <div class="timeline-grid">
-                <!-- Master's Degree -->
-                <div class="timeline-card main-degree">
-                    <div class="tp-header">
-                        <img src="assets/cdu-logo.png" alt="Charles Darwin University" class="tp-logo"
-                            onerror="this.src='assets/me.png'">
-                        <div>
-                            <h3>Master of Information Technology (AI Major)</h3>
-                            <span class="tp-org">Charles Darwin University</span>
-                            <span class="tp-date">Jul 2025 - Jul 2027</span>
-                        </div>
-                    </div>
-                    <div class="tp-body">
-                        <p>Pursuing advanced studies in Artificial Intelligence.</p>
-                        <div class="tp-tags">
-                            <span>In Progress</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bachelor's Degree -->
-                <div class="timeline-card main-degree">
-                    <div class="tp-header">
-                        <img src="assets/torrens.png" alt="Torrens" class="tp-logo">
-                        <div>
-                            <h3>Bachelor of Software Engineering (AI)</h3>
-                            <span class="tp-org">Torrens University Australia</span>
-                            <span class="tp-date">May 2022 - May 2025</span>
-                        </div>
-                    </div>
-                    <div class="tp-body">
-                        <p>Specialized in Artificial Intelligence and scalable software systems. Built the
-                            foundation for advanced ML engineering.</p>
-                        <div class="tp-tags">
-                            <span>GPA: 6.0/7.0</span>
-                            <span>High Distinction</span>
-                            <span>Completed</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Achievement -->
-                <div class="timeline-card highlight-card"
-                    style="border: 2px solid gold; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);">
-                    <div class="tp-header">
-                        <img src="assets/govhack-logo.png" alt="GovHack" class="tp-logo"
-                            onerror="this.src='assets/me.png'">
-                        <div>
-                            <h3 style="color: gold;">Honorable Mention</h3>
-                            <span class="tp-org">Gov Hack NT Challenge</span>
-                        </div>
-                    </div>
-                    <div class="tp-body">
-                        <p>Recognized for innovative solutions and technical excellence during the hackathon.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 1 -->
-                <div class="timeline-card">
-                    <div class="tp-header">
-                        <img src="assets/projects/llogo.png" alt="DeepLearning.AI logo" class="tp-logo">
-                        <div>
-                            <h3>Machine Learning Certification</h3>
-                            <span class="tp-org">DeepLearning.AI</span>
-                        </div>
-                    </div>
-                    <div class="tp-body">
-                        <p>Mastered advanced algorithms and neural network architectures.</p>
-                        <a href="assets/projects/mls.pdf" target="_blank" class="tp-link">View Credential</a>
-                    </div>
-                </div>
-
-                <!-- Cert 2 -->
-                <div class="timeline-card">
-                    <div class="tp-header">
-                        <img src="assets/pwskills-logo.png" alt="Avodha" class="tp-logo">
-                        <div>
-                            <h3>Data Science Bootcamp</h3>
-                            <span class="tp-org">PwSkills</span>
-                        </div>
-                    </div>
-                    <div class="tp-body">
-                        <p>Intensive end-to-end data science training focused on deployment.</p>
-                        <a href="assets/projects/pwskills certificate.pdf" target="_blank" class="tp-link">View
-                            Credential</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
+        <!-- ============== EXPERIENCE ============== -->
         <section class="section" id="experience">
-            <h2>Experience</h2>
-            <ul class="timeline">
-                <!-- Experience 1 -->
-                <li class="entry">
-                    <div class="entry-image" style="background-color:black;">
-                        <img loading="lazy" src="assets/ntfes-logo.jpg" alt="NTFES Logo"
-                            onerror="this.src='assets/me.png'" />
+            <div class="section-header fade-in">
+                <h2 class="text-gradient">Experience</h2>
+                <p>Building AI, ML & Edge Computing Solutions</p>
+            </div>
+            <div class="exp-grid">
+                <!-- NTFES -->
+                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
+                    <div class="exp-logo">
+                        <img src="assets/ntfes-logo.jpg" alt="NTFES" onerror="this.style.display='none'">
                     </div>
-                    <div class="entry-content">
-                        <div class="entry-dot"></div>
-                        <div class="entry-header">
-                            <h3>Vacation Employment – AI in Public Safety</h3>
-                            <h4 class="organization">Northern Territory Fire and Emergency Services (NTFES)</h4>
-                            <p class="entry-meta">
-                                <span class="year">Nov 2025 – Mar 2026</span>
-                            </p>
-                        </div>
-                        <p>Research and development of a real-time active fire edge detection system.</p>
+                    <h3>Vacation Employment – AI in Public Safety</h3>
+                    <span class="exp-company">Northern Territory Fire & Emergency Services</span>
+                    <span class="exp-meta">Nov 2025 – Mar 2026</span>
+                    <div class="exp-details">
                         <ul>
-                            <li>Lead research and development of an active fire edge detection system, integrating DJI
-                                Matrice 4T drone hardware with Manifold3 edge-computing devices.</li>
-                            <li>Built a working prototype capable of real-time fire boundary detection, with AI
-                                capabilities minimizing reliance on manual interpretation.</li>
-                            <li>Conducted testing and validation to ensure accurate fire perimeter identification for
-                                operational use.</li>
-                            <li>Collaborated with stakeholders to ensure alignment with public safety standards and
-                                operational requirements.</li>
-                        </ul>
-                    </div>
-                </li>
-
-                <!-- Experience 2 -->
-                <li class="entry">
-                    <div class="entry-image" style="background-color:black;">
-                        <img loading="lazy" src="assets/usyd-logo.png" alt="University of Sydney Logo"
-                            onerror="this.src='assets/me.png'" />
-                    </div>
-                    <div class="entry-content">
-                        <div class="entry-dot"></div>
-                        <div class="entry-header">
-                            <h3>R&D Intern – AI in Agriculture</h3>
-                            <h4 class="organization">University of Sydney & Mak Design</h4>
-                            <p class="entry-meta">
-                                <span class="year">May 2025 – Aug 2025</span>
-                            </p>
-                        </div>
-                        <p>Handled satellite imagery and performed research validation.</p>
-                        <ul>
-                            <li><strong>Data Handling & Preparation:</strong> Extracted, cleaned, and managed satellite
-                                imagery datasets (2000+ records) for aerospace, AI, and remote sensing applications.
+                            <li>Developing an active fire edge detection system using DJI drones and Manifold3 hardware.
                             </li>
-                            <li><strong>Research & Reporting:</strong> Contributed to academic and applied research by
-                                documenting model performance and summarizing insights for stakeholders.</li>
-                            <li><strong>Process Automation:</strong> Built Python tools to automate validation tasks,
-                                reducing manual work by 40%.</li>
+                            <li>Enabling autonomous fire boundary identification for rapid emergency response.</li>
                         </ul>
+                        <a href="https://pfes.nt.gov.au/" target="_blank" class="visit-btn"
+                            onclick="event.stopPropagation()">Visit Website</a>
                     </div>
-                </li>
+                </div>
 
-                <!-- Experience 3 -->
-                <li class="entry">
-                    <div class="entry-image" style="background-color:black;">
-                        <img loading="lazy" src="assets/xonects-logo.webp" alt="Xonects Logo" />
+                <!-- University of Sydney -->
+                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
+                    <div class="exp-logo">
+                        <img src="assets/usyd-logo.png" alt="University of Sydney" onerror="this.style.display='none'">
                     </div>
-                    <div class="entry-content">
-                        <div class="entry-dot"></div>
-                        <div class="entry-header">
-                            <h3>Machine Learning Engineer Intern</h3>
-                            <h4 class="organization">Xonects</h4>
-                            <p class="entry-meta">
-                                <span class="year">Mar 2025 – Apr 2025</span>
-                                <span class="location">Sydney</span>
-                            </p>
-                        </div>
-                        <p>Designed and improved NLP pipelines and semantic search capabilities.</p>
+                    <h3>R&D Intern – AI in Agriculture</h3>
+                    <span class="exp-company">University of Sydney & Mak Design</span>
+                    <span class="exp-meta">May 2025 – Aug 2025</span>
+                    <div class="exp-details">
                         <ul>
-                            <li><strong>Workflow Automation:</strong> Designed and implemented NLP pipeline to process
-                                10,000+ text, images and documents, reducing manual effort.</li>
-                            <li><strong>Collaborative Development:</strong> Worked closely with cross-functional Agile
-                                teams to build semantic search capabilities, improving data retrieval accuracy by 30%.
+                            <li>Designed NLP pipelines and machine learning models for agricultural data analysis.</li>
+                            <li>Collaborated with researchers to optimize crop yield predictions using remote sensing.
                             </li>
-                            <li><strong>Process Automation:</strong> Created clear technical documentation, including
-                                user manuals and internal reports, to support handovers and stakeholder engagement.</li>
                         </ul>
+                        <a href="https://www.sydney.edu.au/" target="_blank" class="visit-btn"
+                            onclick="event.stopPropagation()">Visit Website</a>
                     </div>
-                </li>
+                </div>
 
-                <!-- Experience 4 -->
-                <li class="entry">
-                    <div class="entry-image">
-                        <img loading="lazy" src="assets/sms-neotech-logo.jpg" alt="SMS Neotech Logo" />
+                <!-- Xonects -->
+                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
+                    <div class="exp-logo">
+                        <img src="assets/xonects-logo.webp" alt="Xonects">
                     </div>
-                    <div class="entry-content">
-                        <div class="entry-dot"></div>
-                        <div class="entry-header">
-                            <h3>ML Engineer Trainee</h3>
-                            <h4 class="organization">SMS Neotech</h4>
-                            <p class="entry-meta">
-                                <span class="year">Feb 2024 – Apr 2024</span>
-                                <span class="location">Remote</span>
-                            </p>
-                        </div>
-                        <p>Evaluated AI models and ensured compliance for legal text understanding.</p>
+                    <h3>Machine Learning Engineer Intern</h3>
+                    <span class="exp-company">Xonects</span>
+                    <span class="exp-meta">Mar 2025 – Apr 2025 · Sydney</span>
+                    <div class="exp-details">
                         <ul>
-                            <li><strong>Model Evaluation:</strong> Finetuned and evaluated GPT, BERT, Gemini and other
-                                AI models using prompting and Retrieval Augmented Generation (RAG) techniques to support
-                                legal text understanding and better response.</li>
-                            <li><strong>Compliance Testing and Reporting:</strong> Coordinated testing to ensure AI
-                                tools met legal, ethical, and industry standards, prepared detailed reports, and worked
-                                with remote teams.</li>
+                            <li>Built and deployed scalable machine learning models for enterprise clients.</li>
+                            <li>Optimized data pipelines, improving data processing speed and model accuracy.</li>
                         </ul>
+                        <a href="https://xonects.com/" target="_blank" class="visit-btn"
+                            onerror="this.style.display='none'" onclick="event.stopPropagation()">Visit Website</a>
                     </div>
-                </li>
-            </ul>
+                </div>
+
+                <!-- SMS Neotech -->
+                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
+                    <div class="exp-logo">
+                        <img src="assets/sms-neotech-logo.jpg" alt="SMS Neotech" onerror="this.style.display='none'">
+                    </div>
+                    <h3>ML Engineer Trainee</h3>
+                    <span class="exp-company">SMS Neotech</span>
+                    <span class="exp-meta">Feb 2024 – Apr 2024 · Remote</span>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Developed a line parser to process OCR text from Google Vision API, dropping costs by
+                                95%.</li>
+                            <li>Processed 50-60k documents rapidly using unstructured data extractors.</li>
+                        </ul>
+                        <a href="https://www.smsneotech.com/" target="_blank" class="visit-btn"
+                            onclick="event.stopPropagation()">Visit Website</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section contact-section" id="contact">
-            <h2>Let's Connect</h2>
-            <p class="section-subtitle">Interested in working together? Let's discuss your project.</p>
+        <!-- ============== EDUCATION ============== -->
+        <section class="section" id="education">
+            <div class="section-header fade-in">
+                <h2 class="text-gradient">Education</h2>
+                <p>Academic Background & Learning Journey</p>
+            </div>
+            <div class="edu-list">
+                <!-- CDU -->
+                <div class="edu-card fade-in">
+                    <div class="edu-logo">
+                        <img src="assets/cdu-logo.png" alt="Charles Darwin University"
+                            onerror="this.parentElement.innerHTML='<span style=font-size:2rem>🎓</span>'">
+                    </div>
+                    <div class="edu-details">
+                        <h3>Charles Darwin University</h3>
+                        <p class="edu-degree">Master of Information Technology (AI Major)</p>
+                        <p class="edu-date">Jul 2025 – Jul 2027</p>
+                        <p class="edu-skills">Core Skills: Artificial Intelligence, Machine Learning, Edge Computing,
+                            NLP</p>
+                    </div>
+                    <span class="edu-badge in-progress">In Progress</span>
+                </div>
 
-            <div class="contact-content">
+                <!-- Torrens -->
+                <div class="edu-card fade-in">
+                    <div class="edu-logo">
+                        <img src="assets/torrens.png" alt="Torrens University">
+                    </div>
+                    <div class="edu-details">
+                        <h3>Torrens University Australia</h3>
+                        <p class="edu-degree">Bachelor of Software Engineering (AI)</p>
+                        <p class="edu-date">May 2022 – May 2025</p>
+                        <p class="edu-grade">GPA: <strong>6.0/7.0</strong> · High Distinction</p>
+                        <p class="edu-skills">Core Skills: AI, Deep Learning, Software Engineering, Data Science</p>
+                    </div>
+                    <span class="edu-badge graduate">Graduate</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="certifications">
+            <div class="section-header fade-in">
+                <h2 class="text-gradient">Certifications</h2>
+                <p>Verified Credentials & Achievements</p>
+            </div>
+            <div class="cert-grid">
+                <!-- Azure AI-102 -->
+                <div class="cert-card fade-in" style="border-color: var(--color-accent);">
+                    <div class="cert-img"
+                        style="background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 8px; margin-bottom: 1rem;">
+                        <img src="https://learn.microsoft.com/en-us/credentials/certifications/media/certification-badges/certification-badge-microsoft-certified-azure-ai-engineer-associate.svg"
+                            alt="Azure AI-102"
+                            onerror="this.parentElement.innerHTML='<span style=font-size:3rem>☁️</span>'"
+                            style="height: 100%; object-fit: contain;">
+                    </div>
+                    <h4>Azure AI Engineer Associate (AI-102)</h4>
+                    <span class="cert-status in-progress"
+                        style="display:inline-block; margin-top:10px; padding:4px 12px; border-radius:20px; font-size:0.8rem; background:var(--color-accent); color:#fff; font-weight:600;">In
+                        Progress</span>
+                </div>
+
+                <!-- GovHack -->
+                <div class="cert-card highlight fade-in">
+                    <div class="cert-img">
+                        <img src="assets/govhack-logo.png" alt="GovHack"
+                            onerror="this.parentElement.innerHTML='<span style=font-size:3rem>🏆</span>'">
+                    </div>
+                    <h4>Gov Hack NT Challenge<br>Honorable Mention</h4>
+                </div>
+
+                <!-- DeepLearning.AI -->
+                <div class="cert-card fade-in">
+                    <div class="cert-img">
+                        <img src="assets/projects/llogo.png" alt="DeepLearning.AI">
+                    </div>
+                    <h4>Machine Learning Certification</h4>
+                    <a href="assets/projects/mls.pdf" target="_blank">View Credential →</a>
+                </div>
+
+                <!-- PwSkills -->
+                <div class="cert-card fade-in">
+                    <div class="cert-img">
+                        <img src="assets/pwskills-logo.png" alt="PwSkills">
+                    </div>
+                    <h4>Data Science Bootcamp</h4>
+                    <a href="assets/projects/pwskills certificate.pdf" target="_blank">View Credential →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== SKILLS ============== -->
+        <section class="section" id="skills">
+            <div class="section-header fade-in">
+                <h2 class="text-gradient">Skills</h2>
+                <p>Technical competencies across AI, ML, and Cloud Engineering</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-group fade-in">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">TensorFlow</span>
+                        <span class="skill-pill">Scikit-learn</span>
+                        <span class="skill-pill">LangChain</span>
+                        <span class="skill-pill">RAG Systems</span>
+                        <span class="skill-pill">NLP</span>
+                        <span class="skill-pill">Computer Vision</span>
+                        <span class="skill-pill">Edge AI</span>
+                        <span class="skill-pill">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-group fade-in">
+                    <h3>Cloud, Data & DevOps</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">AWS</span>
+                        <span class="skill-pill">Azure</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">CI/CD Tools</span>
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">Power BI</span>
+                        <span class="skill-pill">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-group fade-in">
+                    <h3>Programming & Web</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">HTML/CSS</span>
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Agile / Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== CONTACT ============== -->
+        <section class="section" id="contact">
+            <div class="section-header fade-in">
+                <p
+                    style="font-size:0.85rem; letter-spacing:4px; text-transform:uppercase; margin-bottom:8px; color:var(--color-text-secondary);">
+                    Contact</p>
+                <h2 class="text-gradient">Let's Connect</h2>
+                <p>Have a project, question, or just want to chat? I'd love to hear from you!</p>
+            </div>
+            <div class="contact-wrapper fade-in">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
-                        <div>
-                            <h4>Email</h4>
-                            <p>saugatsaugat363@gmail.com</p>
-                        </div>
+                        <span>0450 112 303</span>
                     </div>
                     <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
                         </svg>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Sydney, Australia</p>
-                        </div>
+                        <span>saugatp363@gmail.com</span>
                     </div>
                 </div>
-
-                <div class="contact-cta">
-                    <a href="mailto:saugatsaugat363@gmail.com" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        Send Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/xaugat/" target="_blank" class="btn btn-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        LinkedIn Profile
-                    </a>
-                </div>
+                <form class="contact-form" action="https://formsubmit.co/saugatp363@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New message from portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://xaugatp.github.io/">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="contact-submit">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-name">Saugat Poudel</span>
-                <span class="footer-tagline">ML & AI Engineer</span>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/xaugatp" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/xaugat/" target="_blank">LinkedIn</a>
-                <a href="assets/Resume_Saugat.pdf" target="_blank">Resume</a>
-            </div>
-            <p class="footer-copy">&copy; 2024 Saugat Poudel. Built with passion.</p>
-        </div>
+    <!-- ============== FOOTER ============== -->
+    <footer class="footer">
+        <p>&copy; 2026 Saugat Poudel. Built with passion.</p>
     </footer>
-
-    <!-- Popup Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-project-content"></div>
-        </div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
