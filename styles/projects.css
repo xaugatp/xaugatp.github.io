@@ -1,0 +1,467 @@
+/* =============================================
+   PROJECTS.CSS – Card Grid + Detail Modal
+   ============================================= */
+
+/* ---- Grid ---- */
+#projects {
+    min-height: unset;
+    padding-bottom: 100px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: var(--max-width);
+    align-items: start;
+}
+
+/* ---- Card ---- */
+.proj-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    position: relative;
+    outline: none;
+}
+
+.proj-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(160, 32, 240, 0.45);
+    box-shadow: 0 16px 40px rgba(160, 32, 240, 0.15);
+}
+
+.proj-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ---- Image ---- */
+.proj-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.proj-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.proj-card:hover .proj-image-wrap img {
+    transform: scale(1.06);
+}
+
+/* Badge floating on image */
+.proj-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--color-accent);
+    border-radius: var(--radius-pill);
+    padding: 3px 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Expand hint on image */
+.proj-image-hint {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 0, 30, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.proj-card:hover .proj-image-hint {
+    opacity: 1;
+}
+
+.proj-image-hint span {
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.proj-image-hint svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* ---- Card body (always visible) ---- */
+.proj-body {
+    padding: 18px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.proj-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.proj-title-row h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.proj-arrow {
+    width: 17px;
+    height: 17px;
+    stroke: var(--color-text-secondary);
+    fill: none;
+    flex-shrink: 0;
+    transition: stroke 0.3s ease;
+}
+
+.proj-card:hover .proj-arrow {
+    stroke: var(--color-accent);
+}
+
+.proj-summary {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Tech pills row */
+.proj-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.proj-tech span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: var(--radius-pill);
+    background: rgba(160, 32, 240, 0.1);
+    color: var(--color-accent-hover);
+    border: 1px solid rgba(160, 32, 240, 0.22);
+    letter-spacing: 0.2px;
+}
+
+/* =============================================
+   MODAL OVERLAY
+   ============================================= */
+#proj-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(5, 0, 18, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#proj-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.proj-modal-box {
+    background: #12001f;
+    border: 1px solid rgba(160, 32, 240, 0.35);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 780px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(160, 32, 240, 0.15);
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.3s ease;
+    opacity: 0;
+
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(160, 32, 240, 0.4) transparent;
+}
+
+#proj-modal.active .proj-modal-box {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.proj-modal-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.proj-modal-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.proj-modal-box::-webkit-scrollbar-thumb {
+    background: rgba(160, 32, 240, 0.4);
+    border-radius: 99px;
+}
+
+/* ---- Modal header (image banner) ---- */
+.proj-modal-header {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.proj-modal-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gradient overlay on image */
+.proj-modal-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, #12001f 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Close button */
+#proj-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(10, 0, 25, 0.7);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#proj-modal-close:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Badge inside header */
+.proj-modal-header .proj-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ---- Modal body ---- */
+.proj-modal-body {
+    padding: 24px 28px 32px;
+}
+
+#proj-modal-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin: 0 0 10px;
+    line-height: 1.25;
+}
+
+#proj-modal-summary {
+    font-size: 0.92rem;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0 0 16px;
+}
+
+/* ---- Divider & label ---- */
+.proj-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    margin: 20px 0 16px;
+}
+
+.proj-details-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    opacity: 0.85;
+    margin-bottom: 14px;
+}
+
+/* ---- Bullet list ---- */
+.proj-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.proj-bullets li {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    padding-left: 20px;
+    position: relative;
+}
+
+.proj-bullets li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+/* ---- Action buttons ---- */
+.proj-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.proj-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    border: none;
+}
+
+.proj-btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    flex-shrink: 0;
+}
+
+.proj-btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.proj-btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(160, 32, 240, 0.4);
+}
+
+.proj-btn-ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.proj-btn-ghost:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-image-wrap {
+        height: 170px;
+    }
+
+    .proj-modal-header {
+        height: 200px;
+    }
+
+    .proj-modal-body {
+        padding: 18px 20px 28px;
+    }
+
+    #proj-modal-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #proj-modal {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .proj-modal-box {
+        border-radius: 20px 20px 0 0;
+        max-height: 92vh;
+    }
+
+    .proj-body {
+        padding: 15px 16px 14px;
+    }
+}

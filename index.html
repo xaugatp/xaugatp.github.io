@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/education.css">
     <link rel="stylesheet" href="styles/certifications.css">
+    <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/contact.css">
 
@@ -57,6 +58,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -345,6 +347,222 @@
             </div>
         </section>
 
+        <!-- ============== PROJECTS ============== -->
+        <section class="section" id="projects">
+            <div class="section-header fade-in">
+                <h2 class="text-gradient">Projects</h2>
+                <p>Click any card to see what was built, the tech stack, and links</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- 1. Active Fire Edge Detection -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp" data-alt-href="#experience"
+                    data-alt-label="See in Experience"
+                    data-bullets="Developed an onboard computer vision pipeline on DJI Manifold3 to detect active fire perimeters in real time from live drone footage during emergency operations.||Fine-tuned YOLOv8 on smoke and fire thermal imagery, achieving sub-100 ms inference latency at the edge — no cloud dependency.||Integrated with DJI Payload SDK to stream annotated bounding-box overlays back to the NTFES ground control station for incident commanders.||Reduced manual aerial surveillance time by enabling autonomous fire boundary mapping, supporting faster evacuation decisions.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/safe_site.jpg" alt="Active Fire Edge Detection" loading="lazy">
+                        <span class="proj-badge">Featured</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>Active Fire Edge Detection</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Real-time fire boundary detection on DJI drones with Manifold3 edge
+                            hardware for NTFES.</p>
+                        <div class="proj-tech">
+                            <span>YOLOv8</span><span>Computer Vision</span><span>Edge
+                                AI</span><span>Python</span><span>DJI SDK</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Insurance RAG Chatbot -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp"
+                    data-bullets="Built a RAG pipeline using LangChain and FAISS vector store, ingesting 10,000+ insurance policy documents for semantic Q&amp;A retrieval.||Integrated OpenAI GPT-4 with a custom prompt template for accurate, cited answers grounded in the internal knowledge base.||Designed a FastAPI backend + Streamlit front end — agents query policy compliance in plain English during live client calls.||Cut average document lookup time from ~15 minutes to under 30 seconds, measurably improving agent productivity.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/insurance_chatbot.webp" alt="Insurance RAG Chatbot" loading="lazy">
+                        <span class="proj-badge">NLP</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>Insurance RAG Chatbot</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Retrieval-augmented chatbot querying 10,000+ insurance policy documents
+                            with GPT-4 and semantic search.</p>
+                        <div class="proj-tech">
+                            <span>LangChain</span><span>RAG</span><span>FAISS</span><span>GPT-4</span><span>FastAPI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Credit Card Fraud Detection -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp"
+                    data-bullets="Balanced a highly imbalanced dataset of 15,000+ transactions using SMOTE oversampling and StandardScaler feature scaling.||Trained Logistic Regression, Random Forest, and XGBoost — XGBoost achieved 98.7% ROC-AUC and was selected for production.||Engineered domain-specific features: transaction velocity, time-of-day patterns, and merchant category risk scores.||Deployed as a Flask REST API providing real-time fraud probability scores with sub-5 ms response time per transaction.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/CreditCardFraudDetection.jpeg" alt="Credit Card Fraud Detection"
+                            loading="lazy">
+                        <span class="proj-badge">ML</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>Credit Card Fraud Detection</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Ensemble ML system identifying fraudulent transactions across 15,000+
+                            records with 98.7% ROC-AUC.</p>
+                        <div class="proj-tech">
+                            <span>XGBoost</span><span>Scikit-learn</span><span>SMOTE</span><span>Flask</span><span>Pandas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. PDF Chatbot -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp"
+                    data-bullets="Built a fully offline Q&amp;A system using Ollama-served Mistral 7B — no user data leaves the machine, ideal for sensitive enterprise documents.||LangChain RAG pipeline with ChromaDB: PDFs chunked, embedded with sentence-transformers, retrieved via cosine similarity.||Streamlit interface with drag-and-drop upload, real-time streaming responses, and source-highlighted citations.||Supports multi-document context windows for cross-document Q&amp;A across multiple PDFs in a single session.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/pdf-chatbot.png" alt="PDF Chatbot" loading="lazy">
+                        <span class="proj-badge">LLM</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>PDF Chatbot (Local LLM)</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Privacy-first offline document Q&amp;A powered by Mistral 7B via Ollama
+                            — zero data leaves the machine.</p>
+                        <div class="proj-tech">
+                            <span>Ollama</span><span>Mistral
+                                7B</span><span>LangChain</span><span>ChromaDB</span><span>Streamlit</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Market Pulse -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp"
+                    data-bullets="Scraped 500+ financial headlines per hour from multiple RSS feeds and news APIs in real time.||Fine-tuned FinBERT on financial sentiment data (positive/negative/neutral), achieving 91% accuracy on out-of-sample headlines.||Built an interactive Flask dashboard with candlestick charts overlaid with daily aggregated sentiment scores per ticker.||REST API endpoint allowing downstream apps to query current market sentiment for any ASX/NYSE ticker with one call.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/market_pulse.jpg" alt="Market Pulse" loading="lazy">
+                        <span class="proj-badge">FinTech</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>Market Pulse – Sentiment Analyser</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Real-time financial news sentiment dashboard using fine-tuned FinBERT,
+                            achieving 91% accuracy on stock mood prediction.</p>
+                        <div class="proj-tech">
+                            <span>FinBERT</span><span>Transformers</span><span>Flask</span><span>REST
+                                API</span><span>NLP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Multiclass CNN -->
+                <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
+                    data-github="https://github.com/xaugatp"
+                    data-bullets="Custom 8-layer CNN in TensorFlow/Keras for 10+ categories, with batch normalisation and dropout regularisation.||Extensive augmentation (rotations, flips, zoom, brightness shift) on 50,000+ images, boosting generalisation by ~12%.||Transfer learning with ResNet50 and EfficientNetB0 — EfficientNet fine-tune achieved 94.3% top-1 accuracy on test set.||Grad-CAM visualisations confirmed the network focused on semantically meaningful image regions for each class.">
+                    <div class="proj-image-wrap">
+                        <img src="assets/projects/multiclass_classification_CNN.webp" alt="Multiclass CNN Classifier"
+                            loading="lazy">
+                        <span class="proj-badge">Deep Learning</span>
+                        <div class="proj-image-hint">
+                            <span>
+                                <svg viewBox="0 0 24 24" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                View Details
+                            </span>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title-row">
+                            <h3>Multiclass Image Classification (CNN)</h3>
+                            <svg class="proj-arrow" viewBox="0 0 24 24" stroke-width="2.5">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </div>
+                        <p class="proj-summary">Deep CNN achieving 94.3% top-1 accuracy on 10+ image categories using
+                            EfficientNetB0 transfer learning.</p>
+                        <div class="proj-tech">
+                            <span>TensorFlow</span><span>Keras</span><span>EfficientNetB0</span><span>Grad-CAM</span><span>CNN</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
         <!-- ============== SKILLS ============== -->
         <section class="section" id="skills">
             <div class="section-header fade-in">
@@ -441,7 +659,28 @@
         <p>&copy; 2026 Saugat Poudel. Built with passion.</p>
     </footer>
 
+    <!-- ============== PROJECT DETAIL MODAL ============== -->
+    <div id="proj-modal" aria-modal="true" role="dialog" aria-label="Project details">
+        <div class="proj-modal-box">
+            <div class="proj-modal-header">
+                <img id="proj-modal-img" src="" alt="">
+                <button id="proj-modal-close" aria-label="Close">&times;</button>
+                <span id="proj-modal-badge" class="proj-badge"></span>
+            </div>
+            <div class="proj-modal-body">
+                <h2 id="proj-modal-title"></h2>
+                <p id="proj-modal-summary"></p>
+                <div id="proj-modal-tech" class="proj-tech"></div>
+                <hr class="proj-divider">
+                <p class="proj-details-label">What I built</p>
+                <ul id="proj-modal-bullets" class="proj-bullets"></ul>
+                <div id="proj-modal-actions" class="proj-actions"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 
 </html>
