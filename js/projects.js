@@ -1,5 +1,5 @@
 /* =============================================
-   projects.js – Project Detail Modal
+   projects.js – Project Name Banners + Modal
    ============================================= */
 
 (function () {
@@ -8,45 +8,134 @@
     const GITHUB_ICON = `<svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`;
     const DEPLOY_ICON = `<svg viewBox="0 0 24 24" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
+    /* ---- Each card gets a unique accent colour palette ---- */
+    const PALETTES = [
+        { from: '#0d001a', mid: '#1a0033', glow: 'rgba(160,32,240,', text: '#fff' },
+        { from: '#000d1a', mid: '#001833', glow: 'rgba(32,140,240,', text: '#fff' },
+        { from: '#001a0d', mid: '#003318', glow: 'rgba(32,200,100,', text: '#fff' },
+        { from: '#1a0d00', mid: '#331800', glow: 'rgba(240,140,32,', text: '#fff' },
+        { from: '#1a001a', mid: '#330033', glow: 'rgba(220,32,160,', text: '#fff' },
+        { from: '#000d1a', mid: '#001a2e', glow: 'rgba(32,200,220,', text: '#fff' },
+    ];
+
     /* ---- DOM refs ---- */
-    const modal = document.getElementById('proj-modal');
-    const modalBox = modal.querySelector('.proj-modal-box');
-    const closeBtn = document.getElementById('proj-modal-close');
-    const modalImg = document.getElementById('proj-modal-img');
-    const modalBadge = document.getElementById('proj-modal-badge');
-    const modalTitle = document.getElementById('proj-modal-title');
-    const modalSummary = document.getElementById('proj-modal-summary');
-    const modalTech = document.getElementById('proj-modal-tech');
-    const modalBullets = document.getElementById('proj-modal-bullets');
-    const modalActions = document.getElementById('proj-modal-actions');
+    const modal       = document.getElementById('proj-modal');
+    const modalBox    = modal.querySelector('.proj-modal-box');
+    const closeBtn    = document.getElementById('proj-modal-close');
+    const modalHeader = modal.querySelector('.proj-modal-header');
+    const modalBadge  = document.getElementById('proj-modal-badge');
+    const modalTitle  = document.getElementById('proj-modal-title');
+    const modalSummary= document.getElementById('proj-modal-summary');
+    const modalTech   = document.getElementById('proj-modal-tech');
+    const modalBullets= document.getElementById('proj-modal-bullets');
+    const modalActions= document.getElementById('proj-modal-actions');
 
-    /* ---- Open modal with card data ---- */
-    function openModal(card) {
-        const img = card.querySelector('.proj-image-wrap img');
-        const badge = card.querySelector('.proj-badge');
-        const title = card.querySelector('.proj-title-row h3');
-        const summary = card.querySelector('.proj-summary');
-        const techEls = card.querySelectorAll('.proj-tech span');
-        const bulletsRaw = card.dataset.bullets || '';
-        const github = card.dataset.github || null;
-        const demo = card.dataset.demo || null;
-        const altHref = card.dataset.altHref || null;
-        const altLabel = card.dataset.altLabel || null;
+    /* ---- Build an animated name banner inside a container ---- */
+    function buildNameBanner(container, title, badge, paletteIndex, isModal) {
+        const p = PALETTES[paletteIndex % PALETTES.length];
+        container.style.background = `linear-gradient(135deg, ${p.from} 0%, ${p.mid} 50%, ${p.from} 100%)`;
 
-        /* Image */
-        modalImg.src = img ? img.src : '';
-        modalImg.alt = img ? img.alt : '';
+        /* Subtitle (badge text or generic) */
+        const sub = badge || 'Project';
 
-        /* Badge */
-        if (badge) {
-            modalBadge.textContent = badge.textContent;
-            modalBadge.style.display = '';
-        } else {
-            modalBadge.style.display = 'none';
+        /* Name text block */
+        const nameEl = document.createElement('div');
+        nameEl.className = isModal ? 'proj-modal-name' : 'proj-name-text';
+        nameEl.innerHTML = `
+            <span class="${isModal ? 'proj-modal-name-main' : 'proj-name-main'}">${title}</span>
+            <span class="${isModal ? 'proj-modal-name-sub' : 'proj-name-sub'}">${sub}</span>
+        `;
+        container.appendChild(nameEl);
+
+        /* Gradient fade at bottom */
+        if (isModal) {
+            const fade = document.createElement('div');
+            fade.className = 'proj-modal-header-gradient';
+            container.appendChild(fade);
         }
 
+        /* Floating particles */
+        const count = isModal ? 14 : 8;
+        for (let i = 0; i < count; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'proj-particle';
+            const size = Math.random() * 5 + 2;
+            dot.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                left: ${Math.random() * 90 + 5}%;
+                top: ${Math.random() * 80 + 10}%;
+                animation-duration: ${Math.random() * 3 + 2.5}s;
+                animation-delay: ${Math.random() * 3}s;
+                opacity: ${Math.random() * 0.5 + 0.1};
+                background: ${p.glow}0.7);
+            `;
+            container.appendChild(dot);
+        }
+    }
+
+    /* ---- Replace .proj-image-wrap with .proj-name-banner on each card ---- */
+    function buildCardBanners() {
+        document.querySelectorAll('.proj-card').forEach((card, idx) => {
+            /* Grab the old image wrap */
+            const wrap = card.querySelector('.proj-image-wrap');
+            if (!wrap) return;
+
+            /* Read data from existing elements */
+            const titleEl = card.querySelector('.proj-title-row h3');
+            const badgeEl = card.querySelector('.proj-badge');
+            const hintEl  = card.querySelector('.proj-image-hint');
+            const title   = titleEl ? titleEl.textContent : '';
+            const badge   = badgeEl ? badgeEl.textContent : '';
+
+            /* Build the new banner div */
+            const banner = document.createElement('div');
+            banner.className = 'proj-name-banner';
+
+            /* Re-attach the badge and hint (if they existed) into the new banner */
+            if (badgeEl) banner.appendChild(badgeEl);
+
+            buildNameBanner(banner, title, badge, idx, false);
+
+            if (hintEl) banner.appendChild(hintEl);
+
+            /* Swap */
+            wrap.replaceWith(banner);
+        });
+    }
+
+    /* ---- Open modal with card data ---- */
+    function openModal(card, paletteIndex) {
+        const badge     = card.querySelector('.proj-badge');
+        const title     = card.querySelector('.proj-title-row h3');
+        const summary   = card.querySelector('.proj-summary');
+        const techEls   = card.querySelectorAll('.proj-tech span');
+        const bulletsRaw= card.dataset.bullets || '';
+        const github    = card.dataset.github || null;
+        const demo      = card.dataset.demo || null;
+        const altHref   = card.dataset.altHref || null;
+        const altLabel  = card.dataset.altLabel || null;
+
+        const titleText = title ? title.textContent : '';
+        const badgeText = badge ? badge.textContent : '';
+
+        /* Rebuild modal header as name banner */
+        modalHeader.innerHTML = `<button id="proj-modal-close" aria-label="Close">&times;</button><span id="proj-modal-badge" class="proj-badge"></span>`;
+        const newCloseBtn = document.getElementById('proj-modal-close');
+        newCloseBtn.addEventListener('click', closeModal);
+
+        const newBadge = document.getElementById('proj-modal-badge');
+        if (badgeText) {
+            newBadge.textContent = badgeText;
+            newBadge.style.display = '';
+        } else {
+            newBadge.style.display = 'none';
+        }
+
+        buildNameBanner(modalHeader, titleText, badgeText, paletteIndex, true);
+
         /* Text */
-        modalTitle.textContent = title ? title.textContent : '';
+        modalTitle.textContent   = titleText;
         modalSummary.textContent = summary ? summary.textContent : '';
 
         /* Tech pills */
@@ -60,21 +149,15 @@
 
         /* Action buttons */
         let actHtml = '';
-        if (demo) {
-            actHtml += `<a href="${demo}" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary">${DEPLOY_ICON} Live Demo</a>`;
-        }
-        if (github) {
-            actHtml += `<a href="${github}" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost">${GITHUB_ICON} GitHub</a>`;
-        }
-        if (altHref && altLabel) {
-            actHtml += `<a href="${altHref}" class="proj-btn proj-btn-ghost">${DEPLOY_ICON} ${altLabel}</a>`;
-        }
+        if (demo)   actHtml += `<a href="${demo}"    target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary">${DEPLOY_ICON} Live Demo</a>`;
+        if (github) actHtml += `<a href="${github}"  target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost">${GITHUB_ICON} GitHub</a>`;
+        if (altHref && altLabel) actHtml += `<a href="${altHref}" class="proj-btn proj-btn-ghost">${DEPLOY_ICON} ${altLabel}</a>`;
         modalActions.innerHTML = actHtml;
 
         /* Show */
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        closeBtn.focus();
+        newCloseBtn.focus();
     }
 
     /* ---- Close modal ---- */
@@ -82,9 +165,6 @@
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
-
-    /* ---- Event: close button ---- */
-    closeBtn.addEventListener('click', closeModal);
 
     /* ---- Event: backdrop click (outside modal box) ---- */
     modal.addEventListener('click', function (e) {
@@ -98,17 +178,18 @@
 
     /* ---- Attach open listeners to cards ---- */
     function initCards() {
-        document.querySelectorAll('.proj-card').forEach(card => {
+        buildCardBanners();
+
+        document.querySelectorAll('.proj-card').forEach((card, idx) => {
             card.addEventListener('click', function (e) {
-                /* Don't intercept clicks on links/buttons inside the card */
                 if (e.target.closest('a, button')) return;
-                openModal(card);
+                openModal(card, idx);
             });
 
             card.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    openModal(card);
+                    openModal(card, idx);
                 }
             });
         });
