@@ -360,9 +360,12 @@
                     data-github="https://github.com/xaugatp" data-alt-href="#experience"
                     data-alt-label="See in Experience"
                     data-bullets="Developed an onboard computer vision pipeline on DJI Manifold3 to detect active fire perimeters in real time from live drone footage during emergency operations.||Fine-tuned YOLOv8 on smoke and fire thermal imagery, achieving sub-100 ms inference latency at the edge — no cloud dependency.||Integrated with DJI Payload SDK to stream annotated bounding-box overlays back to the NTFES ground control station for incident commanders.||Reduced manual aerial surveillance time by enabling autonomous fire boundary mapping, supporting faster evacuation decisions.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/safe_site.jpg" alt="Active Fire Edge Detection" loading="lazy">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">Featured</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">Active Fire Edge Detection</span>
+                            <span class="proj-name-sub">Featured</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
@@ -394,9 +397,12 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Built a RAG pipeline using LangChain and FAISS vector store, ingesting 10,000+ insurance policy documents for semantic Q&amp;A retrieval.||Integrated OpenAI GPT-4 with a custom prompt template for accurate, cited answers grounded in the internal knowledge base.||Designed a FastAPI backend + Streamlit front end — agents query policy compliance in plain English during live client calls.||Cut average document lookup time from ~15 minutes to under 30 seconds, measurably improving agent productivity.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/insurance_chatbot.webp" alt="Insurance RAG Chatbot" loading="lazy">
+                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #000d1a 0%, #001833 50%, #000d1a 100%)">
                         <span class="proj-badge">NLP</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">Insurance RAG Chatbot</span>
+                            <span class="proj-name-sub">NLP</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
@@ -427,10 +433,12 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Balanced a highly imbalanced dataset of 15,000+ transactions using SMOTE oversampling and StandardScaler feature scaling.||Trained Logistic Regression, Random Forest, and XGBoost — XGBoost achieved 98.7% ROC-AUC and was selected for production.||Engineered domain-specific features: transaction velocity, time-of-day patterns, and merchant category risk scores.||Deployed as a Flask REST API providing real-time fraud probability scores with sub-5 ms response time per transaction.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/CreditCardFraudDetection.jpeg" alt="Credit Card Fraud Detection"
-                            loading="lazy">
+                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #001a0d 0%, #003318 50%, #001a0d 100%)">
                         <span class="proj-badge">ML</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">Credit Card Fraud Detection</span>
+                            <span class="proj-name-sub">ML</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
@@ -461,9 +469,12 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Built a fully offline Q&amp;A system using Ollama-served Mistral 7B — no user data leaves the machine, ideal for sensitive enterprise documents.||LangChain RAG pipeline with ChromaDB: PDFs chunked, embedded with sentence-transformers, retrieved via cosine similarity.||Streamlit interface with drag-and-drop upload, real-time streaming responses, and source-highlighted citations.||Supports multi-document context windows for cross-document Q&amp;A across multiple PDFs in a single session.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/pdf-chatbot.png" alt="PDF Chatbot" loading="lazy">
+                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #1a0d00 0%, #331800 50%, #1a0d00 100%)">
                         <span class="proj-badge">LLM</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">PDF Chatbot (Local LLM)</span>
+                            <span class="proj-name-sub">LLM</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
@@ -495,9 +506,12 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Scraped 500+ financial headlines per hour from multiple RSS feeds and news APIs in real time.||Fine-tuned FinBERT on financial sentiment data (positive/negative/neutral), achieving 91% accuracy on out-of-sample headlines.||Built an interactive Flask dashboard with candlestick charts overlaid with daily aggregated sentiment scores per ticker.||REST API endpoint allowing downstream apps to query current market sentiment for any ASX/NYSE ticker with one call.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/market_pulse.jpg" alt="Market Pulse" loading="lazy">
+                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #1a001a 0%, #330033 50%, #1a001a 100%)">
                         <span class="proj-badge">FinTech</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">Market Pulse – Sentiment Analyser</span>
+                            <span class="proj-name-sub">FinTech</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
@@ -529,10 +543,12 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Custom 8-layer CNN in TensorFlow/Keras for 10+ categories, with batch normalisation and dropout regularisation.||Extensive augmentation (rotations, flips, zoom, brightness shift) on 50,000+ images, boosting generalisation by ~12%.||Transfer learning with ResNet50 and EfficientNetB0 — EfficientNet fine-tune achieved 94.3% top-1 accuracy on test set.||Grad-CAM visualisations confirmed the network focused on semantically meaningful image regions for each class.">
-                    <div class="proj-image-wrap">
-                        <img src="assets/projects/multiclass_classification_CNN.webp" alt="Multiclass CNN Classifier"
-                            loading="lazy">
+                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #000d1a 0%, #001a2e 50%, #000d1a 100%)">
                         <span class="proj-badge">Deep Learning</span>
+                        <div class="proj-name-text">
+                            <span class="proj-name-main">Multiclass Image Classification (CNN)</span>
+                            <span class="proj-name-sub">Deep Learning</span>
+                        </div>
                         <div class="proj-image-hint">
                             <span>
                                 <svg viewBox="0 0 24 24" stroke-width="2">
