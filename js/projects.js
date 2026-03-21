@@ -74,33 +74,36 @@
         }
     }
 
-    /* ---- Replace .proj-image-wrap with .proj-name-banner on each card ---- */
+    /* ---- Add particles + glow to existing .proj-name-banner elements ---- */
     function buildCardBanners() {
         document.querySelectorAll('.proj-card').forEach((card, idx) => {
-            /* Grab the old image wrap */
-            const wrap = card.querySelector('.proj-image-wrap');
-            if (!wrap) return;
+            const banner = card.querySelector('.proj-name-banner');
+            if (!banner) return;
 
-            /* Read data from existing elements */
-            const titleEl = card.querySelector('.proj-title-row h3');
-            const badgeEl = card.querySelector('.proj-badge');
-            const hintEl  = card.querySelector('.proj-image-hint');
-            const title   = titleEl ? titleEl.textContent : '';
-            const badge   = badgeEl ? badgeEl.textContent : '';
+            const p = PALETTES[idx % PALETTES.length];
 
-            /* Build the new banner div */
-            const banner = document.createElement('div');
-            banner.className = 'proj-name-banner';
+            /* Apply per-card gradient if not already set inline */
+            if (!banner.style.background) {
+                banner.style.background = `linear-gradient(135deg, ${p.from} 0%, ${p.mid} 50%, ${p.from} 100%)`;
+            }
 
-            /* Re-attach the badge and hint (if they existed) into the new banner */
-            if (badgeEl) banner.appendChild(badgeEl);
-
-            buildNameBanner(banner, title, badge, idx, false);
-
-            if (hintEl) banner.appendChild(hintEl);
-
-            /* Swap */
-            wrap.replaceWith(banner);
+            /* Add floating particles */
+            for (let i = 0; i < 8; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'proj-particle';
+                const size = Math.random() * 5 + 2;
+                dot.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${Math.random() * 90 + 5}%;
+                    top: ${Math.random() * 80 + 10}%;
+                    animation-duration: ${Math.random() * 3 + 2.5}s;
+                    animation-delay: ${Math.random() * 3}s;
+                    opacity: ${Math.random() * 0.5 + 0.1};
+                    background: ${p.glow}0.7);
+                `;
+                banner.appendChild(dot);
+            }
         });
     }
 
