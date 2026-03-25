@@ -2,9 +2,6 @@
    BASE.CSS – Variables, Reset, Typography, Global
    ============================================= */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 /* Design Tokens */
 :root {
     --font-primary: 'Raleway', sans-serif;
@@ -13,6 +10,9 @@
     --color-bg-gradient-end: #000000;
     --color-accent: #a020f0;
     --color-accent-hover: #b44dff;
+    --color-accent-rgb: 160, 32, 240;
+    --color-accent-glow: rgba(160, 32, 240, 0.15);
+    --color-accent-border: rgba(160, 32, 240, 0.35);
     --color-text: #ffffff;
     --color-text-secondary: #aaaaaa;
     --color-card-bg: rgba(255, 255, 255, 0.05);
@@ -105,75 +105,6 @@ ul {
     list-style: none;
 }
 
-/* Layout Utility */
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 40px;
-    width: 100%;
-}
-
-/* Section Base */
-.section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 40px;
-    position: relative;
-    scroll-margin-top: 70px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-header h2 {
-    margin-bottom: 12px;
-}
-
-.section-header p {
-    font-size: 1rem;
-    font-weight: 300;
-}
-
-/* Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Staggered delay for child elements */
-.fade-in:nth-child(2) {
-    transition-delay: 0.1s;
-}
-
-.fade-in:nth-child(3) {
-    transition-delay: 0.2s;
-}
-
-.fade-in:nth-child(4) {
-    transition-delay: 0.3s;
-}
-
-/* Text Gradient Utility */
-.text-gradient {
-    background: linear-gradient(135deg, var(--color-accent), #ff6bd6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-
 /* Selection */
 ::selection {
     background: var(--color-accent);
@@ -190,11 +121,20 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(160, 32, 240, 0.5);
+    background: rgba(var(--color-accent-rgb), 0.5);
     border-radius: 3px;
     transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-accent);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--color-card-border);
 }

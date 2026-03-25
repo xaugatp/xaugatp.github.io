@@ -1,0 +1,16 @@
+{
+    "name": "Saugat Poudel – AI/ML Engineer Portfolio",
+    "short_name": "Saugat Poudel",
+    "description": "Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, edge computing, and AI-driven product development.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#0a0a0a",
+    "icons": [
+        {
+            "src": "assets/favicon.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

@@ -3,4 +3,4 @@ Disallow: /private/
 Disallow: /tmp/
 Allow: /
 
-Sitemap: https://xaugatp.github.io/sitemap.xml
+Sitemap: https://saugatpoudel.me/sitemap.xml

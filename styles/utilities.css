@@ -1,0 +1,87 @@
+/* =============================================
+   UTILITIES.CSS – Reusable Layout & Animation Helpers
+   ============================================= */
+
+/* ---- Layout ---- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/* ---- Section Base ---- */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    position: relative;
+    scroll-margin-top: 70px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Overline label above section headings */
+.section-label {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--color-text-secondary);
+}
+
+/* ---- Text Gradient ---- */
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), #ff6bd6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* ---- Scroll Fade-in Animations ---- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for child elements */
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+/* ---- Image Fallback ---- */
+/* Applied by JS when an img fails to load */
+.img-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fallback-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    display: block;
+}

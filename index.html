@@ -9,21 +9,45 @@
         content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, edge computing, and AI-driven product development.">
     <meta name="keywords"
         content="Saugat Poudel, Machine Learning Engineer, AI Engineer, Data Scientist, MLOps, Portfolio">
+    <link rel="canonical" href="https://saugatpoudel.me/">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saugatpoudel.me/">
+    <meta property="og:title" content="Saugat Poudel – AI/ML Engineer | Portfolio">
+    <meta property="og:description" content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, edge computing, and AI-driven product development.">
+    <meta property="og:image" content="https://saugatpoudel.me/assets/images/profile/me.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saugat Poudel – AI/ML Engineer | Portfolio">
+    <meta name="twitter:description" content="Portfolio of Saugat Poudel – AI/ML Engineer skilled in deploying scalable Machine Learning solutions, edge computing, and AI-driven product development.">
+    <meta name="twitter:image" content="https://saugatpoudel.me/assets/images/profile/me.png">
+
+    <!-- Google Fonts (non-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap">
 
     <!-- Styles (Modular) -->
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/utilities.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/education.css">
     <link rel="stylesheet" href="styles/certifications.css">
-    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/projects-cards.css">
+    <link rel="stylesheet" href="styles/projects-modal.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/contact.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/me.png" type="image/x-icon">
+    <!-- Favicon & PWA -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -31,8 +55,9 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Saugat Poudel",
-        "url": "https://xaugatp.github.io/",
-        "image": "https://xaugatp.github.io/assets/me.png",
+        "url": "https://saugatpoudel.me/",
+        "image": "https://saugatpoudel.me/assets/images/profile/me.png",
+
         "sameAs": [
             "https://www.linkedin.com/in/xaugat/",
             "https://github.com/xaugatp"
@@ -137,7 +162,7 @@
 
                 <div class="about-right fade-in">
                     <div class="about-photo">
-                        <img src="assets/me.png" alt="Saugat Poudel" />
+                        <img src="assets/images/profile/me.png" alt="Saugat Poudel" />
                     </div>
                     <div class="about-stats">
                         <div class="stat-box">
@@ -181,9 +206,9 @@
             </div>
             <div class="exp-grid">
                 <!-- NTFES -->
-                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
-                    <div class="exp-logo">
-                        <img src="assets/ntfes-logo.jpg" alt="NTFES" onerror="this.style.display='none'">
+                <div class="exp-card fade-in" tabindex="0" role="button" aria-expanded="false">
+                    <div class="exp-logo" data-fallback="">
+                        <img src="assets/images/logos/ntfes-logo.jpg" alt="NTFES">
                     </div>
                     <h3>Vacation Employment – AI in Public Safety</h3>
                     <span class="exp-company">Northern Territory Fire & Emergency Services</span>
@@ -194,15 +219,14 @@
                             </li>
                             <li>Enabling autonomous fire boundary identification for rapid emergency response.</li>
                         </ul>
-                        <a href="https://pfes.nt.gov.au/" target="_blank" class="visit-btn"
-                            onclick="event.stopPropagation()">Visit Website</a>
+                        <a href="https://pfes.nt.gov.au/" target="_blank" class="visit-btn">Visit Website</a>
                     </div>
                 </div>
 
                 <!-- University of Sydney -->
-                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
-                    <div class="exp-logo">
-                        <img src="assets/usyd-logo.png" alt="University of Sydney" onerror="this.style.display='none'">
+                <div class="exp-card fade-in" tabindex="0" role="button" aria-expanded="false">
+                    <div class="exp-logo" data-fallback="">
+                        <img src="assets/images/logos/usyd-logo.png" alt="University of Sydney">
                     </div>
                     <h3>R&D Intern – AI in Agriculture</h3>
                     <span class="exp-company">University of Sydney & Mak Design</span>
@@ -213,15 +237,14 @@
                             <li>Collaborated with researchers to optimize crop yield predictions using remote sensing.
                             </li>
                         </ul>
-                        <a href="https://www.sydney.edu.au/" target="_blank" class="visit-btn"
-                            onclick="event.stopPropagation()">Visit Website</a>
+                        <a href="https://www.sydney.edu.au/" target="_blank" class="visit-btn">Visit Website</a>
                     </div>
                 </div>
 
                 <!-- Xonects -->
-                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
+                <div class="exp-card fade-in" tabindex="0" role="button" aria-expanded="false">
                     <div class="exp-logo">
-                        <img src="assets/xonects-logo.webp" alt="Xonects">
+                        <img src="assets/images/logos/xonects-logo.webp" alt="Xonects">
                     </div>
                     <h3>Machine Learning Engineer Intern</h3>
                     <span class="exp-company">Xonects</span>
@@ -231,15 +254,14 @@
                             <li>Built and deployed scalable machine learning models for enterprise clients.</li>
                             <li>Optimized data pipelines, improving data processing speed and model accuracy.</li>
                         </ul>
-                        <a href="https://xonects.com/" target="_blank" class="visit-btn"
-                            onerror="this.style.display='none'" onclick="event.stopPropagation()">Visit Website</a>
+                        <a href="https://xonects.com/" target="_blank" class="visit-btn">Visit Website</a>
                     </div>
                 </div>
 
                 <!-- SMS Neotech -->
-                <div class="exp-card fade-in" onclick="this.classList.toggle('expanded')">
-                    <div class="exp-logo">
-                        <img src="assets/sms-neotech-logo.jpg" alt="SMS Neotech" onerror="this.style.display='none'">
+                <div class="exp-card fade-in" tabindex="0" role="button" aria-expanded="false">
+                    <div class="exp-logo" data-fallback="">
+                        <img src="assets/images/logos/sms-neotech-logo.jpg" alt="SMS Neotech">
                     </div>
                     <h3>ML Engineer Trainee</h3>
                     <span class="exp-company">SMS Neotech</span>
@@ -250,8 +272,7 @@
                                 95%.</li>
                             <li>Processed 50-60k documents rapidly using unstructured data extractors.</li>
                         </ul>
-                        <a href="https://www.smsneotech.com/" target="_blank" class="visit-btn"
-                            onclick="event.stopPropagation()">Visit Website</a>
+                        <a href="https://www.smsneotech.com/" target="_blank" class="visit-btn">Visit Website</a>
                     </div>
                 </div>
             </div>
@@ -266,9 +287,8 @@
             <div class="edu-list">
                 <!-- CDU -->
                 <div class="edu-card fade-in">
-                    <div class="edu-logo">
-                        <img src="assets/cdu-logo.png" alt="Charles Darwin University"
-                            onerror="this.parentElement.innerHTML='<span style=font-size:2rem>🎓</span>'">
+                    <div class="edu-logo" data-fallback="🎓">
+                        <img src="assets/images/logos/cdu-logo.png" alt="Charles Darwin University">
                     </div>
                     <div class="edu-details">
                         <h3>Charles Darwin University</h3>
@@ -283,7 +303,7 @@
                 <!-- Torrens -->
                 <div class="edu-card fade-in">
                     <div class="edu-logo">
-                        <img src="assets/torrens.png" alt="Torrens University">
+                        <img src="assets/images/logos/torrens.png" alt="Torrens University">
                     </div>
                     <div class="edu-details">
                         <h3>Torrens University Australia</h3>
@@ -304,25 +324,19 @@
             </div>
             <div class="cert-grid">
                 <!-- Azure AI-102 -->
-                <div class="cert-card fade-in" style="border-color: var(--color-accent);">
-                    <div class="cert-img"
-                        style="background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; height: 160px; border-radius: 8px; margin-bottom: 1rem;">
+                <div class="cert-card cert-card--accent fade-in">
+                    <div class="cert-img cert-img--badge" data-fallback="☁️">
                         <img src="https://learn.microsoft.com/en-us/credentials/certifications/media/certification-badges/certification-badge-microsoft-certified-azure-ai-engineer-associate.svg"
-                            alt="Azure AI-102"
-                            onerror="this.parentElement.innerHTML='<span style=font-size:3rem>☁️</span>'"
-                            style="height: 100%; object-fit: contain;">
+                            alt="Azure AI-102">
                     </div>
                     <h4>Azure AI Engineer Associate (AI-102)</h4>
-                    <span class="cert-status in-progress"
-                        style="display:inline-block; margin-top:10px; padding:4px 12px; border-radius:20px; font-size:0.8rem; background:var(--color-accent); color:#fff; font-weight:600;">In
-                        Progress</span>
+                    <span class="cert-status in-progress">In Progress</span>
                 </div>
 
                 <!-- GovHack -->
                 <div class="cert-card highlight fade-in">
-                    <div class="cert-img">
-                        <img src="assets/govhack-logo.png" alt="GovHack"
-                            onerror="this.parentElement.innerHTML='<span style=font-size:3rem>🏆</span>'">
+                    <div class="cert-img" data-fallback="🏆">
+                        <img src="assets/images/logos/govhack-logo.png" alt="GovHack">
                     </div>
                     <h4>Gov Hack NT Challenge<br>Honorable Mention</h4>
                 </div>
@@ -330,19 +344,19 @@
                 <!-- DeepLearning.AI -->
                 <div class="cert-card fade-in">
                     <div class="cert-img">
-                        <img src="assets/projects/llogo.png" alt="DeepLearning.AI">
+                        <img src="assets/images/logos/deeplearning-ai-logo.png" alt="DeepLearning.AI">
                     </div>
                     <h4>Machine Learning Certification</h4>
-                    <a href="assets/projects/mls.pdf" target="_blank">View Credential →</a>
+                    <a href="assets/documents/certificates/ml-specialization-certificate.pdf" target="_blank">View Credential →</a>
                 </div>
 
                 <!-- PwSkills -->
                 <div class="cert-card fade-in">
                     <div class="cert-img">
-                        <img src="assets/pwskills-logo.png" alt="PwSkills">
+                        <img src="assets/images/logos/pwskills-logo.png" alt="PwSkills">
                     </div>
                     <h4>Data Science Bootcamp</h4>
-                    <a href="assets/projects/pwskills certificate.pdf" target="_blank">View Credential →</a>
+                    <a href="assets/documents/certificates/pwskills-certificate.pdf" target="_blank">View Credential →</a>
                 </div>
             </div>
         </section>
@@ -396,7 +410,7 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Built a RAG pipeline using LangChain and FAISS vector store, ingesting 10,000+ insurance policy documents for semantic Q&amp;A retrieval.||Integrated OpenAI GPT-4 with a custom prompt template for accurate, cited answers grounded in the internal knowledge base.||Designed a FastAPI backend + Streamlit front end — agents query policy compliance in plain English during live client calls.||Cut average document lookup time from ~15 minutes to under 30 seconds, measurably improving agent productivity.">
-                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #000d1a 0%, #001833 50%, #000d1a 100%)">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">NLP</span>
                         <div class="proj-name-text">
                             <span class="proj-name-main">Insurance RAG Chatbot</span>
@@ -431,7 +445,7 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Balanced a highly imbalanced dataset of 15,000+ transactions using SMOTE oversampling and StandardScaler feature scaling.||Trained Logistic Regression, Random Forest, and XGBoost — XGBoost achieved 98.7% ROC-AUC and was selected for production.||Engineered domain-specific features: transaction velocity, time-of-day patterns, and merchant category risk scores.||Deployed as a Flask REST API providing real-time fraud probability scores with sub-5 ms response time per transaction.">
-                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #001a0d 0%, #003318 50%, #001a0d 100%)">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">ML</span>
                         <div class="proj-name-text">
                             <span class="proj-name-main">Credit Card Fraud Detection</span>
@@ -466,7 +480,7 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Built a fully offline Q&amp;A system using Ollama-served Mistral 7B — no user data leaves the machine, ideal for sensitive enterprise documents.||LangChain RAG pipeline with ChromaDB: PDFs chunked, embedded with sentence-transformers, retrieved via cosine similarity.||Streamlit interface with drag-and-drop upload, real-time streaming responses, and source-highlighted citations.||Supports multi-document context windows for cross-document Q&amp;A across multiple PDFs in a single session.">
-                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #1a0d00 0%, #331800 50%, #1a0d00 100%)">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">LLM</span>
                         <div class="proj-name-text">
                             <span class="proj-name-main">PDF Chatbot (Local LLM)</span>
@@ -502,7 +516,7 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Scraped 500+ financial headlines per hour from multiple RSS feeds and news APIs in real time.||Fine-tuned FinBERT on financial sentiment data (positive/negative/neutral), achieving 91% accuracy on out-of-sample headlines.||Built an interactive Flask dashboard with candlestick charts overlaid with daily aggregated sentiment scores per ticker.||REST API endpoint allowing downstream apps to query current market sentiment for any ASX/NYSE ticker with one call.">
-                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #1a001a 0%, #330033 50%, #1a001a 100%)">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">FinTech</span>
                         <div class="proj-name-text">
                             <span class="proj-name-main">Market Pulse – Sentiment Analyser</span>
@@ -538,7 +552,7 @@
                 <article class="proj-card fade-in" tabindex="0" role="button" aria-expanded="false"
                     data-github="https://github.com/xaugatp"
                     data-bullets="Custom 8-layer CNN in TensorFlow/Keras for 10+ categories, with batch normalisation and dropout regularisation.||Extensive augmentation (rotations, flips, zoom, brightness shift) on 50,000+ images, boosting generalisation by ~12%.||Transfer learning with ResNet50 and EfficientNetB0 — EfficientNet fine-tune achieved 94.3% top-1 accuracy on test set.||Grad-CAM visualisations confirmed the network focused on semantically meaningful image regions for each class.">
-                    <div class="proj-name-banner" style="background: linear-gradient(135deg, #000d1a 0%, #001a2e 50%, #000d1a 100%)">
+                    <div class="proj-name-banner">
                         <span class="proj-badge">Deep Learning</span>
                         <div class="proj-name-text">
                             <span class="proj-name-main">Multiclass Image Classification (CNN)</span>
@@ -626,9 +640,7 @@
         <!-- ============== CONTACT ============== -->
         <section class="section" id="contact">
             <div class="section-header fade-in">
-                <p
-                    style="font-size:0.85rem; letter-spacing:4px; text-transform:uppercase; margin-bottom:8px; color:var(--color-text-secondary);">
-                    Contact</p>
+                <p class="section-label">Contact</p>
                 <h2 class="text-gradient">Let's Connect</h2>
                 <p>Have a project, question, or just want to chat? I'd love to hear from you!</p>
             </div>
@@ -654,7 +666,7 @@
                 <form class="contact-form" action="https://formsubmit.co/contact.saugatpoudel@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="New message from portfolio!">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://xaugatp.github.io/">
+                    <input type="hidden" name="_next" value="https://saugatpoudel.me/">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
