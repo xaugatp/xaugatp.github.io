@@ -23,8 +23,8 @@
 }
 
 .edu-card:hover {
-    border-color: rgba(160, 32, 240, 0.3);
-    box-shadow: 0 5px 20px rgba(160, 32, 240, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.1);
 }
 
 .edu-logo {

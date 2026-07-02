@@ -35,10 +35,15 @@
     flex-shrink: 0;
 }
 
-.contact-item span {
+.contact-item span,
+.contact-item a {
     font-size: 0.95rem;
     font-weight: 400;
     color: var(--color-text);
+}
+
+.contact-item a:hover {
+    color: var(--color-accent);
 }
 
 /* Right - Form */
@@ -100,6 +105,10 @@
     background: var(--color-accent-hover);
     box-shadow: 0 5px 20px rgba(var(--color-accent-rgb), 0.4);
     transform: translateY(-2px);
+}
+
+.contact-submit:active {
+    transform: translateY(-2px) scale(0.97);
 }
 
 @media (max-width: 768px) {

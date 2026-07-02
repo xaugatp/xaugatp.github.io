@@ -10,8 +10,8 @@
 
     /* ---- Each card gets a unique accent colour palette ---- */
     const PALETTES = [
-        { from: '#0d001a', mid: '#1a0033', glow: 'rgba(160,32,240,',  text: '#fff' },
-        { from: '#000d1a', mid: '#001833', glow: 'rgba(32,140,240,',  text: '#fff' },
+        { from: '#050b16', mid: '#0a1830', glow: 'rgba(59,130,246,',  text: '#fff' },
+        { from: '#001a1a', mid: '#003333', glow: 'rgba(34,211,238,',  text: '#fff' },
         { from: '#001a0d', mid: '#003318', glow: 'rgba(32,200,100,',  text: '#fff' },
         { from: '#1a0d00', mid: '#331800', glow: 'rgba(240,140,32,',  text: '#fff' },
         { from: '#1a001a', mid: '#330033', glow: 'rgba(220,32,160,',  text: '#fff' },
@@ -130,7 +130,7 @@
         /* Action buttons */
         var actHtml = '';
         if (demo)                actHtml += '<a href="' + demo    + '" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary">' + DEPLOY_ICON + ' Live Demo</a>';
-        if (github)              actHtml += '<a href="' + github  + '" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost">'   + GITHUB_ICON + ' GitHub</a>';
+        if (github)              actHtml += '<a href="' + github  + '" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost">'   + GITHUB_ICON + ' GitHub Profile</a>';
         if (altHref && altLabel) actHtml += '<a href="' + altHref + '" class="proj-btn proj-btn-ghost">' + DEPLOY_ICON + ' ' + altLabel + '</a>';
         modalActions.innerHTML = actHtml;
 

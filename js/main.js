@@ -7,11 +7,63 @@
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        // ---- Navbar scroll effect ----
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ---- Consolidated scroll handler (single rAF-throttled listener
+        //      driving navbar state, active nav link, back-to-top and the
+        //      scroll-progress bar — avoids stacking multiple unthrottled
+        //      scroll listeners) ----
         const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links a');
+        const backToTop = document.getElementById('back-to-top');
+        const progressBar = document.getElementById('scroll-progress');
+        let scrollTicking = false;
+
+        function updateOnScroll() {
+            const scrollY = window.scrollY;
+
+            navbar.classList.toggle('scrolled', scrollY > 50);
+
+            if (backToTop) backToTop.classList.toggle('visible', scrollY > 600);
+
+            if (progressBar) {
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+                progressBar.style.width = pct + '%';
+            }
+
+            const activeY = scrollY + 200;
+            sections.forEach(function (section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                if (activeY >= sectionTop && activeY < sectionTop + sectionHeight) {
+                    navItems.forEach(function (item) {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === '#' + sectionId) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            scrollTicking = false;
+        }
+
         window.addEventListener('scroll', function () {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            if (!scrollTicking) {
+                requestAnimationFrame(updateOnScroll);
+                scrollTicking = true;
+            }
         });
+        updateOnScroll();
+
+        if (backToTop) {
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            });
+        }
 
         // ---- Mobile menu toggle ----
         const navToggle = document.getElementById('nav-toggle');
@@ -30,31 +82,21 @@
             });
         });
 
-        // ---- Active nav link on scroll ----
-        const sections = document.querySelectorAll('section[id]');
-        const navItems = document.querySelectorAll('.nav-links a');
-
-        function updateActiveNav() {
-            const scrollY = window.scrollY + 200;
-            sections.forEach(function (section) {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    navItems.forEach(function (item) {
-                        item.classList.remove('active');
-                        if (item.getAttribute('href') === '#' + sectionId) {
-                            item.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', updateActiveNav);
-
         // ---- Fade-in on scroll (IntersectionObserver) ----
+        // Each element gets a transition-delay based on its position among
+        // its own siblings, so reveal grids of any size (3 cards or 7) stagger
+        // proportionally instead of only the first few items getting a delay.
         const fadeElements = document.querySelectorAll('.fade-in');
+        const siblingIndex = new Map();
+
+        fadeElements.forEach(function (el) {
+            const parent = el.parentElement;
+            const index = siblingIndex.get(parent) || 0;
+            if (!reduceMotion) {
+                el.style.transitionDelay = (Math.min(index, 7) * 0.05) + 's';
+            }
+            siblingIndex.set(parent, index + 1);
+        });
 
         const observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
@@ -73,7 +115,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
                 }
             });
         });
@@ -98,19 +140,67 @@
             });
         });
 
-        // ---- Image error fallback (event delegation) ----
-        document.addEventListener('error', function (e) {
-            if (e.target.tagName !== 'IMG') return;
-            const container = e.target.closest('.exp-logo, .edu-logo, .cert-img');
-            if (!container) return;
-            const fallback = container.dataset.fallback;
-            if (fallback) {
-                container.classList.add('img-fallback');
-                container.innerHTML = '<span class="fallback-icon">' + fallback + '</span>';
-            } else {
-                e.target.remove();
+        // Note: broken-image fallback listener lives in an inline <script> in
+        // <head> (must run before body <img> tags are parsed — see index.html).
+
+        // ---- Animated stat counters (About section) ----
+        const statCounts = document.querySelectorAll('.stat-count');
+        if (statCounts.length) {
+            const statObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target, 10) || 0;
+                    statObserver.unobserve(el);
+
+                    if (reduceMotion) {
+                        el.textContent = target;
+                        return;
+                    }
+
+                    const duration = 1200;
+                    let start = null;
+
+                    function step(ts) {
+                        if (start === null) start = ts;
+                        const progress = Math.min((ts - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.round(eased * target);
+                        if (progress < 1) requestAnimationFrame(step);
+                    }
+                    requestAnimationFrame(step);
+                });
+            }, { threshold: 0.5 });
+
+            statCounts.forEach(function (el) { statObserver.observe(el); });
+        }
+
+        // ---- Cursor-follow spotlight on cards (fine-pointer devices only) ----
+        if (!reduceMotion && window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+            const spotlightCards = document.querySelectorAll('.spotlight-card');
+            let pendingCard = null, pendingX = 0, pendingY = 0, spotlightTicking = false;
+
+            function applySpotlight() {
+                if (pendingCard) {
+                    pendingCard.style.setProperty('--spot-x', pendingX + 'px');
+                    pendingCard.style.setProperty('--spot-y', pendingY + 'px');
+                }
+                spotlightTicking = false;
             }
-        }, true);
+
+            spotlightCards.forEach(function (card) {
+                card.addEventListener('mousemove', function (e) {
+                    const rect = card.getBoundingClientRect();
+                    pendingCard = card;
+                    pendingX = e.clientX - rect.left;
+                    pendingY = e.clientY - rect.top;
+                    if (!spotlightTicking) {
+                        requestAnimationFrame(applySpotlight);
+                        spotlightTicking = true;
+                    }
+                });
+            });
+        }
 
     });
 

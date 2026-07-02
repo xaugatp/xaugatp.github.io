@@ -31,11 +31,12 @@ No build tools, no frameworks, no dependencies — just clean static files.
 ├── robots.txt                  # Search engine directives
 ├── sitemap.xml                 # SEO sitemap
 ├── .gitattributes              # Git line ending / binary config
+├── .gitignore                  # Excludes local tooling (.claude/), OS/editor cruft
 │
 ├── styles/
-│   ├── base.css                # Design tokens, reset, typography
-│   ├── utilities.css           # Layout helpers, animations, fade-in
-│   ├── nav.css                 # Navbar + social sidebar + mobile menu
+│   ├── base.css                # Design tokens, reset, typography, global focus ring
+│   ├── utilities.css           # Layout helpers, animations, skip-link, back-to-top
+│   ├── nav.css                 # Navbar + resume CTA + social sidebar + mobile menu
 │   ├── hero.css                # Hero landing section
 │   ├── about.css               # Two-column about grid
 │   ├── experience.css          # Expandable experience cards
@@ -47,19 +48,26 @@ No build tools, no frameworks, no dependencies — just clean static files.
 │   └── contact.css             # Contact form + footer
 │
 ├── js/
-│   ├── main.js                 # Nav, scroll, fade-in, exp-card toggle, image fallbacks
+│   ├── main.js                 # Nav, scroll, fade-in, exp-card toggle, back-to-top
 │   └── projects.js             # Project banners, particles, modal
 │
 └── assets/
     ├── favicon.png
     ├── images/
     │   ├── profile/            # Profile photo (me.png)
-    │   ├── logos/              # Company/institution logos
-    │   └── resume/             # Resume SVG icon
+    │   └── logos/              # Company/institution logos (kebab-case, `*-logo.ext`)
     └── documents/
         ├── Resume_Saugat.pdf
         └── certificates/       # PDF certificates
+
 ```
+
+> **Note:** the broken-image fallback listener lives in an inline `<script>` at
+> the top of `<head>` in `index.html` — it must run before any `<img>` in
+> `<body>` is parsed, so it can't live in `js/main.js` (loaded too late to
+> catch early image load failures). Any `.exp-logo` / `.edu-logo` / `.cert-img`
+> container can carry a `data-fallback="XYZ"` attribute — if the image inside
+> it 404s, the container renders that text/emoji instead.
 
 ---
 

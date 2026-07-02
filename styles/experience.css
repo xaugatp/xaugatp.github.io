@@ -27,7 +27,7 @@
 .exp-card:hover {
     transform: translateY(-5px);
     border-color: var(--color-accent);
-    box-shadow: 0 10px 30px rgba(160, 32, 240, 0.15);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
 
 .exp-logo {
@@ -92,7 +92,7 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.4s var(--ease-premium);
     text-align: left;
     width: 100%;
 }
@@ -129,7 +129,7 @@
 .visit-btn {
     display: inline-block;
     padding: 10px 0;
-    background: rgba(160, 32, 240, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
     border-radius: 6px;
@@ -144,6 +144,10 @@
 .visit-btn:hover {
     background: var(--color-accent);
     color: var(--color-text);
+}
+
+.visit-btn:active {
+    transform: scale(0.97);
 }
 
 @media (max-width: 768px) {

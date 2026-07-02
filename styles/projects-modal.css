@@ -26,7 +26,7 @@
 
 /* ---- Dialog box ---- */
 .proj-modal-box {
-    background: #12001f;
+    background: #060c18;
     border: 1px solid var(--color-accent-border);
     border-radius: 16px;
     width: 100%;
@@ -71,7 +71,7 @@
     overflow: hidden;
     flex-shrink: 0;
     border-radius: 16px 16px 0 0;
-    background: linear-gradient(135deg, #0d001a 0%, #1e0040 50%, #0a001a 100%);
+    background: linear-gradient(135deg, #050b16 0%, #0d2247 50%, #050b16 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +136,7 @@
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(to top, #12001f 0%, transparent 100%);
+    background: linear-gradient(to top, #060c18 0%, transparent 100%);
     pointer-events: none;
     z-index: 4;
 }
@@ -295,6 +295,10 @@
     color: #fff;
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
+}
+
+.proj-btn:active {
+    transform: translateY(-2px) scale(0.96);
 }
 
 /* ---- Responsive ---- */

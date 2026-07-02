@@ -1,0 +1,11 @@
+# Claude Code local tooling (skills, settings) — not part of the site
+.claude/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/

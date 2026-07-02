@@ -63,6 +63,37 @@
     width: 100%;
 }
 
+/* Resume CTA button (desktop) */
+.nav-resume-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-left: 20px;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-pill);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    background: rgba(var(--color-accent-rgb), 0.12);
+    white-space: nowrap;
+    transition: var(--transition-default);
+}
+
+.nav-resume-btn:hover {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.nav-resume-btn:active {
+    transform: scale(0.95);
+}
+
+/* Items that only appear inside the mobile slide-out menu */
+.nav-links-mobile-only,
+.nav-social-mobile {
+    display: none;
+}
+
 /* Mobile Toggle */
 .nav-toggle {
     display: none;
@@ -138,6 +169,10 @@
         display: flex;
     }
 
+    .nav-resume-btn {
+        display: none;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -150,10 +185,51 @@
         padding: 100px 40px;
         gap: 25px;
         transition: right 0.4s ease;
+        overflow-y: auto;
     }
 
     .nav-links.open {
         right: 0;
+    }
+
+    .nav-links-mobile-only {
+        display: block;
+        padding-top: 15px;
+        border-top: 1px solid var(--color-card-border);
+    }
+
+    .nav-links-mobile-only a {
+        color: var(--color-accent);
+        font-weight: 700;
+    }
+
+    .nav-social-mobile {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-social-mobile a {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-card-border);
+        border-radius: 50%;
+        color: var(--color-text);
+        transition: var(--transition-default);
+    }
+
+    .nav-social-mobile a:hover {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+
+    .nav-social-mobile svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
     }
 
     .social-sidebar {
